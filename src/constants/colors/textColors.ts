@@ -1,7 +1,7 @@
 import colors from "./colors";
 
 enum textColors {
-    whitePrimary = colors.white1,
+    whiteDefault = colors.white1,
     whiteLittleDark = colors.white2,
 
     gray = colors.gray2,

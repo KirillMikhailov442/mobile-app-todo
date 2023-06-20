@@ -6,7 +6,7 @@ enum borderColors {
 
     gray = colors.gray5,
 
-    violetPrimary = colors.violet3,
+    violetDefault = colors.violet3,
     violetLittleDark = colors.violet4,
 }
 
