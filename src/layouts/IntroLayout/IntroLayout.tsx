@@ -1,3 +1,5 @@
+
+import React, {JSX} from 'react'
 import {View, TouchableHighlight} from 'react-native'
 
 interface IntroLayoutProps {

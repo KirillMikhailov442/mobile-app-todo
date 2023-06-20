@@ -1,28 +1,19 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import React from 'react'
+import {Provider} from 'react-redux'
+import store from './store/store'
+import { bgColors } from './constants/colors'
 
-import React from 'react';
-
-import {Text, View, StatusBar} from "react-native"
-import { Provider } from 'react-redux';
-import store from './store/store';
-import { bgColors } from './constants/colors';
-import AppStyles from './styles/App.style';
-
+import {View, StatusBar} from 'react-native'
 
 const App = () =>{
-  return(
-    <Provider store={store}>
-      <StatusBar backgroundColor={bgColors.black}/>
-      <View style={AppStyles.wrapper}>
+    return (
+        <Provider store={store}>
+            <StatusBar backgroundColor={bgColors.black}/>
+            <View>
 
-      </View>
-    </Provider>
-  )
+            </View>
+        </Provider>
+    )
 }
 
-export default App;
+export default App
