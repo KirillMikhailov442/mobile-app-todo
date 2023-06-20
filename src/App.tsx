@@ -8,7 +8,7 @@ import {View, StatusBar} from 'react-native'
 const App = () =>{
     return (
         <Provider store={store}>
-            <StatusBar backgroundColor={bgColors.black1}/>
+            <StatusBar backgroundColor={bgColors.black}/>
             <View>
 
             </View>
