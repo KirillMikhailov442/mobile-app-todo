@@ -1,9 +1,9 @@
 import colors from "./colors";
 
 enum bgColors {
-    black = colors.black1,
+    black1 = colors.black1,
 
-    gray = colors.gray4
+    gray1 = colors.gray4
 }
 
 export default bgColors

@@ -4,11 +4,11 @@ enum textColors {
     white1 = colors.white1,
     white2 = colors.white2,
 
-    gray = colors.gray2,
+    gray1 = colors.gray2,
 
-    violet = colors.violet1,
+    violet1 = colors.violet1,
 
-    red = colors.red1
+    red1 = colors.red1
 }
 
 export default textColors
