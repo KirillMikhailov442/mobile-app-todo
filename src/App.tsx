@@ -1,18 +1,16 @@
 import React from 'react'
-import {Provider} from 'react-redux'
-import store from './store/store'
-import { bgColors } from './constants/colors'
-
 import {View, StatusBar} from 'react-native'
+
+import {AppStyles} from './styles/index'
+import { bgColors } from './constants/colors'
+import Navigation from './screens/Navigation'
 
 const App = () =>{
     return (
-        <Provider store={store}>
+        <View style={AppStyles.wrapper}>
             <StatusBar backgroundColor={bgColors.black}/>
-            <View>
-
-            </View>
-        </Provider>
+            <Navigation/>
+        </View>
     )
 }
 
