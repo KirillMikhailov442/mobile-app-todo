@@ -12,7 +12,8 @@ const Button = ({
     text,
     color,
     callback,
-    isActivated = true
+    isActivated = true,
+    style
 }: ButtonProps) =>{
 
     if(!isActivated){
@@ -26,7 +27,8 @@ const Button = ({
                     borderRadius: 4,
                     borderWidth: border ? 1 : 0,
                     borderColor: border ? border : 'rgba(0,0,0,0)'
-                }
+                },
+                {...style}
             ]}>
             <Text style={[
                 ButtonStyles.buttonText,
@@ -49,7 +51,8 @@ const Button = ({
                     borderRadius: 4,
                     borderWidth: border ? 1 : 0,
                     borderColor: border ? border : 'rgba(0,0,0,0)'
-                }
+                },
+                {...style}
             ]}>
             <Text style={[
                 ButtonStyles.buttonText,

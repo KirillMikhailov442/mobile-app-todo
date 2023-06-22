@@ -11,8 +11,6 @@ const IntroContentStyles = StyleSheet.create({
     },
     title: {
         marginTop: 50,
-        fontSize: 32,
-        fontWeight: 'bold'
     }, 
     subTitle: {
         marginTop: 42
@@ -25,7 +23,7 @@ const IntroContentStyles = StyleSheet.create({
         marginTop: 50
     },
     indicatorItem: {
-        flexBasis: '30%',
+        // flexBasis: '30%',
         height: '100%',
         backgroundColor: bgColors.grayLight,
         borderRadius: 5

@@ -8,7 +8,7 @@ const ButtonStyles = StyleSheet.create({
         paddingBottom: 12,
         fontSize: 16,
         alignItems: 'center',
-        height: 48
+        height: 48,
     },
     buttonText: {
         fontSize: 16,

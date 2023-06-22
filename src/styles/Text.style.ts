@@ -9,6 +9,10 @@ const TextStyles = StyleSheet.create({
     },
     textCenter: {
         textAlign: 'center'
+    },
+    title: {
+        fontSize: 32,
+        fontWeight: "bold"
     }
 })
 

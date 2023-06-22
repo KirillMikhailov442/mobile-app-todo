@@ -1,3 +1,4 @@
+import { StyleSheet } from "react-native";
 
 export interface ButtonProps{
     text: string,
@@ -6,5 +7,6 @@ export interface ButtonProps{
     border?: string,
     color?: string,
     isActivated?: boolean,
-    callback?: ()=> void 
+    callback?: ()=> void,
+    style?: object
 }

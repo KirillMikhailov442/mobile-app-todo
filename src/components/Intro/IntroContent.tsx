@@ -3,30 +3,35 @@ import { View, Text, Image } from "react-native"
 
 import IntroContentStyles from "./IntroContent.style"
 import { TextStyles } from "../../styles"
-import IntrocontentIndicator from "./IntroContentIndicator"
+import IntroContentIndicator from "./IntroContentIndicator"
 
 
 interface IntroContentProps {
+    index: number,
+    limit: number,
     title: string,
     subTilte: string,
-    imageUrl: string
+    imageUrl?: string
 }
 
 
 const IntroContent = ({
     title,
     subTilte,
-    imageUrl
+    imageUrl,
+    index,
+    limit
 }:IntroContentProps) =>{
     
     
     return(
         <View style={IntroContentStyles.container}>
             <Image style={IntroContentStyles.image} source={require('../../assets/images/intro/intro-1.png')}/>
-            <IntrocontentIndicator/>
+            <IntroContentIndicator limit={limit} index={index}/>
             <Text style={[
                 TextStyles.text,
                 TextStyles.textCenter,
+                TextStyles.title,
                 IntroContentStyles.title
             ]}>
                 {title}
