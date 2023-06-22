@@ -6,7 +6,7 @@ export interface ButtonProps{
     background?: string,
     border?: string,
     color?: string,
-    isActivated?: boolean,
+    isActive?: boolean,
     callback?: ()=> void,
     style?: object
 }

@@ -12,11 +12,11 @@ const Button = ({
     text,
     color,
     callback,
-    isActivated = true,
+    isActive = true,
     style
 }: ButtonProps) =>{
 
-    if(!isActivated){
+    if(!isActive){
         return(
             <View
             style={[

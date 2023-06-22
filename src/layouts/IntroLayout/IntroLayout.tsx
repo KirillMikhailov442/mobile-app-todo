@@ -48,7 +48,7 @@ const IntroLayout: React.FC<IntroLayoutProps> = ({children, navigation, limit, i
                     text="BACK" 
                     color={isBack ? textColors.gray : textColors.black} 
                     width={45}
-                    isActivated={isBack}
+                    isActive={isBack}
                     callback={()=> navigation.navigate('intro', {screenId: --index})} />
                 <Button 
                     text={isFinish ? "FINISH" : "NEXT"}
