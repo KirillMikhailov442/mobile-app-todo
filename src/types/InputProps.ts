@@ -1,4 +1,9 @@
 
+interface InputPropsPlaceholder {
+    text: string,
+    color?: string
+}
+
 interface InputPropsOptions {
     container?: object,
     label?: object,
@@ -8,7 +13,7 @@ interface InputPropsOptions {
 }
 
 export interface InputProps {
-    placeholder: string,
+    placeholder: InputPropsPlaceholder,
     label?: string,
     value?: string,
     setValue?: ()=> void,

@@ -15,7 +15,7 @@ const Navigation = () =>{
     return(
         <NavigationContainer>
             <Stack.Navigator screenOptions={{contentStyle: {
-                backgroundColor: bgColors.black
+                backgroundColor: bgColors.blackDefault
             }}}>
                 <Stack.Screen 
                     options={{headerShown: false}} 
@@ -27,7 +27,7 @@ const Navigation = () =>{
                     options={{
                         headerTitle: "",
                         headerStyle: {
-                         backgroundColor: bgColors.black
+                         backgroundColor: bgColors.blackDefault
                         },
                     headerTintColor: textColors.whiteDefault
                     }} 
@@ -37,7 +37,7 @@ const Navigation = () =>{
                 <Stack.Screen
                     options={{
                         headerStyle: {
-                            backgroundColor: bgColors.black
+                            backgroundColor: bgColors.blackDefault
                         },
                         headerTitle: '',
                         headerTintColor: textColors.whiteDefault

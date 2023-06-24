@@ -23,7 +23,6 @@ const IntroContentStyles = StyleSheet.create({
         marginTop: 50
     },
     indicatorItem: {
-        // flexBasis: '30%',
         height: '100%',
         backgroundColor: bgColors.grayLight,
         borderRadius: 5

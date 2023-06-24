@@ -4,7 +4,7 @@ import { bgColors } from '../constants/colors'
 const AppStyles = StyleSheet.create({
     wrapper: {
         flex: 1,
-        backgroundColor: bgColors.black
+        backgroundColor: bgColors.blackDefault
     }
 })
 

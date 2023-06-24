@@ -1,9 +1,10 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text, View, TextInput } from "react-native";
 import { InputProps } from "../../../types";
-import { TextInput } from "react-native-gesture-handler";
+// import { TextInput } from "react-native-gesture-handler";
 import InputStyles from "./Input.style";
 import { TextStyles } from "../../../styles";
+import { textColors } from "../../../constants/colors";
 
 
 const Input: React.FC<InputProps> = ({
@@ -32,9 +33,10 @@ const Input: React.FC<InputProps> = ({
             ]}>
                 {options && options.icon}
                 <TextInput 
-                    placeholder={placeholder}
-                    value={value}
+                    placeholder={placeholder.text}
+                    placeholderTextColor={placeholder.color ?? textColors.grayDark}
                     style={[
+                        TextStyles.text,
                         InputStyles.input,
                         options && {...options.inputText},
                     ]}/>

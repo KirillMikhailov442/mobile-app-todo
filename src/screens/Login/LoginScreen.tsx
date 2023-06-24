@@ -11,14 +11,37 @@ import { buttonColors } from "../../constants/colors"
 const LoginScreen = () =>{
     return(
         <View style={ViewStyles.container}>
-            <FormLayout title="Login">
-                <Button
-                    text="Login"
-                    options={{
-                        button: {
-                            backgroundColor: buttonColors.violetDefault
-                        }
-                    }}/>
+            <FormLayout title="Login" socialMedias={['apple', 'google']}>
+                <>
+                    <Input 
+                        label="Username"
+                        placeholder={{
+                            text: "Enter your username"
+                        }}
+                        options={{
+                            container: {
+                                marginTop: 52
+                            }
+                        }}/>
+                    <Input 
+                        label="Username"
+                        placeholder={{
+                            text: "Enter your username"
+                        }}
+                        options={{
+                            container: {
+                                marginTop: 25
+                            }
+                        }}/>
+                    <Button
+                        text="Login"
+                        options={{
+                            button: {
+                                backgroundColor: buttonColors.violetDefault,
+                                marginTop: 70
+                            }
+                        }}/>
+                </>
             </FormLayout>
         </View>
     )

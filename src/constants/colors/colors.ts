@@ -8,6 +8,7 @@ enum colors {
     gray3 = '#4C4C4C',
     gray4 = '#363636',
     gray5 = '#979797',
+    gray6 = '#535353',
 
     violet1 = '#8687E7',
     violet2 = '#8687E780',
@@ -19,6 +20,7 @@ enum colors {
     black1 = '#121212',
     black2 = '#272727',
     black3 = '#363636',
+    black4 = '#1D1D1D',
 
     transparent = 'rgba(0,0,0,0)'
 }

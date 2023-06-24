@@ -39,7 +39,7 @@ const IntroLayout: React.FC<IntroLayoutProps> = ({children, navigation, limit, i
                     text="SKIP" 
                     options={{
                         text: {
-                            color: textColors.gray
+                            color: textColors.grayDark
                         },
                         button: {
                             width: 40
@@ -53,7 +53,7 @@ const IntroLayout: React.FC<IntroLayoutProps> = ({children, navigation, limit, i
                 <Button 
                     text="BACK" 
                     options={{
-                        text: {color : isBack ? textColors.gray : textColors.black},
+                        text: {color : isBack ? textColors.grayDefault : textColors.black},
                         button : {width: 45}
                     }}
                     isActive={isBack}

@@ -10,18 +10,30 @@ import { LayoutProps } from "../../types"
 const FormLayout: React.FC<FormLayoutProps & LayoutProps> = ({
     title,
     options,
-    children
+    children,
+    socialMedias
 }) =>{
     return(
         <View style={[
-            FormLayoutStyles.container
+            FormLayoutStyles.container,
+            options && {...options.container}
+            
         ]}>
             {title && <Text style={[
                 TextStyles.text,
                 TextStyles.title,
-                FormLayoutStyles.title
+                FormLayoutStyles.title,
+                options && {...options.title}
             ]}>{title}</Text>}
             {children}
+            {socialMedias && 
+                <View style={[
+                    FormLayoutStyles.footer,
+                    options && {...options.socialMedias}
+                ]}>
+                    
+
+                </View>}
         </View>
     )
 }

@@ -1,7 +1,14 @@
-import { ButtonProps } from "react-native";
-import { InputProps } from "./InputProps";
+
+interface FormLayoutPropsOptions {
+    container: object,
+    title: object,
+    socialMedias: object
+}
+
+type socialMedias = 'google' | 'apple'
 
 export interface FormLayoutProps {
     title?: string,
-    options?: object 
+    socialMedias?: socialMedias[],
+    options?: FormLayoutPropsOptions 
 }
