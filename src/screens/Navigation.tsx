@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import IntroScreen from "./Intro/IntroScreen"
 import { bgColors, textColors } from "../constants/colors";
 import WelcomeScreen from "./Welcome/WelcomeScreen";
+import LoginScreen from "./Login/LoginScreen";
 
 
 const Stack = createNativeStackNavigator()
@@ -22,14 +23,27 @@ const Navigation = () =>{
                     component={IntroScreen}
                     initialParams={{screenId: 1}}/>
 
-                <Stack.Screen options={{
-                    headerShown: true,
-                    headerTitle: "",
-                    headerStyle: {
-                        backgroundColor: bgColors.black
-                    },
+                <Stack.Screen 
+                    options={{
+                        headerTitle: "",
+                        headerStyle: {
+                         backgroundColor: bgColors.black
+                        },
                     headerTintColor: textColors.whiteDefault
-                }} name="welcome" component={WelcomeScreen} />
+                    }} 
+                    name="welcome" 
+                    component={WelcomeScreen} />
+
+                <Stack.Screen
+                    options={{
+                        headerStyle: {
+                            backgroundColor: bgColors.black
+                        },
+                        headerTitle: '',
+                        headerTintColor: textColors.whiteDefault
+                    }}
+                    name="login"
+                    component={LoginScreen}/>
             </Stack.Navigator>
         </NavigationContainer>
     )

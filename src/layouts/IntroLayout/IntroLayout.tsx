@@ -37,8 +37,14 @@ const IntroLayout: React.FC<IntroLayoutProps> = ({children, navigation, limit, i
             <View style={IntroLayoutStyles.header}>
                 <Button
                     text="SKIP" 
-                    color={textColors.gray} 
-                    width={40}
+                    options={{
+                        text: {
+                            color: textColors.gray
+                        },
+                        button: {
+                            width: 40
+                        }
+                    }}
                     callback={()=> navigation.navigate('welcome')}
                      />
             </View>
@@ -46,14 +52,20 @@ const IntroLayout: React.FC<IntroLayoutProps> = ({children, navigation, limit, i
             <View style={IntroLayoutStyles.footer}>
                 <Button 
                     text="BACK" 
-                    color={isBack ? textColors.gray : textColors.black} 
-                    width={45}
+                    options={{
+                        text: {color : isBack ? textColors.gray : textColors.black},
+                        button : {width: 45}
+                    }}
                     isActive={isBack}
                     callback={()=> navigation.navigate('intro', {screenId: --index})} />
                 <Button 
                     text={isFinish ? "FINISH" : "NEXT"}
-                    background={buttonColors.violetDefault} 
-                    width={90} 
+                    options={{
+                        button: {
+                            backgroundColor: buttonColors.violetDefault,
+                            width: 90
+                        },
+                    }}
                     callback={()=> {
                         if(isFinish){
                             return navigation.navigate('welcome')

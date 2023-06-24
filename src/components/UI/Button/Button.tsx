@@ -1,40 +1,31 @@
 import React from "react"
 import { Text, TouchableOpacity, View} from "react-native"
 import ButtonStyles from "./Button.style"
-import { textColors } from "../../../constants/colors"
 import { ButtonProps } from "../../../types/index"
 
 
 const Button = ({
-    width,
-    background,
-    border,
     text,
-    color,
     callback,
     isActive = true,
-    style
+    options,
+    icon
 }: ButtonProps) =>{
+
+    
 
     if(!isActive){
         return(
             <View
             style={[
                 ButtonStyles.button,
-                {
-                    width: width ? width : '100%',
-                    backgroundColor: background ? background : 'rgba(0,0,0,0)',
-                    borderRadius: 4,
-                    borderWidth: border ? 1 : 0,
-                    borderColor: border ? border : 'rgba(0,0,0,0)'
-                },
-                {...style}
+                options && { ...options.button}
             ]}>
+            {icon && icon}
             <Text style={[
                 ButtonStyles.buttonText,
-                {
-                    color: color ? color : textColors.whiteDefault
-                }
+                icon && {marginLeft: 10},
+                options && {...options.text}
             ]}>{text}</Text>
         </View>
         )
@@ -45,20 +36,11 @@ const Button = ({
             onPress={callback}
             style={[
                 ButtonStyles.button,
-                {
-                    width: width ? width : '100%',
-                    backgroundColor: background ? background : 'rgba(0,0,0,0)',
-                    borderRadius: 4,
-                    borderWidth: border ? 1 : 0,
-                    borderColor: border ? border : 'rgba(0,0,0,0)'
-                },
-                {...style}
+                options && {...options.button}
             ]}>
             <Text style={[
                 ButtonStyles.buttonText,
-                {
-                    color: color ? color : textColors.whiteDefault
-                }
+                options && {...options.text}
             ]}>{text}</Text>
         </TouchableOpacity>
     )

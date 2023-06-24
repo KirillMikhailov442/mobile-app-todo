@@ -10,7 +10,9 @@ enum textColors {
 
     violet = colors.violet1,
 
-    red = colors.red1
+    red = colors.red1,
+
+    transparent = colors.transparent
 }
 
 export default textColors

@@ -8,7 +8,9 @@ enum buttonColors {
     grayLittleDark = colors.gray3,
 
     violetDefault = colors.violet1,
-    violetLittleLight = colors.violet2
+    violetLittleLight = colors.violet2,
+
+    transparent = colors.transparent
 }
 
 export default buttonColors

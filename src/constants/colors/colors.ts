@@ -19,6 +19,8 @@ enum colors {
     black1 = '#121212',
     black2 = '#272727',
     black3 = '#363636',
+
+    transparent = 'rgba(0,0,0,0)'
 }
 
 export default colors

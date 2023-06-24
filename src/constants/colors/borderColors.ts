@@ -8,6 +8,8 @@ enum borderColors {
 
     violetDefault = colors.violet3,
     violetLittleDark = colors.violet4,
+
+    transparent = colors.transparent
 }
 
 export default borderColors
