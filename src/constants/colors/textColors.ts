@@ -5,7 +5,8 @@ enum textColors {
     whiteLittleDark = colors.white2,
 
     grayDefault = colors.gray2,
-    grayDark = colors.gray6,
+    grayDark = colors.gray5,
+    grayVeryDark = colors.gray6,
 
     black = colors.black1,
 

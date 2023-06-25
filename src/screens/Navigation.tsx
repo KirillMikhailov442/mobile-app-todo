@@ -6,6 +6,7 @@ import IntroScreen from "./Intro/IntroScreen"
 import { bgColors, textColors } from "../constants/colors";
 import WelcomeScreen from "./Welcome/WelcomeScreen";
 import LoginScreen from "./Login/LoginScreen";
+import RegisterScreen from "./Register/RegisterScreen";
 
 
 const Stack = createNativeStackNavigator()
@@ -44,6 +45,17 @@ const Navigation = () =>{
                     }}
                     name="login"
                     component={LoginScreen}/>
+
+                <Stack.Screen
+                    options={{
+                        headerStyle: {
+                            backgroundColor: bgColors.blackDefault
+                        },
+                        headerTitle: '',
+                        headerTintColor: textColors.whiteDefault
+                    }}
+                    name="register"
+                    component={RegisterScreen}/>
             </Stack.Navigator>
         </NavigationContainer>
     )

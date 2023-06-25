@@ -24,7 +24,7 @@ const Button = ({
             {icon && icon}
             <Text style={[
                 ButtonStyles.buttonText,
-                icon && {marginLeft: 10},
+
                 options && {...options.text}
             ]}>{text}</Text>
         </View>
@@ -38,6 +38,7 @@ const Button = ({
                 ButtonStyles.button,
                 options && {...options.button}
             ]}>
+            {icon && icon}
             <Text style={[
                 ButtonStyles.buttonText,
                 options && {...options.text}

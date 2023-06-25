@@ -1,5 +1,5 @@
 
-import React, {JSX, useEffect, useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import {View} from 'react-native'
 
 
@@ -8,11 +8,11 @@ import Button from '../../components/UI/Button/Button'
 import { buttonColors, textColors } from '../../constants/colors'
 import { ViewStyles } from '../../styles'
 import { LayoutProps } from '../../types'
-import { IntroScreenNavigationProp, IntroScreenRouteProp } from '../../types/navigation/IntroProps'
+import { ScreensNavigationProp, ScreensRouteProp } from '../../types/navigation/NavigationProps'
 
 interface IntroLayoutProps extends LayoutProps {
-    navigation: IntroScreenNavigationProp,
-    route: IntroScreenRouteProp,
+    navigation: ScreensNavigationProp,
+    route: ScreensRouteProp,
     limit: number,
     index: number
 }

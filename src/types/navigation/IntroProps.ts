@@ -1,14 +1,11 @@
+import { ScreensNavigationProp } from "./NavigationProps";
+
 import { RouteProp } from "@react-navigation/native"
+import { RootStackParamList } from "./RootStackParamList"
 
-import { RootStackParamList } from "./StackParamList"
-import { NativeStackNavigationProp } from "@react-navigation/native-stack"
- 
-export type IntroScreenRouteProp = RouteProp<RootStackParamList, 'intro'>
+export type IntroRouteProps = RouteProp<RootStackParamList, 'intro'>
 
-export type IntroScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'intro'>
-
-export type IntroProps = {
-    route: IntroScreenRouteProp,
-    navigation: IntroScreenNavigationProp
+export interface IntroProps {
+    route: IntroRouteProps,
+    navigation: ScreensNavigationProp
 }
-

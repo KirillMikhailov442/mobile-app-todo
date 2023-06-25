@@ -1,4 +1,4 @@
+import { NavigationProps } from "./NavigationProps";
 import { IntroProps } from "./IntroProps";
-import { LoginProps } from "./LoginProps";
 
-export type {IntroProps, LoginProps}
+export type {NavigationProps, IntroProps}

@@ -1,5 +1,5 @@
 import React from "react"
-import { Text, View } from "react-native"
+import { View } from "react-native"
 import { ViewStyles } from "../../styles"
 import { FormLayout } from "../../layouts"
 import Input from "../../components/UI/Input/Input"
@@ -11,7 +11,16 @@ import { buttonColors } from "../../constants/colors"
 const LoginScreen = () =>{
     return(
         <View style={ViewStyles.container}>
-            <FormLayout title="Login" socialMedias={['apple', 'google']}>
+            <FormLayout 
+                title="Login"
+                bottomText={{
+                    text: "Dont't have an account?",
+                    link: {
+                        text: "Register",
+                        screen: 'register'
+                    }
+                }} 
+                showSocialMedias={true}>
                 <>
                     <Input 
                         label="Username"
@@ -24,10 +33,11 @@ const LoginScreen = () =>{
                             }
                         }}/>
                     <Input 
-                        label="Username"
+                        label="Password"
                         placeholder={{
-                            text: "Enter your username"
+                            text: "Enter your password"
                         }}
+                        security={true}
                         options={{
                             container: {
                                 marginTop: 25

@@ -17,7 +17,7 @@ export interface InputProps {
     label?: string,
     value?: string,
     setValue?: ()=> void,
-    type?: "text" | "password",
+    security?: boolean,
     options?: InputPropsOptions
 
 }

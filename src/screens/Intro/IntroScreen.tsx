@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react"
 import { IntroLayout } from "../../layouts"
 import IntroContent from "../../components/Intro/IntroContent"
-import { useNavigation } from "@react-navigation/native"
-import { IntroProps } from "../../types/navigation"
 import { IIntroContent } from "../../types"
+import { IntroProps } from "../../types/navigation"
 
 
 const introContent: IIntroContent[] = 
@@ -23,10 +22,7 @@ const introContent: IIntroContent[] =
             subTitle: 'You can organize your daily tasks by adding your tasks into separate categories',
         }
     ]
-
-
 const IntroScreen: React.FC<IntroProps> = ({route, navigation}) =>{
-
 
     const [index, setIndex] = useState(route.params.screenId)
     

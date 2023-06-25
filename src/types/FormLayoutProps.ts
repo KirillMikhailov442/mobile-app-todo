@@ -1,14 +1,25 @@
 
+
 interface FormLayoutPropsOptions {
-    container: object,
-    title: object,
-    socialMedias: object
+    container?: object,
+    title?: object,
+    socialMedias?: object,
+    divider?: object
 }
 
-type socialMedias = 'google' | 'apple'
+interface FormLayoutPropsBottomTextLink {
+    text: string,
+    screen: 'login' | 'register'
+}
+
+interface FormLayoutPropsBottomText {
+    text: string,
+    link: FormLayoutPropsBottomTextLink
+}
 
 export interface FormLayoutProps {
     title?: string,
-    socialMedias?: socialMedias[],
+    showSocialMedias?: boolean,
+    bottomText: FormLayoutPropsBottomText
     options?: FormLayoutPropsOptions 
 }

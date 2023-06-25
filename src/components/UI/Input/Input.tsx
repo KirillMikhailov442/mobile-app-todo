@@ -12,7 +12,8 @@ const Input: React.FC<InputProps> = ({
     setValue,
     value,
     placeholder,
-    options
+    options,
+    security
 })=>{
 
     return(
@@ -34,7 +35,8 @@ const Input: React.FC<InputProps> = ({
                 {options && options.icon}
                 <TextInput 
                     placeholder={placeholder.text}
-                    placeholderTextColor={placeholder.color ?? textColors.grayDark}
+                    placeholderTextColor={placeholder.color ?? textColors.grayVeryDark}
+                    secureTextEntry={security}
                     style={[
                         TextStyles.text,
                         InputStyles.input,

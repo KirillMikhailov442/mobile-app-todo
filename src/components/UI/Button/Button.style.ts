@@ -13,6 +13,8 @@ const ButtonStyles = StyleSheet.create({
         width: '100%',
         backgroundColor: bgColors.transparent,
         borderRadius: 4,
+        flexDirection: 'row',
+        justifyContent: 'center'
     },
     buttonText: {
         fontSize: 16,

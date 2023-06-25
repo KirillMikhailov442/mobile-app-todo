@@ -1,14 +1,13 @@
 import React from "react"
 import { Text, View } from "react-native"
-import Icon from 'react-native-vector-icons/AntDesign';
 
 import { TextStyles, ViewStyles } from "../../styles"
 import WelcomeScreenStyles from "./WelcomeScreen.style"
 import Button from "../../components/UI/Button/Button"
 import { buttonColors } from "../../constants/colors"
-import { LoginProps } from "../../types/navigation"
+import { NavigationProps } from "../../types/navigation";
 
-const WelcomeScreen: React.FC<LoginProps> = ({navigation}) =>{
+const WelcomeScreen: React.FC<NavigationProps> = ({navigation}) =>{
     return(
         <View style={ViewStyles.container}>
             <Text style={[
@@ -40,7 +39,8 @@ const WelcomeScreen: React.FC<LoginProps> = ({navigation}) =>{
                                 borderColor: buttonColors.violetDefault,
                                 marginTop: 28
                             }
-                        }}/>
+                        }}
+                        callback={()=> navigation.navigate('register')}/>
                 </View>
         </View>
     )
