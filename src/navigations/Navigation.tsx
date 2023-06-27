@@ -2,14 +2,13 @@ import React from "react"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { NavigationContainer } from '@react-navigation/native';
 
-import IntroScreen from "./Intro/IntroScreen"
 import { bgColors, textColors } from "../constants/colors";
-import WelcomeScreen from "./Welcome/WelcomeScreen";
-import LoginScreen from "./Login/LoginScreen";
-import RegisterScreen from "./Register/RegisterScreen";
+import { IntroScreen, WelcomeScreen, LoginScreen, RegisterScreen } from "../screens";
+import Tabs from "./Tabs";
 
 
 const Stack = createNativeStackNavigator()
+
 
 const Navigation = () =>{
 
@@ -18,6 +17,13 @@ const Navigation = () =>{
             <Stack.Navigator screenOptions={{contentStyle: {
                 backgroundColor: bgColors.blackDefault
             }}}>
+
+
+                <Stack.Screen
+                    options={{headerShown: false}}
+                    name="home"
+                    component={Tabs}/>
+
                 <Stack.Screen 
                     options={{headerShown: false}} 
                     name="intro" 
@@ -56,6 +62,7 @@ const Navigation = () =>{
                     }}
                     name="register"
                     component={RegisterScreen}/>
+
             </Stack.Navigator>
         </NavigationContainer>
     )

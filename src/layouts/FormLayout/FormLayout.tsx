@@ -15,7 +15,7 @@ import {ScreensNavigationProp } from "../../types/navigation/NavigationProps"
 
 const FormLayout: React.FC<FormLayoutProps & LayoutProps> = ({
     title,
-    options,
+    styles,
     children,
     showSocialMedias,
     bottomText,
@@ -27,24 +27,24 @@ const FormLayout: React.FC<FormLayoutProps & LayoutProps> = ({
     return(
         <View style={[
             FormLayoutStyles.container,
-            options && {...options.container}
+            styles && {...styles.container}
             
         ]}>
             {title && <Text style={[
                 TextStyles.text,
                 TextStyles.title,
                 FormLayoutStyles.title,
-                options && {...options.title}
+                styles && {...styles.title}
             ]}>{title}</Text>}
             {children}
             {showSocialMedias && 
                 <View style={[
                     FormLayoutStyles.footer,
-                    options && {...options.socialMedias}
+                    styles && {...styles.socialMedias}
                 ]}>
                     <View style={[
                         FormLayoutStyles.divider,
-                        options && {...options.divider}
+                        styles && {...styles.divider}
                     ]}>
                         <View style={FormLayoutStyles.dividerLine}></View>
                         <Text style={[
@@ -57,7 +57,8 @@ const FormLayout: React.FC<FormLayoutProps & LayoutProps> = ({
                     <Button
                         text="Login with Google"
                         icon={<Image  source={require('../../assets/images/login/google.png')} />}
-                        options={{
+                        onPress={()=> navigation.navigate('home')}
+                        styles={{
                             button: {
                                 borderColor: buttonColors.violetDefault
                             },
@@ -69,7 +70,8 @@ const FormLayout: React.FC<FormLayoutProps & LayoutProps> = ({
                     <Button
                         text="Login with Apple"
                         icon={<Image  source={require('../../assets/images/login/apple.png')} />}
-                        options={{
+                        onPress={()=> navigation.navigate('home')}
+                        styles={{
                             button: {
                                 borderColor: buttonColors.violetDefault,
                                 marginTop: 20

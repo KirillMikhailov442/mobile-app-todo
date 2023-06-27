@@ -1,5 +1,5 @@
 
-interface ButtonPropsOptions {
+interface ButtonPropsStyles {
     button?: object,
     text?: object,
 }
@@ -7,7 +7,7 @@ interface ButtonPropsOptions {
 export interface ButtonProps {
     text: string,
     isActive?: boolean,
-    callback?: ()=> void,
-    options?: ButtonPropsOptions,
+    onPress?: ()=> void,
+    styles?: ButtonPropsStyles,
     icon?: JSX.Element
 }

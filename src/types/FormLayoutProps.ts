@@ -1,6 +1,6 @@
 
 
-interface FormLayoutPropsOptions {
+interface FormLayoutPropsStyles {
     container?: object,
     title?: object,
     socialMedias?: object,
@@ -21,5 +21,5 @@ export interface FormLayoutProps {
     title?: string,
     showSocialMedias?: boolean,
     bottomText: FormLayoutPropsBottomText
-    options?: FormLayoutPropsOptions 
+    styles?: FormLayoutPropsStyles 
 }

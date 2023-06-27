@@ -4,20 +4,22 @@ interface InputPropsPlaceholder {
     color?: string
 }
 
-interface InputPropsOptions {
+interface InputPropsStyles {
     container?: object,
     label?: object,
     input?: object,
     inputText?: object,
-    icon?: any
+    error?: object,
 }
 
 export interface InputProps {
     placeholder: InputPropsPlaceholder,
     label?: string,
     value?: string,
-    setValue?: ()=> void,
+    onChange?: any,
+    error?: string,
     security?: boolean,
-    options?: InputPropsOptions
+    styles?: InputPropsStyles,
+    icon?: JSX.Element
 
 }

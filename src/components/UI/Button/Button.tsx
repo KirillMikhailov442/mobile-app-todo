@@ -4,13 +4,13 @@ import ButtonStyles from "./Button.style"
 import { ButtonProps } from "../../../types/index"
 
 
-const Button = ({
+const Button: React.FC<ButtonProps> = ({
     text,
-    callback,
+    onPress,
     isActive = true,
-    options,
+    styles,
     icon
-}: ButtonProps) =>{
+}) =>{
 
     
 
@@ -19,13 +19,13 @@ const Button = ({
             <View
             style={[
                 ButtonStyles.button,
-                options && { ...options.button}
+                styles && { ...styles.button}
             ]}>
-            {icon && icon}
+            {icon}
             <Text style={[
                 ButtonStyles.buttonText,
 
-                options && {...options.text}
+                styles && {...styles.text}
             ]}>{text}</Text>
         </View>
         )
@@ -33,15 +33,15 @@ const Button = ({
 
     return(
         <TouchableOpacity
-            onPress={callback}
+            onPress={onPress}
             style={[
                 ButtonStyles.button,
-                options && {...options.button}
+                styles && {...styles.button}
             ]}>
-            {icon && icon}
+            {icon}
             <Text style={[
                 ButtonStyles.buttonText,
-                options && {...options.text}
+                styles && {...styles.text}
             ]}>{text}</Text>
         </TouchableOpacity>
     )

@@ -23,7 +23,12 @@ const InputStyles = StyleSheet.create({
         height: 48,
         paddingLeft: 12,
         paddingRight: 12
-    }
+    },
+    error: {
+        color: textColors.red,
+        marginTop: 3,
+        marginLeft: 10
+    },
 })
 
 export default InputStyles
