@@ -14,9 +14,11 @@ const Navigation = () =>{
 
     return(
         <NavigationContainer>
-            <Stack.Navigator screenOptions={{contentStyle: {
-                backgroundColor: bgColors.blackDefault
-            }}}>
+            <Stack.Navigator 
+                initialRouteName="intro" 
+                screenOptions={{contentStyle: {
+                    backgroundColor: bgColors.blackDefault
+                }}}>
 
 
                 <Stack.Screen

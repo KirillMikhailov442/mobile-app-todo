@@ -12,7 +12,7 @@ const IntroContentStyles = StyleSheet.create({
     title: {
         marginTop: 50,
     }, 
-    subTitle: {
+    subtitle: {
         marginTop: 42
     },
     indicator: {

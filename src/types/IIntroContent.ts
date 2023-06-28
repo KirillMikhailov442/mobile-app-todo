@@ -1,5 +1,5 @@
 export interface IIntroContent {
     title: string,
-    subTitle: string,
+    subtitle: string,
     imageUrl?: string
 }

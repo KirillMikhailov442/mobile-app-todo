@@ -10,6 +10,7 @@ here is only the frontend part app
 Stack:
   React,
   React Native,
+  React Navigation,
   Redux (Redux Toolkit),
   Formik,
   React Native Vector Icons,

@@ -1,15 +1,14 @@
 import React from "react"
-import { View } from "react-native"
+import { View, Text } from "react-native"
 import { NavigationProps } from "../../types/navigation"
-import Button from "../../components/UI/Button/Button"
-import { ViewStyles } from "../../styles"
 import { bgColors } from "../../constants/colors"
+import { HeaderLayout } from "../../layouts"
+import Home from "../../components/Home/Home"
 
-const HomeScreen: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation}) =>{
+const HomeScreen = () =>{
 
     return(
-        <View style={[ViewStyles.container, {backgroundColor: bgColors.blackDefault}]}>
-        </View>
+        <Home/>
     )
 }
 

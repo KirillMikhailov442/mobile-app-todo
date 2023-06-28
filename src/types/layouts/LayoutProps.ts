@@ -1,5 +1,5 @@
 
 export interface LayoutProps {
-    children: JSX.Element,
+    children?: JSX.Element,
     
 }
