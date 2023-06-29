@@ -4,7 +4,7 @@ import { View, Text } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import { HomeScreen} from '../screens'
-import { bgColors, textColors } from '../constants/colors'
+import { textColors } from '../constants/colors'
 import { ViewStyles } from '../styles'
 import TabStyles from './Tab.style'
 

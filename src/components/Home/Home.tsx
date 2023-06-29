@@ -10,7 +10,6 @@ const Home = () =>{
     return(
         <SafeAreaView style={HomeStyles.homeContainer}>
             <HomeHeader/>
-
             <HomeEmpty/>
         </SafeAreaView>
     )

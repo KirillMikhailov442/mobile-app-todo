@@ -1,4 +1,5 @@
 import React from "react"
+import {CardStyleInterpolators, createStackNavigator} from '@react-navigation/stack'
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -7,7 +8,7 @@ import { IntroScreen, WelcomeScreen, LoginScreen, RegisterScreen } from "../scre
 import Tabs from "./Tabs";
 
 
-const Stack = createNativeStackNavigator()
+const Stack = createStackNavigator()
 
 
 const Navigation = () =>{
@@ -16,9 +17,13 @@ const Navigation = () =>{
         <NavigationContainer>
             <Stack.Navigator 
                 initialRouteName="intro" 
-                screenOptions={{contentStyle: {
-                    backgroundColor: bgColors.blackDefault
-                }}}>
+                screenOptions={{
+                    cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+                    cardStyle: {
+                        backgroundColor: bgColors.blackDefault
+                    },
+                    headerShadowVisible: false
+                }}>
 
 
                 <Stack.Screen
@@ -36,7 +41,7 @@ const Navigation = () =>{
                     options={{
                         headerTitle: "",
                         headerStyle: {
-                         backgroundColor: bgColors.blackDefault
+                         backgroundColor: bgColors.blackDefault,
                         },
                     headerTintColor: textColors.whiteDefault
                     }} 
@@ -46,7 +51,7 @@ const Navigation = () =>{
                 <Stack.Screen
                     options={{
                         headerStyle: {
-                            backgroundColor: bgColors.blackDefault
+                            backgroundColor: bgColors.blackDefault,
                         },
                         headerTitle: '',
                         headerTintColor: textColors.whiteDefault
