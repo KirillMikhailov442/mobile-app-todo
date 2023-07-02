@@ -20,6 +20,6 @@ interface FormLayoutPropsBottomText {
 export interface FormLayoutProps {
     title?: string,
     showSocialMedias?: boolean,
-    bottomText: FormLayoutPropsBottomText
+    bottomText?: FormLayoutPropsBottomText
     styles?: FormLayoutPropsStyles 
 }

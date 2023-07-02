@@ -22,11 +22,10 @@ const Button: React.FC<ButtonProps> = ({
                 styles && { ...styles.button}
             ]}>
             {icon}
-            <Text style={[
+            {text && <Text style={[
                 ButtonStyles.buttonText,
-
                 styles && {...styles.text}
-            ]}>{text}</Text>
+            ]}>{text}</Text>}
         </View>
         )
     }
@@ -39,10 +38,10 @@ const Button: React.FC<ButtonProps> = ({
                 styles && {...styles.button}
             ]}>
             {icon}
-            <Text style={[
+            {text && <Text style={[
                 ButtonStyles.buttonText,
                 styles && {...styles.text}
-            ]}>{text}</Text>
+            ]}>{text}</Text>}
         </TouchableOpacity>
     )
 }

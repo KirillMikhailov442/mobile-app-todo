@@ -1,8 +1,8 @@
 import {StyleSheet} from 'react-native'
 import { bgColors } from '../../constants/colors'
-
+ 
 const HomeStyles = StyleSheet.create({
-    homeContainer: {
+    container: {
         flex: 1,
         backgroundColor: bgColors.blackDefault
     }

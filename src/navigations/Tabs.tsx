@@ -1,6 +1,6 @@
 import React from 'react'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
-import { View, Text } from 'react-native'
+import { View, Text, Pressable } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import { HomeScreen} from '../screens'
@@ -9,6 +9,7 @@ import { ViewStyles } from '../styles'
 import TabStyles from './Tab.style'
 
 const Tab = createBottomTabNavigator()
+
 
 const Tabs = () =>{
     return(
@@ -54,12 +55,12 @@ const Tabs = () =>{
                 options={{
                     headerShown: false,
                     tabBarIcon: () => (
-                        <View style={[
+                        <Pressable style={[
                             ViewStyles.center,
                             TabStyles.tabBarCenterButton
                         ]}>
                             <Icon name='plus' color={textColors.whiteDefault} size={30}/>
-                        </View>
+                        </Pressable>
                     )
                 }}/>
 

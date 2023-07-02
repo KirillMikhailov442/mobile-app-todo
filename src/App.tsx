@@ -7,10 +7,12 @@ import Navigation from './navigations/Navigation'
 
 const App = () =>{
     return (
-        <SafeAreaView style={AppStyles.wrapper}>
-            <StatusBar backgroundColor={bgColors.blackDefault}/>
-            <Navigation/>
-        </SafeAreaView>
+            // <Provider store={store}>
+                <SafeAreaView style={AppStyles.wrapper}>
+                    <StatusBar backgroundColor={bgColors.blackDefault}/>
+                    <Navigation/>
+                </SafeAreaView>
+            // </Provider>
     )
 }
 

@@ -3,7 +3,7 @@ import { IntroLayout } from "../../layouts"
 import IntroContent from "../../components/Intro/IntroContent"
 import { IIntroContent } from "../../types"
 import { IntroProps } from "../../types/navigation"
-import { useNavigation } from "@react-navigation/native"
+
 
 
 const introContent: IIntroContent[] = 

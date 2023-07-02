@@ -9,6 +9,11 @@ const ViewStyles = StyleSheet.create({
     center: {
         alignItems: 'center',
         justifyContent: 'center'
+    },
+
+    grid: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
     }
 })
 

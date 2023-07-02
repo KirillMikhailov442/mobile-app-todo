@@ -9,7 +9,8 @@ const TabStyles = StyleSheet.create({
         height: 90,
         paddingTop: 15,
         paddingBottom: 25,
-        borderTopWidth: 0
+        borderTopWidth: 0,
+        zIndex: 1
     },
 
     tabBarCenterButton: {

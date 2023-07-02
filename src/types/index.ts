@@ -5,6 +5,10 @@ import { InputProps } from "./InputProps"
 import { FormLayoutProps } from "./layouts/FormLayoutProps"
 import HeaderLayoutProps from "./layouts/HeaderLayoutProps"
 import AvatarProps from "./AvatarProps"
+import BottomSheetProps from "./BottomSheetProps"
+import ModalLayoutProps from "./layouts/ModalLayoutProps"
+import MiniCardProps from "./MiniCardProps"
+import BoxListProps from "./BoxListProps"
 
 export type {
     ButtonProps, 
@@ -13,4 +17,9 @@ export type {
     InputProps, 
     FormLayoutProps, 
     HeaderLayoutProps,
-    AvatarProps}
+    AvatarProps,
+    BottomSheetProps,
+    ModalLayoutProps,
+    MiniCardProps,
+    BoxListProps
+}

@@ -84,13 +84,13 @@ const FormLayout: React.FC<FormLayoutProps & LayoutProps> = ({
                         TextStyles.text,
                         TextStyles.textCenter,
                         FormLayoutStyles.bottomText
-                    ]}>{bottomText.text}
+                    ]}>{bottomText && bottomText.text}
                         <Text 
                             style={[
                                 FormLayoutStyles.bottomTextLink
                             ]}
                             onPress={()=> navigation.navigate(bottomText.link.screen)}>
-                            {bottomText.link.text}
+                            {bottomText && bottomText.link.text}
                         </Text>
                     </Text>
 
