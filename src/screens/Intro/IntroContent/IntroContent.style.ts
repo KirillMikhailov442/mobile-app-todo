@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native'
-import { bgColors } from '../../constants/colors'
+import { bgColors } from '../../../constants/colors'
 
 const IntroContentStyles = StyleSheet.create({
     container: {

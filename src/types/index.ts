@@ -1,14 +1,18 @@
-import { ButtonProps } from "./ButtonProps"
-import { LayoutProps } from "./layouts/LayoutProps"
-import { IIntroContent } from "./IIntroContent"
-import { InputProps } from "./InputProps"
-import { FormLayoutProps } from "./layouts/FormLayoutProps"
+import ButtonProps  from "./UI/ButtonProps"
+import LayoutProps from "./layouts/LayoutProps"
+import IIntroContent from "./IIntroContent"
+import InputProps from "./UI/InputProps"
+import FormLayoutProps from "./layouts/FormLayoutProps"
 import HeaderLayoutProps from "./layouts/HeaderLayoutProps"
-import AvatarProps from "./AvatarProps"
+import AvatarProps from "./UI/AvatarProps"
 import BottomSheetProps from "./BottomSheetProps"
 import ModalLayoutProps from "./layouts/ModalLayoutProps"
-import MiniCardProps from "./MiniCardProps"
-import BoxListProps from "./BoxListProps"
+import MiniCardProps from "./UI/MiniCardProps"
+import BoxListProps from "./UI/BoxListProps"
+import CheckBoxProps from "./UI/CheckBoxProps"
+import ToDoItemProps from "./ToDoItemProps"
+import ToDoListProps from "./ToDoListProps"
+import ColorsListItemProps from "./ColorsListItemProps"
 
 export type {
     ButtonProps, 
@@ -21,5 +25,9 @@ export type {
     BottomSheetProps,
     ModalLayoutProps,
     MiniCardProps,
-    BoxListProps
+    BoxListProps,
+    CheckBoxProps,
+    ToDoItemProps,
+    ToDoListProps,
+    ColorsListItemProps
 }

@@ -19,7 +19,7 @@ const InputStyles = StyleSheet.create({
         backgroundColor: bgColors.blackLight
     },
     input: {
-        width: 'auto',
+        flex: 1,
         height: 48,
         paddingLeft: 12,
         paddingRight: 12

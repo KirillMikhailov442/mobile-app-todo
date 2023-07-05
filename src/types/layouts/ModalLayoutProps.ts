@@ -1,5 +1,5 @@
-import ButtonPropsStyles from "../ButtonProps";
-import { LayoutProps } from "./LayoutProps";
+import ButtonPropsStyles from "../UI/ButtonProps";
+import LayoutProps from "./LayoutProps";
 
 interface ModalLayoutPropsStyles {
     modal?: object,
@@ -15,7 +15,7 @@ interface ModalLayoutPropsButtonsItem {
 }
 
 interface ModalLayoutPropsButttons {
-    left: ModalLayoutPropsButtonsItem,
+    left?: ModalLayoutPropsButtonsItem,
     right: ModalLayoutPropsButtonsItem
 }
 
@@ -23,5 +23,6 @@ export default interface ModalLayoutProps extends LayoutProps {
     styles?: ModalLayoutPropsStyles,
     buttons?: ModalLayoutPropsButttons,
     visibleModal?: boolean,
-    title?: string
+    title?: string,
+    onPressButton?: ()=> void
 }

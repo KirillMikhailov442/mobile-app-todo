@@ -67,8 +67,9 @@ const ModalPriority = () =>{
                 }
             }}>
             <View style={ModalPriorityStyles.grid}>
-                {dataTaskPriority.map(({icon, number}) => 
+                {dataTaskPriority.map(({icon, number}, index) => 
                     <MiniCard 
+                        key={index}
                         cardText={number}
                         styles={{container: {margin: 8}}}
                         icon={<Icon name={icon} size={25} color={textColors.whiteDefault}/>}/>)}

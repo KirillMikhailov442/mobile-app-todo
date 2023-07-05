@@ -3,12 +3,12 @@ import { ScrollView } from "react-native"
 import { useFormik } from "formik"
 import * as Yup from 'yup';
 
-import Button from "../UI/Button/Button"
-import Input from "../UI/Input/Input"
-import { FormLayout } from "../../layouts"
-import { ViewStyles } from "../../styles"
-import { buttonColors } from "../../constants/colors"
-import { NavigationProps } from "../../types/navigation";
+import Button from "../../../components/UI/Button/Button"
+import Input from "../../../components/UI/Input/Input"
+import { FormLayout } from "../../../layouts"
+import { ViewStyles } from "../../../styles"
+import { buttonColors } from "../../../constants/colors"
+import { NavigationProps } from "../../../types/navigation";
 
 
 const RegisterForm: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation}) =>{
@@ -42,7 +42,10 @@ const RegisterForm: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation
     })
 
     return(
-        <ScrollView style={ViewStyles.container}>
+        <ScrollView style={[
+            ViewStyles.container,
+            ViewStyles.fullScreen
+        ]}>
             <FormLayout 
                 title="Register" 
                 showSocialMedias={true}

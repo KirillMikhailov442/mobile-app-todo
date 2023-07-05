@@ -12,7 +12,7 @@ const ModalCalendar = () =>{
 
     return(
         <ModalLayout
-            visibleModal={false}
+            visibleModal={true}
             buttons={{
                 left: {
                     text: 'Cancel'

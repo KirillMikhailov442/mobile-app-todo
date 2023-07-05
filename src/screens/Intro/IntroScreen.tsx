@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { IntroLayout } from "../../layouts"
-import IntroContent from "../../components/Intro/IntroContent"
+import IntroContent from "./IntroContent/IntroContent"
 import { IIntroContent } from "../../types"
 import { IntroProps } from "../../types/navigation"
 

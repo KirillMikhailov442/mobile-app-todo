@@ -17,7 +17,7 @@ interface FormLayoutPropsBottomText {
     link: FormLayoutPropsBottomTextLink
 }
 
-export interface FormLayoutProps {
+export default interface FormLayoutProps {
     title?: string,
     showSocialMedias?: boolean,
     bottomText?: FormLayoutPropsBottomText

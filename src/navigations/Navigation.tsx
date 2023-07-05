@@ -3,7 +3,12 @@ import {CardStyleInterpolators, createStackNavigator} from '@react-navigation/st
 import { NavigationContainer } from '@react-navigation/native';
 
 import { bgColors, textColors } from "../constants/colors";
-import { IntroScreen, WelcomeScreen, LoginScreen, RegisterScreen } from "../screens";
+import { 
+    IntroScreen,
+    WelcomeScreen,
+    LoginScreen,
+    RegisterScreen,
+    CreateCategoryScreen, } from "../screens";
 import Tabs from "./Tabs";
 
 
@@ -29,7 +34,7 @@ const Navigation = () =>{
                     options={{headerShown: false}}
                     name="home"
                     component={Tabs}/>
-
+                    
                 <Stack.Screen 
                     options={{headerShown: false}} 
                     name="intro" 
@@ -68,6 +73,18 @@ const Navigation = () =>{
                     }}
                     name="register"
                     component={RegisterScreen}/>
+
+                <Stack.Screen
+                    options={{
+                        headerStyle: {
+                            backgroundColor: bgColors.blackDefault
+                        },
+                        headerTitle: '',
+                        headerTintColor: textColors.whiteDefault,
+                        headerShown: false
+                    }}
+                    name="categories"
+                    component={CreateCategoryScreen}/>
 
             </Stack.Navigator>
         </NavigationContainer>

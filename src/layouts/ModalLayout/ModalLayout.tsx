@@ -11,7 +11,8 @@ const ModalLayout: React.FC<ModalLayoutProps> = ({
     styles,
     buttons,
     visibleModal,
-    title
+    title,
+    onPressButton
 }) =>{
 
     const [showModal, setShowModal] = useState(visibleModal)
@@ -40,29 +41,36 @@ const ModalLayout: React.FC<ModalLayoutProps> = ({
                     <View style={[
                         ModalLayoutStyles.footer
                     ]}>
-                        <Button
+                        {buttons?.left && 
+                            <Button
                             text={buttons?.left.text}
                             onPress={()=> setShowModal(false)}
                             styles={{
                                 button: {
                                     ...ModalLayoutStyles.footerButton,
+                                    ...buttons?.left.styles?.button
 
                                     }, 
-                                text: {...ModalLayoutStyles.footerButtonText, }, 
-                            }}/>
+                                text: {
+                                    ...ModalLayoutStyles.footerButtonText, 
+                                    ...buttons?.left.styles?.text
+                                }, 
+                            }}/>}
 
-                        <Button
+                        {buttons?.right && 
+                            <Button
                             text={buttons?.right.text}
+                            onPress={onPressButton}
                             styles={{
                                 button: {
                                     ...ModalLayoutStyles.footerButton,
                                     ...ModalLayoutStyles.footerButtonRight,
-                                    ...buttons?.left.styles?.button }, 
+                                    ...buttons?.right.styles?.button }, 
                                 text: {
                                     ...ModalLayoutStyles.footerButtonText,
                                     ...ModalLayoutStyles.footerButtonTextRight,
                                     ...buttons?.right.styles?.text }, 
-                            }}/>
+                            }}/>}
 
                     </View>
                 </View>

@@ -1,29 +1,31 @@
 import React from "react"
 import { Text, View } from "react-native"
 
-import { TextStyles, ViewStyles } from "../../styles"
-import WelcomeStyles from "./Welcome.style"
-import Button from "../UI/Button/Button"
-import { buttonColors } from "../../constants/colors"
-import { NavigationProps } from "../../types/navigation";
+import { TextStyles, ViewStyles } from "../../../styles"
+import WelcomeContentStyles from "./WelcomeContent.style"
+import Button from "../../../components/UI/Button/Button"
+import { buttonColors } from "../../../constants/colors"
+import { NavigationProps } from "../../../types/navigation";
 
-const Welcome: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation}) =>{
+const WelcomeContent: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation}) =>{
     return(
-        <View style={ViewStyles.container}>
+        <View style={[
+            ViewStyles.container,
+            ViewStyles.fullScreen]}>
             <Text style={[
                 TextStyles.text, 
                 TextStyles.textCenter,
                 TextStyles.title,
-                WelcomeStyles.title
+                WelcomeContentStyles.title
                 ]}>Welcome to UpTodo</Text>
 
                 <Text style={[
                     TextStyles.text,
                     TextStyles.textCenter,
-                    WelcomeStyles.subTitle
+                    WelcomeContentStyles.subTitle
                 ]}>Please login to your account or create new account to continue</Text>
                 
-                <View style={WelcomeStyles.footer}>
+                <View style={WelcomeContentStyles.footer}>
                     <Button 
                         text="LOGIN"
                         styles={{
@@ -46,4 +48,4 @@ const Welcome: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation}) =>
     )
 }
 
-export default Welcome
+export default WelcomeContent

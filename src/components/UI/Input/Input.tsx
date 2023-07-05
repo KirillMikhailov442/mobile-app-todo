@@ -20,18 +20,18 @@ const Input: React.FC<InputProps> = ({
     return(
         <View style={[
             InputStyles.container,
-            styles && {...styles.container}
+            styles?.container
         ]}>
             { label &&
                 <Text style={[
                     TextStyles.text,
                     InputStyles.label,
-                    styles && {...styles.label}
+                    styles?.label
                 ]}>{label}</Text>
             }
             <View style={[
                 InputStyles.inputView,
-                styles && {...styles.input}
+                styles?.input
             ]}>
                 {icon && icon}
                 <TextInput 
@@ -43,12 +43,12 @@ const Input: React.FC<InputProps> = ({
                     style={[
                         TextStyles.text,
                         InputStyles.input,
-                        styles && {...styles.inputText},
+                        styles?.inputText
                     ]}/>
             </View>
             {error && <Text style={[
                 InputStyles.error,
-                styles && {...styles.error}
+                styles?.error
             ]}>{error}</Text>}
         </View>
     )

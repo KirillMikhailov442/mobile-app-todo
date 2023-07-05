@@ -33,7 +33,9 @@ const IntroLayout: React.FC<IntroLayoutProps> = ({children, navigation, limit, i
 
     
     return(
-        <View style={ViewStyles.container}>
+        <View style={[
+            ViewStyles.container,
+            ViewStyles.fullScreen]}>
             <View style={IntroLayoutStyles.header}>
                 <Button
                     text="SKIP" 

@@ -9,7 +9,7 @@ import BottomSheetFooter from './BottomSheetFooter/BottomSheetFooter';
 
 const BottomSheet = () =>{
 
-    const [showModal, setShowModal] = useState(false)
+    const [showModal, setShowModal] = useState(true)
 
     return(
         <Modal 

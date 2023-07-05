@@ -3,5 +3,6 @@ export type RootStackParamList = {
     welcome: undefined,
     login: undefined,
     register: undefined,
-    home: undefined
+    home: undefined,
+    categories: undefined
 }

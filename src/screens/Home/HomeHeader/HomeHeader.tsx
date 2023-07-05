@@ -3,7 +3,7 @@ import {Text} from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import { HeaderLayout } from "../../../layouts"
-import { Avatar } from "../../UI"
+import { Avatar } from "../../../components/UI"
 import HomeHeaderStyles from "./HomeHeader.style"
 import { textColors } from "../../../constants/colors"
 

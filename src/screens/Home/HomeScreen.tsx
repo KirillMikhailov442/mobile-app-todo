@@ -1,10 +1,28 @@
 import React from "react"
-import Home from "../../components/Home/Home"
+import { SafeAreaView } from "react-native"
 
-const HomeScreen = () =>{
+
+import HomeContent from "./HomeContent/HomeContent"
+import HomeHeader from "./HomeHeader/HomeHeader"
+// import HomeEmpty from "./HomeEmpty/HomeEmpty"
+import { ModalCalendar, ModalPriority, ModalTime, ModalCategory } from "../../components/Modals"
+import { BottomSheet } from "../../components"
+import { NavigationProps } from "../../types/navigation"
+import HomeScreenStyles from "./HomeScreen.style"
+
+const HomeScreen:React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation}) =>{
 
     return(
-        <Home/>
+        <SafeAreaView style={[HomeScreenStyles.container]}>
+            <HomeHeader/>
+            <HomeContent/>
+            {/* <HomeEmpty/> */}
+            {/* <BottomSheet/> */}
+            {/* <ModalCalendar/> */}
+            {/* <ModalTime/> */}
+            {/* <ModalPriority/> */}
+            <ModalCategory navigation={navigation}/>
+        </SafeAreaView>
     )
 }
 

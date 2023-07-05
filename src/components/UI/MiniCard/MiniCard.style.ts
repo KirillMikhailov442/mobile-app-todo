@@ -24,7 +24,7 @@ const MiniCardStyles = StyleSheet.create({
 
     bottomLabel: {
         marginTop: 5,
-        fontSize: 14,
+        fontSize: 12,
         color: textColors.whiteDefault,
         textAlign: 'center'
     }

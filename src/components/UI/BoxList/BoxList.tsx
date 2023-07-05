@@ -13,14 +13,13 @@ const BoxList: React.FC<BoxListProps> = ({
             BoxListStyles.container,
             styles?.container
         ]}>
-            <Animated.ScrollView style={[BoxListStyles.container]}>
                 <FlatList
+                style={BoxListStyles.container}
                 showsVerticalScrollIndicator={false}
                 showsHorizontalScrollIndicator={false}
                 bounces={false}
                 data={data}
                 renderItem={({item}) => <Text style={[BoxListStyles.text]}>{item}</Text>}/>
-            </Animated.ScrollView>
 
         </View>
     )

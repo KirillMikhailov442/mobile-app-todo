@@ -2,7 +2,7 @@ import React from "react"
 import { Text, Image, View } from "react-native"
 
 import IntroContentStyles from "./IntroContent.style"
-import { TextStyles } from "../../styles"
+import { TextStyles } from "../../../styles"
 import IntroContentIndicator from "./IntroContentIndicator"
 
 interface IntroContentProps {
@@ -27,7 +27,7 @@ const IntroContent = ({
         <View style={IntroContentStyles.container}>
             <Image 
                 style={IntroContentStyles.image} 
-                source={require('../../assets/images/intro/intro-1.png')}/>
+                source={require(`../../../assets/images/intro/intro-1.png`)}/>
             <IntroContentIndicator limit={limit} index={index}/>
             <Text style={[
                 TextStyles.text,

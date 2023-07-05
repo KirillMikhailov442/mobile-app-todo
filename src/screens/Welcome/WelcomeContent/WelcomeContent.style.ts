@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const WelcomeScreenStyles = StyleSheet.create({
+const WelcomeContentStyles = StyleSheet.create({
     title: {
         marginTop: 45
     },
@@ -13,4 +13,4 @@ const WelcomeScreenStyles = StyleSheet.create({
     }
 })
 
-export default WelcomeScreenStyles
+export default WelcomeContentStyles

@@ -1,4 +1,4 @@
-import { LayoutProps } from "./LayoutProps";
+import LayoutProps from "./LayoutProps";
 
 interface HeaderLayoutPropsStyles {
     header?: object,

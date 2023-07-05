@@ -1,7 +1,7 @@
 import React from "react"
 import { Text, TouchableOpacity, View} from "react-native"
 import ButtonStyles from "./Button.style"
-import { ButtonProps } from "../../../types/index"
+import { ButtonProps } from "../../../types"
 
 
 const Button: React.FC<ButtonProps> = ({
@@ -9,7 +9,8 @@ const Button: React.FC<ButtonProps> = ({
     onPress,
     isActive = true,
     styles,
-    icon
+    icon,
+    positinIcon = 'left'
 }) =>{
 
     
@@ -19,13 +20,14 @@ const Button: React.FC<ButtonProps> = ({
             <View
             style={[
                 ButtonStyles.button,
-                styles && { ...styles.button}
+                styles?.button
             ]}>
-            {icon}
+            {positinIcon === 'left' && icon}
             {text && <Text style={[
                 ButtonStyles.buttonText,
-                styles && {...styles.text}
+                styles?.text
             ]}>{text}</Text>}
+            {positinIcon === 'right' && icon}
         </View>
         )
     }
@@ -35,13 +37,14 @@ const Button: React.FC<ButtonProps> = ({
             onPress={onPress}
             style={[
                 ButtonStyles.button,
-                styles && {...styles.button}
+                styles?.button
             ]}>
-            {icon}
+            {positinIcon === 'left' && icon}
             {text && <Text style={[
                 ButtonStyles.buttonText,
-                styles && {...styles.text}
+                styles?.text
             ]}>{text}</Text>}
+            {positinIcon === 'right' && icon}
         </TouchableOpacity>
     )
 }

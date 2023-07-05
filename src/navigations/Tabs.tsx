@@ -3,7 +3,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import { View, Text, Pressable } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
-import { HomeScreen} from '../screens'
+import { CategoriesScreen, HomeScreen} from '../screens'
 import { textColors } from '../constants/colors'
 import { ViewStyles } from '../styles'
 import TabStyles from './Tab.style'
@@ -32,6 +32,7 @@ const Tabs = () =>{
                         </View>
                     )
                 }}/>
+
 
             <Tab.Screen
                 name='calendar'

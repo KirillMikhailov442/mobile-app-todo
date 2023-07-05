@@ -1,4 +1,4 @@
-export interface IIntroContent {
+export default interface IIntroContent {
     title: string,
     subtitle: string,
     imageUrl?: string

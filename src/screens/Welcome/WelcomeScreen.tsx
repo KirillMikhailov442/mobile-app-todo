@@ -1,11 +1,11 @@
 import React from "react"
 
 import { NavigationProps } from "../../types/navigation";
-import Welcome from "../../components/Welcome/Welcome"
+import WelcomeContent from "./WelcomeContent/WelcomeContent"
 
 const WelcomeScreen: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation}) =>{
     return(
-        <Welcome navigation={navigation}/>
+        <WelcomeContent navigation={navigation}/>
     )
 }
 

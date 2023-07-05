@@ -12,7 +12,7 @@ interface InputPropsStyles {
     error?: object,
 }
 
-export interface InputProps {
+export default interface InputProps {
     placeholder: InputPropsPlaceholder,
     label?: string,
     value?: string,
