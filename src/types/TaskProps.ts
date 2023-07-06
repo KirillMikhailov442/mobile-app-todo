@@ -1,13 +1,13 @@
 
-interface ToDoItemPropsDetailes {
+interface TaskPropsDetails {
     date: string,
     category?: string,
     priority?: number
 }
 
-export default interface ToDoItemProps {
+export default interface TaskProps {
     check: boolean,
     text: string,
-    details: ToDoItemPropsDetailes,
+    details: TaskPropsDetails,
     completed: boolean
 }

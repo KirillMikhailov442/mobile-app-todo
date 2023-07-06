@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import { buttonColors } from "../../constants/colors";
 
-const ToDoListStyles = StyleSheet.create({
+const TasksListStyles = StyleSheet.create({
     buttonLabel: {
         paddingTop: 5,
         paddingBottom: 5,
@@ -19,4 +19,4 @@ const ToDoListStyles = StyleSheet.create({
     }
 })
 
-export default ToDoListStyles
+export default TasksListStyles

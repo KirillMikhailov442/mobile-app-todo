@@ -8,7 +8,8 @@ import {
     WelcomeScreen,
     LoginScreen,
     RegisterScreen,
-    CreateCategoryScreen, } from "../screens";
+    CreateCategoryScreen,
+    TaskScreen, } from "../screens";
 import Tabs from "./Tabs";
 
 
@@ -85,6 +86,18 @@ const Navigation = () =>{
                     }}
                     name="categories"
                     component={CreateCategoryScreen}/>
+
+                <Stack.Screen
+                    options={{
+                        headerStyle: {
+                            backgroundColor: bgColors.blackDefault
+                        },
+                        headerTitle: '',
+                        headerTintColor: textColors.whiteDefault,
+                        headerShown: false
+                    }}
+                    name="task"
+                    component={TaskScreen}/>
 
             </Stack.Navigator>
         </NavigationContainer>

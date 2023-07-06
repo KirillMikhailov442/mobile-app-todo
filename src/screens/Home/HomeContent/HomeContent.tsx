@@ -3,10 +3,10 @@ import { ScrollView, View } from "react-native";
 
 import { ViewStyles } from "../../../styles";
 import {SearchBar} from '../../../components/index'
-import ToDoList from "../../../components/ToDoList/ToDoList";
-import { ToDoItemProps } from "../../../types";
+import TasksList from "../../../components/TasksList/TasksList";
+import { TaskProps } from "../../../types";
 
-const tasks:ToDoItemProps[] = [
+const tasks: TaskProps[] = [
     {
         text: 'Do Math Homework',
         check: false,
@@ -41,7 +41,7 @@ const tasks:ToDoItemProps[] = [
     }
 ]
 
-const tasksCompleted:ToDoItemProps[] = [
+const tasksCompleted: TaskProps[] = [
     {
         text: 'Buy Grocery',
         check: false,
@@ -54,16 +54,18 @@ const tasksCompleted:ToDoItemProps[] = [
 
 const HomeContent = () =>{
     return(
-        <View style={ViewStyles.container}>
+        <View style={[ViewStyles.container, ViewStyles.fullScreen]}>
             <SearchBar/>
-            <ScrollView>
-                <ToDoList
+            <ScrollView
+                showsVerticalScrollIndicator={false}
+                showsHorizontalScrollIndicator={false}>
+                <TasksList
                     label="Today"
                     data={tasks}/>
-                <ToDoList 
+                <TasksList 
                     label="Completed"
                     data={tasksCompleted}
-                    styles={{container: {marginBottom: 40}}}/>
+                    />
             </ScrollView>
         </View>
     )

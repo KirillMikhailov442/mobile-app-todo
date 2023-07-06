@@ -3,15 +3,15 @@ import { FlatList, View } from "react-native";
 import Icon from 'react-native-vector-icons/SimpleLineIcons'
 
 
-import ToDoItem from "./ToDoItem/ToDoItem";
-import { ToDoListProps } from "../../types";
+import Task from "./Task/Task";
+import { TasksListProps } from "../../types";
 import { Button } from "../UI";
-import ToDoListStyles from "./ToDoList.style";
+import TasksListStyles from "./TasksList.style";
 import { textColors } from "../../constants/colors";
 
 
 
-const ToDoList: React.FC<ToDoListProps> = ({
+const TaskList: React.FC<TasksListProps> = ({
     label,
     data,
     showList = true,
@@ -30,12 +30,12 @@ const ToDoList: React.FC<ToDoListProps> = ({
                     icon={<Icon name={showToDoList ? 'arrow-down' : 'arrow-up'} size={10} color={textColors.whiteDefault}/>}
                     positinIcon="right"
                     styles={{
-                        button: ToDoListStyles.buttonLabel,
-                        text: ToDoListStyles.buttonLabelText
+                        button: TasksListStyles.buttonLabel,
+                        text: TasksListStyles.buttonLabelText
                     }}/>}
             {showToDoList && 
                     data?.map((item, index) => 
-                        <ToDoItem
+                        <Task
                             key={index}
                             text={item.text}
                             check={item.check}
@@ -46,4 +46,4 @@ const ToDoList: React.FC<ToDoListProps> = ({
     )
 }
 
-export default ToDoList
+export default TaskList

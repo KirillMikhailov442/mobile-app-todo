@@ -7,6 +7,7 @@ import { Button, Input } from '../../components/UI'
 import ColorList from './ColorsList/ColorsList'
 import { buttonColors, textColors } from '../../constants/colors'
 import { NavigationProps } from '../../types/navigation'
+import CreateCategoryFooter from './CreateCategoryFooter/CreateCategoryFooter'
 
 const CreateCategoryScreen: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation}) =>{
 
@@ -38,31 +39,7 @@ const CreateCategoryScreen: React.FC<Pick<NavigationProps, 'navigation'>> = ({na
                 <Text style={CreateCategoryStyles.label}>Category color:</Text>
             </View>
             <ColorList/>
-            <View style={[
-                CreateCategoryStyles.footer,
-                ViewStyles.container
-            ]}>
-                <Button
-                    text='Cancel'
-                    onPress={()=> navigation.goBack()}
-                    styles={{
-                        button: {
-                            width: 154,
-                        },
-                        text: {
-                            color: textColors.violet
-                        }
-                    }}/>
-
-                <Button
-                    text='Create Category'
-                    styles={{
-                        button: {
-                            width: 154,
-                            backgroundColor: buttonColors.violetDefault
-                        }
-                    }}/>
-            </View>
+            <CreateCategoryFooter navigation={navigation}/>
         </SafeAreaView>
     )
 }

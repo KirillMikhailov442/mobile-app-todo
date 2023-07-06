@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 import { bgColors, borderColors, buttonColors, textColors } from "../../../constants/colors";
 import { TextStyles } from "../../../styles";
 
-const ToDoItemStyles = StyleSheet.create({
+const TaskStyles = StyleSheet.create({
     container: {
         backgroundColor: bgColors.blackVeryLight,
         minHeight: 72,
@@ -61,4 +61,4 @@ const ToDoItemStyles = StyleSheet.create({
     }
 })
 
-export default ToDoItemStyles
+export default TaskStyles

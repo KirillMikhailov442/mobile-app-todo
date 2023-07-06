@@ -4,6 +4,7 @@ import LoginScreen from "./Login/LoginScreen";
 import RegisterScreen from "./Register/RegisterScreen";
 import WelcomeScreen from "./Welcome/WelcomeScreen";
 import CreateCategoryScreen from "./CreateCategory/CreateCategoryScreen";
+import TaskScreen from "./Task/TaskScreen";
 
 export {
     HomeScreen, 
@@ -11,5 +12,6 @@ export {
     IntroScreen, 
     RegisterScreen, 
     WelcomeScreen,
-    CreateCategoryScreen
+    CreateCategoryScreen,
+    TaskScreen
 }

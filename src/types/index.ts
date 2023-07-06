@@ -10,9 +10,10 @@ import ModalLayoutProps from "./layouts/ModalLayoutProps"
 import MiniCardProps from "./UI/MiniCardProps"
 import BoxListProps from "./UI/BoxListProps"
 import CheckBoxProps from "./UI/CheckBoxProps"
-import ToDoItemProps from "./ToDoItemProps"
-import ToDoListProps from "./ToDoListProps"
+import TaskProps from "./TaskProps"
+import TasksListProps from "./TasksListProps"
 import ColorsListItemProps from "./ColorsListItemProps"
+import PreferenceProps from "./PreferenceProps"
 
 export type {
     ButtonProps, 
@@ -27,7 +28,8 @@ export type {
     MiniCardProps,
     BoxListProps,
     CheckBoxProps,
-    ToDoItemProps,
-    ToDoListProps,
-    ColorsListItemProps
+    TaskProps,
+    TasksListProps,
+    ColorsListItemProps,
+    PreferenceProps
 }

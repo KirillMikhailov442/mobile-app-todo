@@ -8,6 +8,8 @@ enum textColors {
     grayDark = colors.gray5,
     grayVeryDark = colors.gray6,
 
+    blue = colors.blue1,
+
     black = colors.black1,
 
     violet = colors.violet1,

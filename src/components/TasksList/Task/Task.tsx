@@ -2,32 +2,36 @@ import React, { useState } from 'react'
 import { Text, View, TouchableOpacity } from 'react-native'
 
 import { Button, CheckBox } from '../../UI'
-import ToDoItemStyles from './ToDoItem.style'
-import { ToDoItemProps } from '../../../types'
+import TaskStyles from './Task.style'
+import {TaskProps} from '../../../types'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+import { useNavigation } from '@react-navigation/native'
+import { NavigationProps } from '../../../types/navigation'
 
-const ToDoItem: React.FC<ToDoItemProps> = ({
+const Task: React.FC<TaskProps> = ({
     text,
     check,
     details,
-    completed
+    completed,
 }) =>{
 
     const [value, setValue] = useState(check)
+
+    const navigation = useNavigation()
 
 
     if(completed){
         return(
             <View
-            style={ToDoItemStyles.container}>
+            style={TaskStyles.container}>
             <CheckBox
                 value={value}
                 onChange={()=> setValue(prev => !prev)}
-                styles={{container: ToDoItemStyles.checkBox}}/>
-            <View style={ToDoItemStyles.content}>
-                <Text style={ToDoItemStyles.text}>{text}</Text>
-                <View style={ToDoItemStyles.details}>
-                    <Text style={ToDoItemStyles.detailsDate}>{details.date}</Text>
+                styles={{container: TaskStyles.checkBox}}/>
+            <View style={TaskStyles.content}>
+                <Text style={TaskStyles.text}>{text}</Text>
+                <View style={TaskStyles.details}>
+                    <Text style={TaskStyles.detailsDate}>{details.date}</Text>
                 </View>
             </View>
         </View>
@@ -36,24 +40,25 @@ const ToDoItem: React.FC<ToDoItemProps> = ({
     
     return(
         <TouchableOpacity
+            onLongPress={()=> navigation.navigate('task')}
             onPress={()=> setValue(prev => !prev)}
-            style={ToDoItemStyles.container}>
+            style={TaskStyles.container}>
             <CheckBox
                 value={value}
                 onChange={()=> setValue(prev => !prev)}
-                styles={{container: ToDoItemStyles.checkBox}}/>
-            <View style={ToDoItemStyles.content}>
-                <Text style={ToDoItemStyles.text}>{text}</Text>
-                <View style={ToDoItemStyles.details}>
-                    <Text style={ToDoItemStyles.detailsDate}>{details.date}</Text>
+                styles={{container: TaskStyles.checkBox}}/>
+            <View style={TaskStyles.content}>
+                <Text style={TaskStyles.text}>{text}</Text>
+                <View style={TaskStyles.details}>
+                    <Text style={TaskStyles.detailsDate}>{details.date}</Text>
                     {details.category && 
                         <Button 
                             text={details.category}
                             isActive={false}
                             icon={<Icon name='school' size={14} color={'white'} style={{marginRight: 5}}/>}
                             styles={{
-                                button: {...ToDoItemStyles.detailsButton, ...ToDoItemStyles.detailsButtonCategory},
-                                text: ToDoItemStyles.detailsButtonText
+                                button: {...TaskStyles.detailsButton, ...TaskStyles.detailsButtonCategory},
+                                text: TaskStyles.detailsButtonText
                             }}/>}
 
                     {details.priority && 
@@ -62,8 +67,8 @@ const ToDoItem: React.FC<ToDoItemProps> = ({
                             isActive={false}
                             icon={<Icon name='flag' size={14} color={'white'} style={{marginRight: 5}}/>}
                             styles={{
-                                button: {...ToDoItemStyles.detailsButton, ...ToDoItemStyles.detailsButtonPriority},
-                                text: ToDoItemStyles.detailsButtonText
+                                button: {...TaskStyles.detailsButton, ...TaskStyles.detailsButtonPriority},
+                                text: TaskStyles.detailsButtonText
                         }}/>}
                 </View>
             </View>
@@ -71,4 +76,4 @@ const ToDoItem: React.FC<ToDoItemProps> = ({
     )
 }
 
-export default ToDoItem
+export default Task

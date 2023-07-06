@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import { ModalLayout } from '../../../layouts'
@@ -64,13 +64,16 @@ const categories: ICategory[] = [
 
 const ModalCategory: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation}) =>{
 
-    // const navigation:Pick<NavigationProps, 'navigation'> = useNavigation()
+    const [visible, setVisible] = useState(true)
 
     return(
         <ModalLayout
             title='Choose Category'
-            visibleModal={true}
-            onPressButton={()=> navigation.navigate('categories')}
+            visibleModal={visible}
+            onPressButton={()=> {
+                setVisible(false)
+                navigation.navigate('categories')
+            }}
             buttons={{
                 right: {
                     text: 'Add Category',

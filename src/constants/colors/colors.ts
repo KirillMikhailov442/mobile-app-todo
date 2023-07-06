@@ -10,6 +10,8 @@ enum colors {
     gray5 = '#979797',
     gray6 = '#535353',
 
+    blue1 = '0055A3',
+
     violet1 = '#8687E7',
     violet2 = '#8687E780',
     violet3 = '#8E7CFF',
