@@ -3,7 +3,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import { View, Text, Pressable } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
-import { CategoriesScreen, HomeScreen} from '../screens'
+import { CalendarScreen, CreateCategoryScreen, HomeScreen} from '../screens'
 import { textColors } from '../constants/colors'
 import { ViewStyles } from '../styles'
 import TabStyles from './Tab.style'
@@ -23,11 +23,11 @@ const Tabs = () =>{
                 component={HomeScreen}
                 options={{
                     headerShown: false,
-                    tabBarIcon: () => (
+                    tabBarIcon: ({focused}) => (
                         <View style={[
                             ViewStyles.center
                         ]}>
-                            <Icon name='home' color={textColors.whiteDefault} size={25}/>
+                            <Icon name={focused ? 'home' : 'home-outline'} color={textColors.whiteDefault} size={25}/>
                             <Text style={TabStyles.tabBarItemLabel}>Home</Text>
                         </View>
                     )
@@ -36,14 +36,14 @@ const Tabs = () =>{
 
             <Tab.Screen
                 name='calendar'
-                component={HomeScreen}
+                component={CalendarScreen}
                 options={{
                     headerShown: false,
-                    tabBarIcon: () => (
+                    tabBarIcon: ({focused}) => (
                         <View style={[
                             ViewStyles.center
                         ]}>
-                            <Icon name='calendar-month' color={textColors.whiteDefault} size={25}/>
+                            <Icon name={focused ? 'calendar-month' : 'calendar-month-outline'} color={textColors.whiteDefault} size={25}/>
                             <Text style={TabStyles.tabBarItemLabel}>Calendar</Text>
                         </View>
                     )
@@ -71,11 +71,11 @@ const Tabs = () =>{
                 component={HomeScreen}
                 options={{
                     headerShown: false,
-                    tabBarIcon: () => (
+                    tabBarIcon: ({focused}) => (
                         <View style={[
                             ViewStyles.center
                         ]}>
-                            <Icon name='clock-time-four-outline' color={textColors.whiteDefault} size={25}/>
+                            <Icon name={focused ? 'clock-time-four' : 'clock-time-four-outline'} color={textColors.whiteDefault} size={25}/>
                             <Text style={TabStyles.tabBarItemLabel}>Focuse</Text>
                         </View>
                     )
@@ -86,11 +86,11 @@ const Tabs = () =>{
                 component={HomeScreen}
                 options={{
                     headerShown: false,
-                    tabBarIcon: () => (
+                    tabBarIcon: ({focused}) => (
                         <View style={[
                             ViewStyles.center
                         ]}>
-                            <Icon name='account' color={textColors.whiteDefault} size={25}/>
+                            <Icon name={focused ? 'account' : 'account-outline'} color={textColors.whiteDefault} size={25}/>
                             <Text style={TabStyles.tabBarItemLabel}>Profile</Text>
                         </View>
                     )

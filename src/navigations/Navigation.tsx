@@ -31,6 +31,8 @@ const Navigation = () =>{
                 }}>
 
 
+
+                {/* Tabs */}
                 <Stack.Screen
                     options={{headerShown: false}}
                     name="home"

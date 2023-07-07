@@ -14,6 +14,7 @@ import TaskProps from "./TaskProps"
 import TasksListProps from "./TasksListProps"
 import ColorsListItemProps from "./ColorsListItemProps"
 import PreferenceProps from "./PreferenceProps"
+import CalendarCarouselItemProps from "./CalendarCarouselItemProps"
 
 export type {
     ButtonProps, 
@@ -31,5 +32,6 @@ export type {
     TaskProps,
     TasksListProps,
     ColorsListItemProps,
-    PreferenceProps
+    PreferenceProps,
+    CalendarCarouselItemProps
 }
