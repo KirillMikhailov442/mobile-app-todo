@@ -9,7 +9,8 @@ import {
     LoginScreen,
     RegisterScreen,
     CreateCategoryScreen,
-    TaskScreen, } from "../screens";
+    TaskScreen,
+    SettingsScreen, } from "../screens";
 import Tabs from "./Tabs";
 
 
@@ -100,6 +101,18 @@ const Navigation = () =>{
                     }}
                     name="task"
                     component={TaskScreen}/>
+
+                <Stack.Screen
+                    options={{
+                        headerStyle: {
+                            backgroundColor: bgColors.blackDefault
+                        },
+                        headerTitle: 'Settings',
+                        headerTitleAlign: 'center',
+                        headerTintColor: textColors.whiteDefault
+                    }}
+                    name="settings"
+                    component={SettingsScreen}/>
 
             </Stack.Navigator>
         </NavigationContainer>

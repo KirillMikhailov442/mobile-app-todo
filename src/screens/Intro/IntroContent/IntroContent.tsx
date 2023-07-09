@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Text, Image, View } from "react-native"
 
 import IntroContentStyles from "./IntroContent.style"
@@ -14,20 +14,21 @@ interface IntroContentProps {
 }
 
 
+
 const IntroContent = ({
     title,
     subtitle,
-    imageUrl,
     index,
-    limit
+    limit,
+    imageUrl
 }:IntroContentProps) =>{
-    
+
     
     return(
         <View style={IntroContentStyles.container}>
             <Image 
                 style={IntroContentStyles.image} 
-                source={require(`../../../assets/images/intro/intro-1.png`)}/>
+                source={imageUrl}/>
             <IntroContentIndicator limit={limit} index={index}/>
             <Text style={[
                 TextStyles.text,

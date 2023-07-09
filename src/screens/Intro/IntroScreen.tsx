@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+
 import { IntroLayout } from "../../layouts"
 import IntroContent from "./IntroContent/IntroContent"
 import { IIntroContent } from "../../types"
@@ -11,16 +12,19 @@ const introContent: IIntroContent[] =
         {
             title: "Manage your tasks",
             subtitle: 'You can easily manage all of your daily tasks in DoMe for free',
+            imageUrl: require('../../assets/images/intro/intro-1.png')
         },
 
         {
             title: "Create daily routine",
             subtitle: 'In Uptodo  you can create your personalized routine to stay productive',
+            imageUrl: require('../../assets/images/intro/intro-2.png')
         },
         
         {
             title: "Orgonaize your tasks",
             subtitle: 'You can organize your daily tasks by adding your tasks into separate categories',
+            imageUrl: require('../../assets/images/intro/intro-3.png')
         }
     ]
 const IntroScreen: React.FC<IntroProps> = ({route, navigation}) =>{

@@ -3,8 +3,8 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import { View, Text, Pressable } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
-import { CalendarScreen, CreateCategoryScreen, HomeScreen} from '../screens'
-import { textColors } from '../constants/colors'
+import { CalendarScreen, CreateCategoryScreen, FocusScreen, HomeScreen, ProfileScreen} from '../screens'
+import { bgColors, textColors } from '../constants/colors'
 import { ViewStyles } from '../styles'
 import TabStyles from './Tab.style'
 
@@ -67,8 +67,8 @@ const Tabs = () =>{
 
 
             <Tab.Screen
-                name='focuse'
-                component={HomeScreen}
+                name='focus'
+                component={FocusScreen}
                 options={{
                     headerShown: false,
                     tabBarIcon: ({focused}) => (
@@ -76,14 +76,14 @@ const Tabs = () =>{
                             ViewStyles.center
                         ]}>
                             <Icon name={focused ? 'clock-time-four' : 'clock-time-four-outline'} color={textColors.whiteDefault} size={25}/>
-                            <Text style={TabStyles.tabBarItemLabel}>Focuse</Text>
+                            <Text style={TabStyles.tabBarItemLabel}>Focus</Text>
                         </View>
                     )
                 }}/>
 
             <Tab.Screen
                 name='profile'
-                component={HomeScreen}
+                component={ProfileScreen}
                 options={{
                     headerShown: false,
                     tabBarIcon: ({focused}) => (

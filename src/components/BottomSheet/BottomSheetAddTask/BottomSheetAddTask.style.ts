@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native"
-import { bgColors, borderColors } from "../../constants/colors"
+import { bgColors, borderColors } from "../../../constants/colors"
 
-const BottomSheetStyles = StyleSheet.create({
+const BottomSheetAddTaskStyles = StyleSheet.create({
     container: {
         height: 230,
         backgroundColor: bgColors.blackVeryLight,
@@ -49,4 +49,4 @@ const BottomSheetStyles = StyleSheet.create({
     }
 })
 
-export default BottomSheetStyles
+export default BottomSheetAddTaskStyles

@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import {  View } from 'react-native';
 import Modal from 'react-native-modal';
 
-import BottomSheetStyles from './BottomSheet.style';
-import { FormLayout } from '../../layouts';
-import { Input } from '../UI';
-import BottomSheetFooter from './BottomSheetFooter/BottomSheetFooter';
+import BottomSheetAddTaskStyles from './BottomSheetAddTask.style';
+import { FormLayout } from '../../../layouts';
+import { Input } from '../../UI';
+import BottomSheetFooter from './BottomSheetAddTaskFooter/BottomSheetAddTaskFooter';
 
-const BottomSheet = () =>{
+const BottomSheetAddTask = () =>{
 
     const [showModal, setShowModal] = useState(true)
 
@@ -17,12 +17,12 @@ const BottomSheet = () =>{
             onBackdropPress={()=> setShowModal(false)}
             swipeDirection="down" 
             style={{margin: 0}}>
-            <View style={BottomSheetStyles.container}>
+            <View style={BottomSheetAddTaskStyles.container}>
                 <FormLayout 
                     title='Add Task'
                     styles={{
-                        container: BottomSheetStyles.form,
-                        title: BottomSheetStyles.title
+                        container: BottomSheetAddTaskStyles.form,
+                        title: BottomSheetAddTaskStyles.title
                     }}>
                     <>
                         <Input
@@ -30,8 +30,8 @@ const BottomSheet = () =>{
                                 text: 'Description'
                             }}
                             styles={{
-                                container: BottomSheetStyles.inputContainer,
-                                input: BottomSheetStyles.input,
+                                container: BottomSheetAddTaskStyles.inputContainer,
+                                input: BottomSheetAddTaskStyles.input,
                             }}/>
 
                         <Input
@@ -39,8 +39,8 @@ const BottomSheet = () =>{
                                 text: 'Description'
                             }}
                             styles={{
-                                container: BottomSheetStyles.inputContainer,
-                                input: BottomSheetStyles.input,
+                                container: BottomSheetAddTaskStyles.inputContainer,
+                                input: BottomSheetAddTaskStyles.input,
                             }}/>
                             
                         <BottomSheetFooter/>
@@ -52,4 +52,4 @@ const BottomSheet = () =>{
 }
 
 
-export default BottomSheet;
+export default BottomSheetAddTask;

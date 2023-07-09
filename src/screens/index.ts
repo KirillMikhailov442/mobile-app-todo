@@ -6,6 +6,9 @@ import WelcomeScreen from "./Welcome/WelcomeScreen";
 import CreateCategoryScreen from "./CreateCategory/CreateCategoryScreen";
 import TaskScreen from "./Task/TaskScreen";
 import CalendarScreen from "./Calendar/CalendarScreen";
+import ProfileScreen from "./Profile/ProfileScreen";
+import SettingsScreen from "./Settings/SettingsScreen";
+import FocusScreen from "./Focus/FocusScreen";
 
 export {
     HomeScreen, 
@@ -15,5 +18,8 @@ export {
     WelcomeScreen,
     CreateCategoryScreen,
     TaskScreen,
-    CalendarScreen
+    CalendarScreen,
+    ProfileScreen,
+    SettingsScreen,
+    FocusScreen   
 }

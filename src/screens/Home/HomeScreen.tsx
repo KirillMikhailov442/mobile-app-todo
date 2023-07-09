@@ -4,9 +4,9 @@ import { SafeAreaView } from "react-native"
 
 import HomeContent from "./HomeContent/HomeContent"
 import HomeHeader from "./HomeHeader/HomeHeader"
-// import HomeEmpty from "./HomeEmpty/HomeEmpty"
+import HomeEmpty from "./HomeEmpty/HomeEmpty"
 import { ModalCalendar, ModalPriority, ModalTime, ModalCategory } from "../../components/Modals"
-import { BottomSheet } from "../../components"
+import { BottomSheetAddTask } from "../../components/BottomSheet"
 import { NavigationProps } from "../../types/navigation"
 import HomeScreenStyles from "./HomeScreen.style"
 
@@ -17,11 +17,11 @@ const HomeScreen:React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation}) 
             <HomeHeader/>
             <HomeContent/>
             {/* <HomeEmpty/> */}
-            {/* <BottomSheet/> */}
+            {/* <BottomSheetAddTask/> */}
             {/* <ModalCalendar/> */}
             {/* <ModalTime/> */}
             {/* <ModalPriority/> */}
-            <ModalCategory navigation={navigation}/>
+            {/* <ModalCategory navigation={navigation}/> */}
         </SafeAreaView>
     )
 }

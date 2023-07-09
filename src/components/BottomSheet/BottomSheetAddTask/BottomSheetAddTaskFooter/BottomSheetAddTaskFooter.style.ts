@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native'
 
-const BottomSheetFooterStyles = StyleSheet.create({
+const BottomSheetAddTaskFooterStyles = StyleSheet.create({
     footer: {
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -16,4 +16,4 @@ const BottomSheetFooterStyles = StyleSheet.create({
     }
 })
 
-export default BottomSheetFooterStyles
+export default BottomSheetAddTaskFooterStyles

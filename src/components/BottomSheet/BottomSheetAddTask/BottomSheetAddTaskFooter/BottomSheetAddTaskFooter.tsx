@@ -2,13 +2,13 @@ import React from 'react'
 import {View} from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import { textColors } from '../../../constants/colors';
-import BottomSheetFooterStyles from './BottomSheetFooter.style';
+import { textColors } from '../../../../constants/colors';
+import BottomSheetAddTaskFooterStyles from './BottomSheetAddTaskFooter.style';
 
-const BottomSheetFooter = () =>{
+const BottomSheetAddTaskFooter = () =>{
     return(
-        <View style={BottomSheetFooterStyles.footer}>
-            <View style={BottomSheetFooterStyles.footerActions}>
+        <View style={BottomSheetAddTaskFooterStyles.footer}>
+            <View style={BottomSheetAddTaskFooterStyles.footerActions}>
                 <Icon 
                     name='timer-outline' 
                     size={25} 
@@ -31,4 +31,4 @@ const BottomSheetFooter = () =>{
     )
 }
 
-export default BottomSheetFooter
+export default BottomSheetAddTaskFooter
