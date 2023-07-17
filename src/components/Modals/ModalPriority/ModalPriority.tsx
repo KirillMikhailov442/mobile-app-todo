@@ -6,6 +6,7 @@ import { ModalLayout } from "../../../layouts";
 import MiniCard from "../../UI/MiniCard/MiniCard";
 import ModalPriorityStyles from "./ModalPriority.style";
 import { textColors } from "../../../constants/colors";
+import { useDispatch, useSelector } from "react-redux";
 
 
 const dataTaskPriority = [
@@ -53,11 +54,13 @@ const dataTaskPriority = [
 
 const ModalPriority = () =>{
 
+    const dispatch = useDispatch()
+    const [modalState] = useSelector(state => state.modals.filter(modal => modal.name === 'priority'))
     
     return(
         <ModalLayout
             title="Task Priority"
-            visibleModal={true}
+            visibleModal={modalState.showModal}
             buttons={{
                 left: {
                     text: 'Cancel'

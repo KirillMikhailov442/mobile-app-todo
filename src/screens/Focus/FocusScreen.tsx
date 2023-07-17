@@ -7,6 +7,7 @@ import FocusApps from "./FocusApps/FocusApps";
 import { ViewStyles } from "../../styles";
 import FocusTimer from "./FocusTimer/FocusTimer";
 import FocuseShedule from "./FocusShedule/FocusShedule";
+import AddTask from "../../components/AddTask/AddTask";
 
 
 const FocusScreen = () =>{
@@ -20,6 +21,7 @@ const FocusScreen = () =>{
                 <FocuseShedule/>
                 <FocusApps/>
             </ScrollView>
+            <AddTask/>
         </View>
     )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import { ModalLayout } from '../../../layouts'
@@ -9,6 +9,9 @@ import { FlatGrid } from 'react-native-super-grid'
 import { buttonColors } from '../../../constants/colors'
 import { NavigationProps } from '../../../types/navigation'
 import { useNavigation } from '@react-navigation/native'
+import { useAppDispatch, useAppSelector } from '../../../hooks'
+import { useDispatch, useSelector } from 'react-redux'
+import { hideModal } from '../../../store/slices/modalsSlice'
 
 interface ICategory {
     text: string,
@@ -62,17 +65,23 @@ const categories: ICategory[] = [
     },
 ]
 
-const ModalCategory: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation}) =>{
+const ModalCategory = () =>{
 
-    const [visible, setVisible] = useState(true)
+    const dispatch = useDispatch()
+    const [modalState] = useSelector(state => state.modals.filter(modal => modal.name === 'category'))
+
+    const [showModal, setShowModal] = useState(modalState.showModal)
+
+    // useEffect(()=> {
+    //     setShowModal(modalState.showModal)
+    // }, [modalState])
 
     return(
         <ModalLayout
             title='Choose Category'
-            visibleModal={visible}
+            visibleModal={showModal}
             onPressButton={()=> {
-                setVisible(false)
-                navigation.navigate('categories')
+                dispatch(hideModal('category'))
             }}
             buttons={{
                 right: {

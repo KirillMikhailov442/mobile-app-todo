@@ -6,7 +6,10 @@ import { Provider } from 'react-redux'
 import {AppStyles} from './styles/index'
 import { bgColors } from './constants/colors'
 import Navigation from './navigations/Navigation'
-import store from './store/store'
+// import store from './store/store'
+import {store} from './store/store'
+import { BottomSheetAddTask } from './components/BottomSheet'
+import { ModalCalendar, ModalCategory, ModalPriority, ModalTime } from './components/Modals'
 
 const App = () =>{
 

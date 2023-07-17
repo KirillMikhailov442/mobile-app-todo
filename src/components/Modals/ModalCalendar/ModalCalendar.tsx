@@ -1,18 +1,31 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import { Calendar } from "react-native-calendars"
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+import { useSelector } from "react-redux"
+
 
 import { ModalLayout } from "../../../layouts"
 import ModalCalendarStyles from "./ModalCalendar.style"
 import { bgColors, buttonColors, textColors } from "../../../constants/colors"
-
+import { useAppDispatch } from "../../../hooks"
+import { hideModal } from "../../../store/slices/modalsSlice"
 
 
 const ModalCalendar = () =>{
 
+    const dispatch = useAppDispatch()
+    const [modalState] = useSelector(state => state.modals.filter(modal => modal.name === 'calendar'))
+    
+    const [showModal, setShowModal] = useState(modalState.showModal)
+    
+    // useEffect(()=>{
+    //     setShowModal(modalState.showModal)
+    // }, [modalState])
+
     return(
         <ModalLayout
-            visibleModal={true}
+            visibleModal={showModal}
+            onBackdropPress={()=> dispatch(hideModal('calendar'))}
             buttons={{
                 left: {
                     text: 'Cancel'

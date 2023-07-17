@@ -6,16 +6,21 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import IconSimpleLine from 'react-native-vector-icons/SimpleLineIcons'
 import IconAntDesign from 'react-native-vector-icons/AntDesign'
 import { useNavigation } from '@react-navigation/native'
+import { useDispatch } from 'react-redux'
 
 
 import ProfileListStyles from './ProfileList.style'
 import { Preference } from '../../../components'
 import { textColors } from '../../../constants/colors'
 import PreferencesLayout from '../../../layouts/PreferencesLayout/PreferencesLayout'
+import { useAppDispatch } from '../../../hooks'
+import { showBottomSheet } from '../../../store/slices/bottomSheetSlice'
+import { showModal } from '../../../store/slices/modalsSlice'
 
 const ProfileList = () =>{
 
     const navigation = useNavigation()
+    const dispatch = useDispatch()
 
     return(
         <View style={ProfileListStyles.container}>
@@ -30,16 +35,19 @@ const ProfileList = () =>{
                 <>
                 <Preference
                     text='Change account name'
+                    onPress={()=> dispatch(showModal('changeName'))}
                     styles={{container: ProfileListStyles.preference}}
                     icon={<Icon name='account-outline' size={25} color={textColors.whiteDefault}/>}/>
 
                 <Preference
                     text='Change account password'
+                    onPress={()=> dispatch(showModal('changePassword'))}
                     styles={{container: ProfileListStyles.preference}}
                     icon={<IconOcticons name='key' size={25} color={textColors.whiteDefault}/>}/>
 
                 <Preference
                     text='Change account image'
+                    onPress={()=> dispatch(showBottomSheet('changeImage'))}
                     styles={{container: ProfileListStyles.preference}}
                     icon={<Icon name='camera-outline' size={25} color={textColors.whiteDefault}/>}/>
                 </>
@@ -69,6 +77,7 @@ const ProfileList = () =>{
 
                 <Preference
                     text='Log out'
+                    onPress={()=> navigation.navigate('login')}
                     styles={{
                         container: ProfileListStyles.preference,
                         text: ProfileListStyles.preferenceExit

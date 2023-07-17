@@ -7,8 +7,9 @@ import ProfileHeader from './ProfileHeader/ProfileHeader'
 import { Avatar} from '../../components/UI'
 import ProfileButtons from './ProfileButtons/ProfileButtons'
 import ProfileList from './ProfileList/ProfileList'
-import { ModalChangeName, ModalChangePassword } from '../../components/Modals'
-import { BottomSheetChangeImage } from '../../components/BottomSheet'
+import { ModalCalendar, ModalCategory, ModalChangeName, ModalChangePassword, ModalPriority, ModalTime } from '../../components/Modals'
+import { BottomSheetAddTask, BottomSheetChangeImage } from '../../components/BottomSheet'
+import AddTask from '../../components/AddTask/AddTask'
 
 const ProfileScreen = () =>{
     return(
@@ -22,10 +23,10 @@ const ProfileScreen = () =>{
             </ScrollView>
 
 
-            {/* <ModalChangeName/> */}
-            {/* <ModalChangePassword/> */}
-            {/* <BottomSheetChangeImage/> */}
-            {/* <BottomSheetAddTask/> */}
+            <ModalChangeName/>
+            <ModalChangePassword/>
+            <BottomSheetChangeImage/>
+            <AddTask/>
         </View>
     )
 }

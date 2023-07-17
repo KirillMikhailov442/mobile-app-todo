@@ -7,8 +7,7 @@ import CalendarHeader from './CalendarHeader/CalendarHeader'
 import CalendarCarousel from './CalendarCarousel/CalendarCarousel'
 import TaskList from '../../components/TasksList/TasksList'
 import SelectTasks from './SelectTasks/SelectTasks'
-import { getDaysInMonth } from '../../helpers/date.helper'
-
+import AddTask from '../../components/AddTask/AddTask'
 
 const tasks = [
     {
@@ -46,8 +45,7 @@ const tasks = [
 ]
 
 const CalendarScreen = () =>{
-    
-    getDaysInMonth()
+
     return(
         <SafeAreaView   
             style={[
@@ -61,6 +59,7 @@ const CalendarScreen = () =>{
                 <TaskList
                     data={tasks}/>
             </ScrollView>
+            <AddTask/>
         </SafeAreaView>
     )
 }

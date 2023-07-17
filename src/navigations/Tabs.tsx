@@ -1,17 +1,22 @@
 import React from 'react'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
-import { View, Text, Pressable } from 'react-native'
+import { View, Text, TouchableHighlight } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
-import { CalendarScreen, CreateCategoryScreen, FocusScreen, HomeScreen, ProfileScreen} from '../screens'
+import { CalendarScreen, FocusScreen, HomeScreen, ProfileScreen} from '../screens'
 import { bgColors, textColors } from '../constants/colors'
 import { ViewStyles } from '../styles'
 import TabStyles from './Tab.style'
+import { useAppDispatch } from '../hooks'
+import { showBottomSheet } from '../store/slices/bottomSheetSlice'
 
 const Tab = createBottomTabNavigator()
 
 
 const Tabs = () =>{
+
+    const dispatch = useAppDispatch()
+    
     return(
         <Tab.Navigator 
             screenOptions={{
@@ -56,12 +61,14 @@ const Tabs = () =>{
                 options={{
                     headerShown: false,
                     tabBarIcon: () => (
-                        <Pressable style={[
-                            ViewStyles.center,
-                            TabStyles.tabBarCenterButton
-                        ]}>
+                        <TouchableHighlight
+                            style={[
+                                ViewStyles.center,
+                                TabStyles.tabBarCenterButton
+                            ]}
+                            onPress={()=> dispatch(showBottomSheet('addTask'))}>
                             <Icon name='plus' color={textColors.whiteDefault} size={30}/>
-                        </Pressable>
+                        </TouchableHighlight>
                     )
                 }}/>
 

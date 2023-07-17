@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {  View } from 'react-native';
 import Modal from 'react-native-modal';
 
@@ -6,15 +6,27 @@ import BottomSheetAddTaskStyles from './BottomSheetAddTask.style';
 import { FormLayout } from '../../../layouts';
 import { Input } from '../../UI';
 import BottomSheetFooter from './BottomSheetAddTaskFooter/BottomSheetAddTaskFooter';
+import { useAppDispatch, useAppSelector } from '../../../hooks';
+import { useDispatch, useSelector } from 'react-redux';
+import { hideBottomSheet } from '../../../store/slices/bottomSheetSlice';
 
 const BottomSheetAddTask = () =>{
 
-    const [showModal, setShowModal] = useState(true)
+    const dispatch = useDispatch()
+    const [bottomSheetState] = useSelector(state => state.bottomSheets.filter(item => item.name === 'addTask'))
+    
+    const [showBottomSheet, setShowBottomSheet] = useState(bottomSheetState.showBottomSheet)
+
+    
+    useEffect(()=>{
+        setShowBottomSheet(bottomSheetState.showBottomSheet)
+    }, [bottomSheetState])
+    
 
     return(
         <Modal 
-            isVisible={showModal}
-            onBackdropPress={()=> setShowModal(false)}
+            isVisible={showBottomSheet}
+            onBackdropPress={()=> dispatch(hideBottomSheet('addTask')) }
             swipeDirection="down" 
             style={{margin: 0}}>
             <View style={BottomSheetAddTaskStyles.container}>

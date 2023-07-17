@@ -1,20 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Text, View } from "react-native";
 import Modal from 'react-native-modal';
 import BottomSheetChangeImageStyles from "./BottomSheetChangeImage.style";
 import Preference from "../../Preference/Preference";
+import { useDispatch, useSelector } from "react-redux";
+import { hideBottomSheet } from "../../../store/slices/bottomSheetSlice";
 
 
 const BottomSheetChangeImage = () =>{
 
-    const [showModal, setShowModal] = useState(true)
+    const dispatch = useDispatch()
+    const [bottomSheetState] = useSelector(state => state.bottomSheets.filter(item => item.name === 'changeImage'))
+    
+
+    const [showBottomSheet, setShowBottomSheet] = useState(bottomSheetState.showBottomSheet)
+
+    useEffect(()=>{
+        setShowBottomSheet(bottomSheetState.showBottomSheet)
+    }, [bottomSheetState])
 
     return(
         <Modal
             swipeDirection={"down"}
-            isVisible={showModal}
+            isVisible={showBottomSheet}
             style={{margin: 0}}
-            onBackdropPress={()=> setShowModal(false)}>
+            onBackdropPress={()=> dispatch(hideBottomSheet('changeImage'))}>
                 <View style={BottomSheetChangeImageStyles.container}>
                     <View style={BottomSheetChangeImageStyles.header}>
                         <Text style={BottomSheetChangeImageStyles.title}>

@@ -12,16 +12,14 @@ const ModalLayout: React.FC<ModalLayoutProps> = ({
     buttons,
     visibleModal,
     title,
-    onPressButton
-}) =>{
-
-    const [showModal, setShowModal] = useState(visibleModal)
-    
+    onPressButton,
+    onBackdropPress
+}) =>{    
 
     return(
         <Modal
-            isVisible={showModal}
-            onBackdropPress={()=> setShowModal(false)}
+            isVisible={visibleModal}
+            onBackdropPress={onBackdropPress}
             style={ModalLayoutStyles.modal}>
                 <View style={[
                     ModalLayoutStyles.container,
@@ -44,7 +42,7 @@ const ModalLayout: React.FC<ModalLayoutProps> = ({
                         {buttons?.left && 
                             <Button
                             text={buttons?.left.text}
-                            onPress={()=> setShowModal(false)}
+                            onPress={onBackdropPress}
                             styles={{
                                 button: {
                                     ...ModalLayoutStyles.footerButton,

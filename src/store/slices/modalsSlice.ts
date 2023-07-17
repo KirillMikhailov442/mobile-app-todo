@@ -6,30 +6,63 @@ interface IModalActionPayload {
     showModal: boolean
 }
 
-const modalsSlice = createSlice({
-    name: 'modal',
-    initialState: [
-        {
-            name: 'calendar',
-            showModal: false
-        },
-        {
-            name: 'time',
-            showModal: false
-        },
-        {
-            name: 'priority',
-            showModal: false
-        },
-    ],
+const initialState: IModalActionPayload[] = [
+    {
+        name: 'calendar',
+        showModal: false
+    },
+    {
+        name: 'time',
+        showModal: false
+    },
+    {
+        name: 'priority',
+        showModal: false
+    },
+    {
+        name: 'category',
+        showModal: false
+    },
+    {
+        name: 'editTitle',
+        showModal: false
+    },
+    {
+        name: 'delete',
+        showModal: false
+    },
+    {
+        name: 'changeName',
+        showModal: false
+    },
+    {
+        name: 'changePassword',
+        showModal: false
+    }
+]
 
+const modalsSlice = createSlice({
+    name: 'modals',
+    initialState,
     reducers: {
-        toggleState: (state, action:PayloadAction<IModalActionPayload>) =>{
-            state = state.filter(item => item.name === action.payload.name ? item.showModal = action.payload.showModal : item)
+        showModal: (state, {payload}: PayloadAction<string>) => {
+            
+            state.find(modal => 
+                modal.name === payload ? 
+                modal.showModal = true :
+                modal.showModal = false) 
+        },
+
+        hideModal: (state, {payload}: PayloadAction<string>) => {
+
+            state.find(modal => 
+                modal.name === payload ? 
+                modal.showModal = false :
+                modal.showModal = false)
         }
     }
 })
 
 export default modalsSlice.reducer
 
-export const {toggleState} = modalsSlice.actions
+export const {showModal, hideModal} = modalsSlice.actions

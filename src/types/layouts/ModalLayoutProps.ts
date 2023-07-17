@@ -9,9 +9,8 @@ interface ModalLayoutPropsStyles {
     title?: object
 }
 
-interface ModalLayoutPropsButtonsItem {
+interface ModalLayoutPropsButtonsItem extends ButtonPropsStyles {
     text?: string,
-    styles?: ButtonPropsStyles
 }
 
 interface ModalLayoutPropsButttons {
@@ -24,5 +23,6 @@ export default interface ModalLayoutProps extends LayoutProps {
     buttons?: ModalLayoutPropsButttons,
     visibleModal?: boolean,
     title?: string,
-    onPressButton?: ()=> void
+    onPressButton?: ()=> void,
+    onBackdropPress?: ()=> void
 }

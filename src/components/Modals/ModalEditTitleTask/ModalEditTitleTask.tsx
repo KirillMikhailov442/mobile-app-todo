@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { ModalLayout } from '../../../layouts'
 import { Input } from '../../UI'
 import { bgColors } from '../../../constants/colors'
+import { useDispatch, useSelector } from 'react-redux'
 
 const ModalEditTask = () =>{
+
+    const dispatch = useDispatch()
+    const [modalState] = useSelector(state => state.modals.filter(modal => modal.name === 'editTitle'))
+
+    const [showModal, setShowModal] = useState(modalState.showModal)
+
     return(
         <ModalLayout
             title='Edit Task title'
-            visibleModal={true}
+            visibleModal={showModal}
             buttons={{
                 left: {
                     text: 'Cancel'
