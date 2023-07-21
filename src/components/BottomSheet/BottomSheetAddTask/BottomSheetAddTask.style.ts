@@ -3,7 +3,7 @@ import { bgColors, borderColors } from "../../../constants/colors"
 
 const BottomSheetAddTaskStyles = StyleSheet.create({
     container: {
-        height: 230,
+        minHeight: 230,
         backgroundColor: bgColors.blackVeryLight,
         marginTop: 'auto',
         paddingLeft: 24,

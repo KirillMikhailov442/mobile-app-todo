@@ -14,7 +14,8 @@ const Input: React.FC<InputProps> = ({
     placeholder,
     styles,
     security,
-    icon
+    icon,
+    isMultiline
 })=>{
 
     return(
@@ -33,13 +34,14 @@ const Input: React.FC<InputProps> = ({
                 InputStyles.inputView,
                 styles?.input
             ]}>
-                {icon && icon}
+                {icon}
                 <TextInput 
                     placeholder={placeholder.text}
                     placeholderTextColor={placeholder.color ?? textColors.grayVeryDark}
                     secureTextEntry={security}
                     onChangeText={onChange}
                     value={value}
+                    multiline={isMultiline}
                     style={[
                         TextStyles.text,
                         InputStyles.input,

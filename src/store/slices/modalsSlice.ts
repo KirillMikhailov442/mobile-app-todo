@@ -46,7 +46,7 @@ const modalsSlice = createSlice({
     initialState,
     reducers: {
         showModal: (state, {payload}: PayloadAction<string>) => {
-            
+
             state.find(modal => 
                 modal.name === payload ? 
                 modal.showModal = true :

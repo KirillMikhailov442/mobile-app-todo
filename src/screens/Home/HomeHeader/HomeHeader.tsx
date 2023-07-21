@@ -6,9 +6,13 @@ import { HeaderLayout } from "../../../layouts"
 import { Avatar } from "../../../components/UI"
 import HomeHeaderStyles from "./HomeHeader.style"
 import { textColors } from "../../../constants/colors"
+import { useNavigation } from "@react-navigation/native"
 
 
 const HomeHeader = () =>{
+
+    const navigation = useNavigation()
+
     return(
         <HeaderLayout styles={{ header: HomeHeaderStyles.container }}>
             <>
@@ -17,7 +21,9 @@ const HomeHeader = () =>{
                     color={textColors.whiteDefault}
                     size={30}/>
                 <Text style={HomeHeaderStyles.title}>Home</Text>
-                <Avatar/>
+                <Avatar 
+                    isActive 
+                    onPress={()=> navigation.navigate('profile')}/>
             </>
         </HeaderLayout>
     )

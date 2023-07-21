@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+import { FlatGrid } from 'react-native-super-grid'
+import { View } from 'react-native'
 
 import { ModalLayout } from '../../../layouts'
-import { View } from 'react-native'
 import ModalCategoryStyles from './ModalCategory.style'
 import { MiniCard } from '../../UI'
-import { FlatGrid } from 'react-native-super-grid'
 import { buttonColors } from '../../../constants/colors'
-import { NavigationProps } from '../../../types/navigation'
-import { useNavigation } from '@react-navigation/native'
-import { useAppDispatch, useAppSelector } from '../../../hooks'
 import { useDispatch, useSelector } from 'react-redux'
 import { hideModal } from '../../../store/slices/modalsSlice'
 
@@ -18,71 +15,74 @@ interface ICategory {
     iconName: string
 }
 
-const categories: ICategory[] = [
-    {
-        text: 'Grocery',
-        iconName: 'food',
-    },
-    {
-        text: 'Work',
-        iconName: 'firework',
-    },
-    {
-        text: 'Sport',
-        iconName: 'car-sports',
-    },
-    {
-        text: 'Design',
-        iconName: 'video-input-component',
-    },
-    {
-        text: 'University',
-        iconName: 'school',
-    },
-    {
-        text: 'social',
-        iconName: 'social-distance-2-meters',
-    },
-    {
-        text: 'Music',
-        iconName: 'music',
-    },
-    {
-        text: 'Health',
-        iconName: 'heart',
-    },
-    {
-        text: 'Movie',
-        iconName: 'video',
-    },
-    {
-        text: 'Home',
-        iconName: 'home',
-    },
-    {
-        text: 'Create new',
-        iconName: 'plus',
-    },
-]
+// const categories: ICategory[] = [
+//     {
+//         text: 'Grocery',
+//         iconName: 'food',
+//     },
+//     {
+//         text: 'Work',
+//         iconName: 'firework',
+//     },
+//     {
+//         text: 'Sport',
+//         iconName: 'car-sports',
+//     },
+//     {
+//         text: 'Design',
+//         iconName: 'video-input-component',
+//     },
+//     {
+//         text: 'University',
+//         iconName: 'school',
+//     },
+//     {
+//         text: 'social',
+//         iconName: 'social-distance-2-meters',
+//     },
+//     {
+//         text: 'Music',
+//         iconName: 'music',
+//     },
+//     {
+//         text: 'Health',
+//         iconName: 'heart',
+//     },
+//     {
+//         text: 'Movie',
+//         iconName: 'video',
+//     },
+//     {
+//         text: 'Home',
+//         iconName: 'home',
+//     },
+//     {
+//         text: 'Create new',
+//         iconName: 'plus',
+//     },
+// ]
 
 const ModalCategory = () =>{
 
     const dispatch = useDispatch()
     const [modalState] = useSelector(state => state.modals.filter(modal => modal.name === 'category'))
 
+    const categories = useSelector(state => state.categories)
+    console.log(categories);
+    
+
     const [showModal, setShowModal] = useState(modalState.showModal)
 
-    // useEffect(()=> {
-    //     setShowModal(modalState.showModal)
-    // }, [modalState])
+    useEffect(()=> {
+        setShowModal(modalState.showModal)
+    }, [modalState])
 
     return(
         <ModalLayout
             title='Choose Category'
             visibleModal={showModal}
-            onPressButton={()=> {
-                dispatch(hideModal('category'))
-            }}
+            onPressButton={()=> dispatch(hideModal('category'))}
+            onBackdropPress={()=> dispatch(hideModal('category'))}
             buttons={{
                 right: {
                     text: 'Add Category',
@@ -95,7 +95,7 @@ const ModalCategory = () =>{
             }}
             >
                 <View style={ModalCategoryStyles.grid}>
-                    <FlatGrid
+                    {/* <FlatGrid
                         data={categories}
                         itemDimension={80}
                         itemContainerStyle={{justifyContent: 'center', alignItems: 'center'}}
@@ -103,7 +103,7 @@ const ModalCategory = () =>{
                             <MiniCard 
                                 bottomLabel={item.text}
                                 styles={{card: {backgroundColor: buttonColors.violetDefault}}} 
-                                icon={<Icon size={25} name={item.iconName} color={'white'}/>}/>}/>
+                                icon={<Icon size={25} name={item.iconName} color={'white'}/>}/>}/> */}
                 </View>
                 
         </ModalLayout>

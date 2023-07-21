@@ -1,18 +1,39 @@
 import React from 'react';
-import {Image} from 'react-native'
+import {Image, View, Pressable, TouchableOpacity} from 'react-native'
 import AvatarStyles from './Avatar.style';
 import { AvatarProps } from '../../../types';
 
 const Avatar: React.FC<AvatarProps> = ({
+    onPress,
+    isActive,
     style
 })=> {
+
+    if(isActive){
+        return(
+            <TouchableOpacity
+                onPress={onPress} 
+                style={[
+                    AvatarStyles.avatarContainer,
+                    style
+            ]}>
+                <Image
+                    source={require('../../../assets/images/user.png')}
+                    style={AvatarStyles.avatar}/>
+            </TouchableOpacity>
+        )
+    }
+
     return (
-        <Image
-            source={require('../../../assets/images/user.png')}
+        <View
             style={[
-                AvatarStyles.avatar,
-                style && {...style}
-            ]}/>
+                AvatarStyles.avatarContainer,
+                style
+            ]}>
+            <Image
+            source={require('../../../assets/images/user.png')}
+            style={AvatarStyles.avatar}/>
+        </View>
     )
 }
 

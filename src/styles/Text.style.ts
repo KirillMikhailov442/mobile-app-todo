@@ -5,7 +5,8 @@ const TextStyles = StyleSheet.create({
     text: {
         color: textColors.whiteDefault,
         fontSize: 16,
-        fontWeight: '400'
+        fontWeight: '400',
+        fontFamily: 'Lato'
     },
     textCenter: {
         textAlign: 'center'

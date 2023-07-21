@@ -3,7 +3,7 @@ import ModalTime from "./ModalTime/ModalTime"
 import ModalPriority from "./ModalPriority/ModalPriority";
 import ModalCategory from "./ModalCategory/ModalCategory";
 import ModalDelete from "./ModalDelete/ModalDelete";
-import ModalEditTitleTask from "./ModalEditTitleTask/ModalEditTitleTask";
+import ModalEditTask from "./ModalEditTitleTask/ModalEditTitleTask";
 import ModalChangeName from "./ModalChangeName/ModalChangeName";
 import ModalChangePassword from './ModalChangePassword/ModalChangePassowrd'
 
@@ -13,7 +13,7 @@ export {
     ModalPriority,
     ModalCategory,
     ModalDelete,
-    ModalEditTitleTask,
+    ModalEditTask,
     ModalChangeName,
     ModalChangePassword
 }

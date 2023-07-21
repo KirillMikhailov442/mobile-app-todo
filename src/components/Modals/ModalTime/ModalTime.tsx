@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Text, View } from "react-native";
 
 import { ModalLayout } from "../../../layouts";
 import BoxList from "../../UI/BoxList/BoxList";
 import ModalTimeStyles from "./ModalTime.style";
 import { useDispatch, useSelector } from "react-redux";
+import { hideModal } from "../../../store/slices/modalsSlice";
 
 const numbersTime:number[] = []
 
@@ -22,10 +23,15 @@ const ModalTime = () =>{
 
     const [showModal, setShowModal] = useState(modalState.showModal)
 
+    useEffect(()=> {
+        setShowModal(modalState.showModal)
+    }, [modalState])
+
     return(
         <ModalLayout
             title="Choose Time"
             visibleModal={showModal}
+            onBackdropPress={()=> dispatch(hideModal('time'))}
             buttons={{
                 left: {
                     text: 'Cancel'

@@ -16,10 +16,11 @@ export default interface InputProps {
     placeholder: InputPropsPlaceholder,
     label?: string,
     value?: string,
-    onChange?: any,
+    onChange?: ()=> void,
     error?: string,
     security?: boolean,
     styles?: InputPropsStyles,
-    icon?: JSX.Element
+    icon?: JSX.Element,
+    isMultiline?: boolean
 
 }

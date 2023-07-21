@@ -1,6 +1,7 @@
 import { StyleSheet } from "react-native";
 
 import { ViewStyles } from "../../../styles";
+import { buttonColors } from "../../../constants/colors";
 
 
 const ModalPriorityStyles = StyleSheet.create({
@@ -10,6 +11,14 @@ const ModalPriorityStyles = StyleSheet.create({
         marginLeft: 'auto',
         marginRight: 'auto',
         ...ViewStyles.grid
+    },
+
+    priorityCardContainer: {
+        margin: 8
+    },
+
+    prioritySelectedCard: {
+        backgroundColor: buttonColors.violetDefault
     }
 })
 

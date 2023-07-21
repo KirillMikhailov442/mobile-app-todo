@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import {  View } from 'react-native';
 import Modal from 'react-native-modal';
+import { useDispatch, useSelector } from 'react-redux';
 
 import BottomSheetAddTaskStyles from './BottomSheetAddTask.style';
 import { FormLayout } from '../../../layouts';
 import { Input } from '../../UI';
 import BottomSheetFooter from './BottomSheetAddTaskFooter/BottomSheetAddTaskFooter';
-import { useAppDispatch, useAppSelector } from '../../../hooks';
-import { useDispatch, useSelector } from 'react-redux';
 import { hideBottomSheet } from '../../../store/slices/bottomSheetSlice';
 
 const BottomSheetAddTask = () =>{
@@ -41,6 +40,7 @@ const BottomSheetAddTask = () =>{
                             placeholder={{
                                 text: 'Description'
                             }}
+                            isMultiline
                             styles={{
                                 container: BottomSheetAddTaskStyles.inputContainer,
                                 input: BottomSheetAddTaskStyles.input,

@@ -17,6 +17,8 @@ import PreferenceProps from "./PreferenceProps"
 import CalendarCarouselItemProps from "./CalendarCarouselItemProps"
 import PreferencesLayoutProps from "./layouts/PreferencesLayoutProps"
 import FocusAppsItemProps from "./FocusAppsItemProps"
+import IPriority from "./IPriority"
+import ICategory from "./ICategory"
 
 export type {
     ButtonProps, 
@@ -37,5 +39,7 @@ export type {
     PreferenceProps,
     CalendarCarouselItemProps,
     PreferencesLayoutProps,
-    FocusAppsItemProps
+    FocusAppsItemProps,
+    IPriority,
+    ICategory
 }

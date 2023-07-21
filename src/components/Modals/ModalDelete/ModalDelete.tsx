@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {Text} from 'react-native'
 
 import { ModalLayout } from '../../../layouts'
 import { TextStyles } from '../../../styles'
 import ModalDeleteStyles from './ModalDelete.style'
 import { useDispatch, useSelector } from 'react-redux'
+import { hideModal } from '../../../store/slices/modalsSlice'
 
 const ModalDelete = () =>{
 
@@ -13,9 +14,14 @@ const ModalDelete = () =>{
     
     const [showModal, setShowModal] = useState(modalState.showModal)
 
+    useEffect(()=> {
+        setShowModal(modalState.showModal)
+    }, [modalState])
+
     return(
         <ModalLayout
             visibleModal={showModal}
+            onBackdropPress={()=> dispatch(hideModal('delete'))}
             buttons={{
                 left: {
                     text: 'Cancel'

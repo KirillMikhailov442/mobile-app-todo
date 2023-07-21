@@ -15,12 +15,13 @@ const InputStyles = StyleSheet.create({
         width: '100%',
         borderColor: borderColors.gray,
         borderWidth: 0.8,
-        height: 48,
+        minHeight: 48,
+        height: 'auto',
         backgroundColor: bgColors.blackLight
     },
     input: {
         flex: 1,
-        height: 48,
+        minHeight: 48,
         paddingLeft: 12,
         paddingRight: 12
     },

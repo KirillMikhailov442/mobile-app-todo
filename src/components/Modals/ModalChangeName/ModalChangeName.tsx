@@ -17,8 +17,8 @@ const ModalChangeName = () =>{
     const [showModal, setShowModal] = useState(modalState.showModal)
     
     useEffect(()=>{
+        setShowModal(modalState.showModal)
         
-        setShowModal(modalState.showBottomSheet)
     }, [modalState])
 
     return(

@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { ModalLayout } from "../../../layouts";
 import { Input } from "../../UI";
 import ModalChangePassowrdStyles from "./ModalChangePassword.style";
 import { useDispatch, useSelector } from "react-redux";
+import { hideModal } from "../../../store/slices/modalsSlice";
 
 
 const ModalChangePassword = () =>{
@@ -13,10 +14,15 @@ const ModalChangePassword = () =>{
 
     const [showModal, setShowModal] = useState(modalState.showModal)
 
+    useEffect(()=>{
+        setShowModal(modalState.showModal)
+    }, [modalState])
+
     return(
         <ModalLayout
             title="Change account password"
             visibleModal={showModal}
+            onBackdropPress={()=> dispatch(hideModal('changePassword'))}
             buttons={{
                 left: {
                     text: 'Cancel'
@@ -30,7 +36,7 @@ const ModalChangePassword = () =>{
                     label="Enter old password"
                     security
                     placeholder={{
-                        text: "Enter new name"
+                        text: "Enter old password"
                     }}
                     styles={{
                         container: ModalChangePassowrdStyles.inputContainer,
@@ -40,7 +46,7 @@ const ModalChangePassword = () =>{
                         label="Enter new password"
                         security
                         placeholder={{
-                            text: "Enter new name"
+                            text: "Enter new password"
                         }}
                         styles={{
                             container: ModalChangePassowrdStyles.inputContainer,
