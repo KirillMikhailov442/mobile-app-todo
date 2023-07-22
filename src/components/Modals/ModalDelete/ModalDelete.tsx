@@ -2,15 +2,14 @@ import React, { useEffect, useState } from 'react'
 import {Text} from 'react-native'
 
 import { ModalLayout } from '../../../layouts'
-import { TextStyles } from '../../../styles'
 import ModalDeleteStyles from './ModalDelete.style'
-import { useDispatch, useSelector } from 'react-redux'
 import { hideModal } from '../../../store/slices/modalsSlice'
+import { useAppDispatch, useAppSelector } from '../../../hooks'
 
 const ModalDelete = () =>{
 
-    const dispatch = useDispatch()
-    const [modalState] = useSelector(state => state.modals.filter(modal => modal.name === 'delete'))
+    const dispatch = useAppDispatch()
+    const [modalState] = useAppSelector(state => state.modals.filter(modal => modal.name === 'delete'))
     
     const [showModal, setShowModal] = useState(modalState.showModal)
 

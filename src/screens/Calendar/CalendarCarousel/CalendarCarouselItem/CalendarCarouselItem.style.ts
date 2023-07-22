@@ -23,6 +23,10 @@ const CalendarCarouselItemStyles = StyleSheet.create({
         fontWeight: 'bold'
     },
 
+    dayWeekend: {
+        color: textColors.red
+    },
+
     day: {
         color: textColors.whiteDefault,
         fontSize: 14,

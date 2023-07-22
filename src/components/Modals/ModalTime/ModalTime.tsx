@@ -4,8 +4,8 @@ import { Text, View } from "react-native";
 import { ModalLayout } from "../../../layouts";
 import BoxList from "../../UI/BoxList/BoxList";
 import ModalTimeStyles from "./ModalTime.style";
-import { useDispatch, useSelector } from "react-redux";
 import { hideModal } from "../../../store/slices/modalsSlice";
+import { useAppDispatch, useAppSelector } from "../../../hooks";
 
 const numbersTime:number[] = []
 
@@ -15,11 +15,10 @@ for (let index = 1; index <= 60; index++) {
 }
 
 
-
 const ModalTime = () =>{
 
-    const dispatch = useDispatch()
-    const [modalState] = useSelector(state => state.modals.filter(modal => modal.name === 'time'))
+    const dispatch = useAppDispatch()
+    const [modalState] = useAppSelector(state => state.modals.filter(modal => modal.name === 'time'))
 
     const [showModal, setShowModal] = useState(modalState.showModal)
 

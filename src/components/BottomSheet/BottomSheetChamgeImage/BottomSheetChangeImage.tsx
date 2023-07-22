@@ -3,14 +3,14 @@ import { Text, View } from "react-native";
 import Modal from 'react-native-modal';
 import BottomSheetChangeImageStyles from "./BottomSheetChangeImage.style";
 import Preference from "../../Preference/Preference";
-import { useDispatch, useSelector } from "react-redux";
 import { hideBottomSheet } from "../../../store/slices/bottomSheetSlice";
+import { useAppDispatch, useAppSelector } from "../../../hooks";
 
 
 const BottomSheetChangeImage = () =>{
 
-    const dispatch = useDispatch()
-    const [bottomSheetState] = useSelector(state => state.bottomSheets.filter(item => item.name === 'changeImage'))
+    const dispatch = useAppDispatch()
+    const [bottomSheetState] = useAppSelector(state => state.bottomSheets.filter(item => item.name === 'changeImage'))
     
 
     const [showBottomSheet, setShowBottomSheet] = useState(bottomSheetState.showBottomSheet)

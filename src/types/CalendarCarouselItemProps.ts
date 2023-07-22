@@ -1,4 +1,6 @@
 
 export default interface CalendarCarouselItemProps {
-    day: number
+    day: number,
+    dayWeek: string,
+    onPress?: ()=> void
 }

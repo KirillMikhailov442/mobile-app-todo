@@ -1,14 +1,13 @@
 import React, {useState, useEffect} from "react"
 import { Calendar } from "react-native-calendars"
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
-import { useSelector } from "react-redux"
 import { View, Text } from "react-native"
 
 
 import { ModalLayout } from "../../../layouts"
 import ModalCalendarStyles from "./ModalCalendar.style"
 import { bgColors, buttonColors, textColors } from "../../../constants/colors"
-import { useAppDispatch } from "../../../hooks"
+import { useAppDispatch, useAppSelector } from "../../../hooks"
 import { hideModal } from "../../../store/slices/modalsSlice"
 
 interface ModalCalendarProps {
@@ -20,7 +19,7 @@ const ModalCalendar: React.FC<ModalCalendarProps> = ({
 }) =>{
 
     const dispatch = useAppDispatch()
-    const [modalState] = useSelector(state => state.modals.filter(modal => modal.name === 'calendar'))
+    const [modalState] = useAppSelector(state => state.modals.filter(modal => modal.name === 'calendar'))
     
     const [showModal, setShowModal] = useState(modalState.showModal)
     
