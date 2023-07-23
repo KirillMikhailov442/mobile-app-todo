@@ -1,26 +1,37 @@
-import React, {useState} from "react"
-import {Pressable} from 'react-native'
+import React, {useState, useEffect} from "react"
+import {Pressable, Text} from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import { ColorsListItemProps } from "../../../../types"
 import ColorsListItemStyles from "./ColorsListItem.style"
 import { textColors } from "../../../../constants/colors"
+import { useAppDispatch, useAppSelector } from "../../../../hooks"
+import { selectColor } from "../../../../store/slices/colorsSlice"
 
 const ColorsListItem: React.FC<ColorsListItemProps> = ({
     color,
     isSelected
 }) =>{
 
-    const [isSelectedColor, setIsSelectedColor] = useState(isSelected)
+    const dispatch = useAppDispatch()
+
+    const [colorState] = useAppSelector(state => state.colors.filter(item => item.color === color))
+
+    const [colorsItem, setColorsItem] = useState(colorState)
+
+    useEffect(()=>{
+        setColorsItem(colorState)
+    }, [colorState])
+    
 
     return(
         <Pressable
-            onPress={()=> setIsSelectedColor(true)}
+            onPress={()=> dispatch(selectColor(color))}
             style={[
                 ColorsListItemStyles.container,
-                {backgroundColor: color}
+                {backgroundColor: colorsItem.color}
             ]}>
-                {isSelected && <Icon name="check" size={20} color={textColors.whiteDefault}/>}
+                {colorsItem.isSelected && <Icon name="check" size={20} color={textColors.whiteDefault}/>}
         </Pressable>
     )
 }

@@ -6,26 +6,14 @@ import { Provider } from 'react-redux'
 import {AppStyles} from './styles/index'
 import { bgColors } from './constants/colors'
 import Navigation from './navigations/Navigation'
-// import store from './store/store'
 import {store} from './store/store'
-import { BottomSheetAddTask } from './components/BottomSheet'
-import { ModalCalendar, ModalCategory, ModalPriority, ModalTime } from './components/Modals'
 
 const App = () =>{
 
     const [showSplash, setShowSplash] = useState(true)
 
-
     useEffect(()=>{
-        if(showSplash){
-            SplashScreen.show()
-
-        }
-        else{
-            SplashScreen.hide()
-        }
-
-        
+        showSplash ? SplashScreen.show() : SplashScreen.hide()        
     }, [showSplash])
 
     setTimeout(()=> setShowSplash(false), 1000)

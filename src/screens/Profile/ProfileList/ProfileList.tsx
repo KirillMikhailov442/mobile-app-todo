@@ -5,22 +5,19 @@ import IconOcticons from 'react-native-vector-icons/Octicons'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import IconSimpleLine from 'react-native-vector-icons/SimpleLineIcons'
 import IconAntDesign from 'react-native-vector-icons/AntDesign'
-import { useNavigation } from '@react-navigation/native'
-import { useDispatch } from 'react-redux'
-
 
 import ProfileListStyles from './ProfileList.style'
 import { Preference } from '../../../components'
 import { textColors } from '../../../constants/colors'
 import PreferencesLayout from '../../../layouts/PreferencesLayout/PreferencesLayout'
-import { useAppDispatch } from '../../../hooks'
+import { useAppDispatch, useAppNavigation } from '../../../hooks'
 import { showBottomSheet } from '../../../store/slices/bottomSheetSlice'
 import { showModal } from '../../../store/slices/modalsSlice'
 
 const ProfileList = () =>{
 
-    const navigation = useNavigation()
-    const dispatch = useDispatch()
+    const navigation = useAppNavigation()
+    const dispatch = useAppDispatch()
 
     return(
         <View style={ProfileListStyles.container}>

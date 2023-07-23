@@ -6,12 +6,13 @@ import { HeaderLayout } from "../../../layouts"
 import { Avatar } from "../../../components/UI"
 import HomeHeaderStyles from "./HomeHeader.style"
 import { textColors } from "../../../constants/colors"
-import { useNavigation } from "@react-navigation/native"
+import { ScreensNavigationProp } from "../../../types/navigation/NavigationProps"
+import { useAppNavigation } from "../../../hooks"
 
 
 const HomeHeader = () =>{
 
-    const navigation = useNavigation()
+    const navigation = useAppNavigation()
 
     return(
         <HeaderLayout styles={{ header: HomeHeaderStyles.container }}>

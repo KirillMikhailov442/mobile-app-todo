@@ -5,7 +5,6 @@ import { ViewStyles } from '../../styles'
 import CreateCategoryStyles from './CreateCategory.style'
 import { Button, Input } from '../../components/UI'
 import ColorList from './ColorsList/ColorsList'
-import { buttonColors, textColors } from '../../constants/colors'
 import { NavigationProps } from '../../types/navigation'
 import CreateCategoryFooter from './CreateCategoryFooter/CreateCategoryFooter'
 

@@ -1,15 +1,13 @@
 import React from "react"
 import { Text, View, Image } from "react-native"
-import { useNavigation } from "@react-navigation/native"
 
-
-import { FormLayoutProps } from "../../types/layouts/FormLayoutProps"
 import { TextStyles } from "../../styles"
 import FormLayoutStyles from "./FormLayout.style"
-import { LayoutProps } from "../../types"
+import { FormLayoutProps, LayoutProps } from "../../types"
 import Button from "../../components/UI/Button/Button"
 import { buttonColors } from "../../constants/colors"
 import {ScreensNavigationProp } from "../../types/navigation/NavigationProps"
+import { useAppNavigation } from "../../hooks"
 
 
 const FormLayout: React.FC<FormLayoutProps & LayoutProps> = ({
@@ -20,7 +18,7 @@ const FormLayout: React.FC<FormLayoutProps & LayoutProps> = ({
     bottomText,
 }) =>{
 
-    const navigation: ScreensNavigationProp = useNavigation()
+    const navigation = useAppNavigation()
 
 
     return(

@@ -1,7 +1,5 @@
 import React from "react"
 import {SafeAreaView} from 'react-native'
-import { useNavigation } from "@react-navigation/native"
-import { useDispatch } from "react-redux"
 
 import { ViewStyles } from "../../styles"
 import TaskHeader from "./TaskHeader/TaskHeader"
@@ -11,11 +9,12 @@ import TaskPreferences from "./TaskPreferences/TaskPreferences"
 import ChangeableTask from "./ChangeableTask/ChangeableTask"
 import { hideModal, showModal } from "../../store/slices/modalsSlice"
 import { ModalCalendar, ModalCategory, ModalDelete, ModalEditTask, ModalPriority, ModalTime } from "../../components/Modals"
+import { useAppDispatch, useAppNavigation } from "../../hooks"
 
 const TaskScreen = () =>{
 
-    const navigation = useNavigation()
-    const dispatch = useDispatch()
+    const navigation = useAppNavigation()
+    const dispatch = useAppDispatch()
 
     return(
         <SafeAreaView style={[

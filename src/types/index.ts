@@ -19,6 +19,7 @@ import PreferencesLayoutProps from "./layouts/PreferencesLayoutProps"
 import FocusAppsItemProps from "./FocusAppsItemProps"
 import IPriority from "./IPriority"
 import ICategory from "./ICategory"
+import IColor from "./IColor"
 
 export type {
     ButtonProps, 
@@ -41,5 +42,6 @@ export type {
     PreferencesLayoutProps,
     FocusAppsItemProps,
     IPriority,
-    ICategory
+    ICategory,
+    IColor
 }

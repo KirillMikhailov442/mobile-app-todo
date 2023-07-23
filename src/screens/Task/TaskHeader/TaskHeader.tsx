@@ -1,16 +1,16 @@
 import React from "react";
 import {View} from 'react-native'
-import { useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 import TaskHeaderStyles from "./TaskHeader.style";
 import { textColors } from "../../../constants/colors";
 import { Button } from "../../../components/UI";
+import { useAppNavigation } from "../../../hooks";
 
 
 const TaskHeader = () =>{
 
-    const navigation = useNavigation()
+    const navigation = useAppNavigation()
 
     return(
         <View style={TaskHeaderStyles.container}>

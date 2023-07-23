@@ -7,61 +7,61 @@ const initialState: ICategory[] = [
         text: 'Grecory',
         color: '#CCFF80',
         iconColor: "#21A300",
-        iconName: 'food'
+        iconName: 'baguette'
     },
     {
         text: 'Work',
         color: '#FF9680',
         iconColor: "#A31D00",
-        iconName: 'food'
+        iconName: 'briefcase'
     },
     {
         text: 'Sport',
         color: '#80FFFF',
         iconColor: "#00A32F",
-        iconName: 'food'
+        iconName: 'dumbbell'
     },
     {
         text: 'Design',
         color: '#80FFD9',
         iconColor: "#00A372",
-        iconName: 'food'
+        iconName: 'arrange-send-to-back'
     },
     {
         text: 'University',
         color: '#809CFF',
         iconColor: "#0055A3",
-        iconName: 'food'
+        iconName: 'school'
     },
     {
         text: 'Social',
         color: '#FF80EB',
         iconColor: "#A30089",
-        iconName: 'food'
+        iconName: 'bullhorn'
     },
     {
         text: 'Music',
         color: '#FC80FF',
         iconColor: "#A000A3",
-        iconName: 'food'
+        iconName: 'music'
     },
     {
         text: 'Health',
         color: '#80FFA3',
         iconColor: "#00A3A3",
-        iconName: 'food'
+        iconName: 'heart-pulse'
     },
     {
         text: 'Movie',
         color: '#80D1FF',
         iconColor: "#0069A3",
-        iconName: 'food'
+        iconName: 'video'
     },
     {
         text: 'Home',
         color: '#FFCC80',
         iconColor: "#A36200",
-        iconName: 'food'
+        iconName: 'home'
     },
 ]
 

@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import { Text, View, TouchableOpacity } from 'react-native'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import { Button, CheckBox } from '../../UI'
 import TaskStyles from './Task.style'
 import {TaskProps} from '../../../types'
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
-import { useNavigation } from '@react-navigation/native'
-import { NavigationProps } from '../../../types/navigation'
+import { useAppNavigation, useAppSelector } from '../../../hooks'
 
 const Task: React.FC<TaskProps> = ({
     text,
@@ -17,8 +16,9 @@ const Task: React.FC<TaskProps> = ({
 
     const [value, setValue] = useState(check)
 
-    const navigation = useNavigation()
+    const navigation = useAppNavigation()
 
+    const [category] = useAppSelector(state => state.categories.filter(item => item.text === details.category))
 
     if(completed){
         return(
@@ -55,9 +55,16 @@ const Task: React.FC<TaskProps> = ({
                         <Button 
                             text={details.category}
                             isActive={false}
-                            icon={<Icon name='school' size={14} color={'white'} style={{marginRight: 5}}/>}
+                            icon={<Icon 
+                                name={category.iconName} 
+                                size={14} 
+                                color={category.iconColor} 
+                                style={{marginRight: 5, color: category.iconColor}}/>}
                             styles={{
-                                button: {...TaskStyles.detailsButton, ...TaskStyles.detailsButtonCategory},
+                                button: {
+                                    ...TaskStyles.detailsButton, 
+                                    ...TaskStyles.detailsButtonCategory,
+                                    backgroundColor: category.color},
                                 text: TaskStyles.detailsButtonText
                             }}/>}
 

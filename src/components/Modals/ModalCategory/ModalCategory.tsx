@@ -1,25 +1,26 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import { FlatGrid } from 'react-native-super-grid'
 import { View } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
 
 import { ModalLayout } from '../../../layouts'
 import { MiniCard } from '../../UI'
 import ModalCategoryStyles from './ModalCategory.style'
-import { buttonColors } from '../../../constants/colors'
 import { hideModal } from '../../../store/slices/modalsSlice'
-import { useAppSelector, useAppDispatch } from '../../../hooks'
+import { useAppSelector, useAppDispatch, useAppNavigation } from '../../../hooks'
+import { hideBottomSheet } from '../../../store/slices/bottomSheetSlice'
+import { ModalLayoutPropsButttons } from '../../../types/layouts/ModalLayoutProps'
 
-interface ICategory {
-    text: string,
-    iconName: string
+interface ModalCategoryProps {
+    buttons?: ModalLayoutPropsButttons,
 }
 
-const ModalCategory = () =>{
+const ModalCategory: React.FC<ModalCategoryProps> = ({
+    buttons
+}) =>{
 
     const dispatch = useAppDispatch()
-    const navigation = useNavigation()
+    const navigation = useAppNavigation()
 
     const [modalState] = useAppSelector(state => state.modals.filter(modal => modal.name === 'category'))
 
@@ -33,21 +34,26 @@ const ModalCategory = () =>{
         setCategories(categoriesState)
     }, [modalState, categoriesState])
 
+
+    const addCategory = useCallback(()=> {
+        navigation.navigate('categories')
+        dispatch(hideBottomSheet('addTask'))
+        dispatch(hideModal('category'))
+    }, [])
+
     return(
         <ModalLayout
             title='Choose Category'
             visibleModal={showModal}
             onPressButton={()=> dispatch(hideModal('category'))}
             onBackdropPress={()=> dispatch(hideModal('category'))}
-            buttons={{
+            buttons={ buttons ?? {
+                left: {
+                    text: 'Cancel',
+                    onPress: ()=> dispatch(hideModal('category'))
+                },
                 right: {
-                    text: 'Add Category',
-                    onPress: ()=> navigation.navigate('categories'),
-                    styles: {
-                        button: {
-                            width: '100%'
-                        }
-                    }
+                    text: 'Add Category'
                 }
             }}
             >
@@ -59,8 +65,13 @@ const ModalCategory = () =>{
                         renderItem={({item}) => 
                             <MiniCard 
                                 bottomLabel={item.text}
+                                onPress={ ()=> item.iconName === 'plus' && addCategory()}
                                 styles={{card: {backgroundColor: item.color}}} 
-                                icon={<Icon size={25} name={item.iconName} color={item.iconColor}/>}/>}/>
+                                icon={<Icon 
+                                    size={35} 
+                                    name={item.iconName} 
+                                    color={item.iconColor}/>}
+                            />}/>
                 </View>
                 
         </ModalLayout>

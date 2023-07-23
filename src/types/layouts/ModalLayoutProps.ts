@@ -13,7 +13,7 @@ interface ModalLayoutPropsButtonsItem extends ButtonPropsStyles {
     text?: string,
 }
 
-interface ModalLayoutPropsButttons {
+export interface ModalLayoutPropsButttons {
     left?: ModalLayoutPropsButtonsItem,
     right: ModalLayoutPropsButtonsItem
 }
