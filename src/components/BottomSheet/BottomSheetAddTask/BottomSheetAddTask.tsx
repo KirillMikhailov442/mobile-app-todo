@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {  View } from 'react-native';
+import { View } from 'react-native';
 import Modal from 'react-native-modal';
 
 import BottomSheetAddTaskStyles from './BottomSheetAddTask.style';
@@ -32,7 +32,6 @@ const BottomSheetAddTask = () =>{
                 <FormLayout 
                     title='Add Task'
                     styles={{
-                        container: BottomSheetAddTaskStyles.form,
                         title: BottomSheetAddTaskStyles.title
                     }}>
                     <>

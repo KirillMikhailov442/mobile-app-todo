@@ -3,14 +3,18 @@ import { StyleSheet } from "react-native";
 
 import { TextStyles } from "../../../styles";
 import { bgColors, textColors } from "../../../constants/colors";
+import { isSmallScreenSize } from "../../../constants/size";
+
+
+const miniCardSize = isSmallScreenSize ? 50 : 64
 
 const MiniCardStyles = StyleSheet.create({
     container: {
-        width: 64
+        width: miniCardSize
     },
     card: {
         width: "100%",
-        height: 64,
+        height: miniCardSize,
         backgroundColor: bgColors.blackLight,
         borderRadius: 5,
         alignItems: 'center',
@@ -24,7 +28,7 @@ const MiniCardStyles = StyleSheet.create({
 
     bottomLabel: {
         marginTop: 5,
-        fontSize: 12,
+        fontSize: isSmallScreenSize ? 10 : 12,
         color: textColors.whiteDefault,
         textAlign: 'center'
     }

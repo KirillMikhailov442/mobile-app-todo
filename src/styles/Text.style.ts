@@ -1,10 +1,11 @@
 import {StyleSheet} from 'react-native'
 import { textColors } from '../constants/colors'
+import { isSmallScreenSize } from '../constants/size'
 
 const TextStyles = StyleSheet.create({
     text: {
         color: textColors.whiteDefault,
-        fontSize: 16,
+        fontSize: isSmallScreenSize ? 13 : 16,
         fontWeight: '400',
         fontFamily: 'Lato'
     },
@@ -12,7 +13,7 @@ const TextStyles = StyleSheet.create({
         textAlign: 'center'
     },
     title: {
-        fontSize: 32,
+        fontSize: isSmallScreenSize ? 25 : 32,
         fontWeight: "bold"
     }
 })

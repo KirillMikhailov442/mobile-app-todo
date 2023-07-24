@@ -6,8 +6,8 @@ import { HeaderLayout } from "../../../layouts"
 import { Avatar } from "../../../components/UI"
 import HomeHeaderStyles from "./HomeHeader.style"
 import { textColors } from "../../../constants/colors"
-import { ScreensNavigationProp } from "../../../types/navigation/NavigationProps"
 import { useAppNavigation } from "../../../hooks"
+import { isSmallScreenSize } from "../../../constants/size"
 
 
 const HomeHeader = () =>{
@@ -20,10 +20,11 @@ const HomeHeader = () =>{
                 <Icon
                     name="menu"
                     color={textColors.whiteDefault}
-                    size={30}/>
+                    size={isSmallScreenSize ? 25 : 30}/>
                 <Text style={HomeHeaderStyles.title}>Home</Text>
                 <Avatar 
                     isActive 
+                    style={{height: isSmallScreenSize ? 32: 42, width: isSmallScreenSize ? 32 : 42}}
                     onPress={()=> navigation.navigate('profile')}/>
             </>
         </HeaderLayout>

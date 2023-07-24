@@ -1,6 +1,8 @@
 import { StyleSheet } from "react-native";
+
 import { bgColors, borderColors, buttonColors, textColors } from "../../../constants/colors";
 import { TextStyles } from "../../../styles";
+import { isSmallScreenSize } from "../../../constants/size";
 
 const TaskStyles = StyleSheet.create({
     container: {
@@ -33,12 +35,10 @@ const TaskStyles = StyleSheet.create({
     },
 
     detailsButton: {
-        paddingTop: 4,
-        paddingBottom: 4,
         paddingLeft: 8,
         paddingRight: 8,
-        height: 30,
-        width: 'auto',
+        height: isSmallScreenSize ? 28 : 30,
+        width: 'auto'
     },
 
     detailsButtonCategory: {
@@ -46,6 +46,7 @@ const TaskStyles = StyleSheet.create({
         backgroundColor: buttonColors.violetLittleLight,
         overflow: 'hidden'
     },
+
     detailsButtonPriority: {
         marginLeft: 12,
         borderColor: borderColors.violetDefault
@@ -53,6 +54,7 @@ const TaskStyles = StyleSheet.create({
 
     detailsButtonText: {
         color: 'white',
+        fontSize: isSmallScreenSize ? 12 : 16
     },
 
     detailsDate: {

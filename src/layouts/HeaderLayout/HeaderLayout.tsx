@@ -13,11 +13,11 @@ const HeaderLayout: React.FC<HeaderLayoutProps> = ({
         return(
             <View style={[
                 HeaderLayoutStyles.header,
-                styles && {...styles.header}
+                {...styles?.header}
             ]}>
                 <Text style={[
                     HeaderLayoutStyles.title,
-                    styles && {...styles.title}
+                    {...styles?.title}
                 ]}>{title}</Text>
             </View>
         )
@@ -26,7 +26,7 @@ const HeaderLayout: React.FC<HeaderLayoutProps> = ({
     return(
         <View style={[
             HeaderLayoutStyles.header,
-            styles && {...styles.header}
+            {...styles?.header}
         ]}>
             {children}
         </View>

@@ -7,6 +7,7 @@ import { Button, Input } from '../../components/UI'
 import ColorList from './ColorsList/ColorsList'
 import { NavigationProps } from '../../types/navigation'
 import CreateCategoryFooter from './CreateCategoryFooter/CreateCategoryFooter'
+import { isSmallScreenSize } from '../../constants/size'
 
 const CreateCategoryScreen: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation}) =>{
 
@@ -25,6 +26,9 @@ const CreateCategoryScreen: React.FC<Pick<NavigationProps, 'navigation'>> = ({na
                         container: {
                             marginTop: 20
                         },
+                        input: {
+                            height: isSmallScreenSize ? 40 : 48
+                        },
                         label: {
                             marginBottom: 16
                         }
@@ -33,7 +37,8 @@ const CreateCategoryScreen: React.FC<Pick<NavigationProps, 'navigation'>> = ({na
                 <Button
                     text='Choose icon from library'
                     styles={{
-                        button: CreateCategoryStyles.button
+                        button: CreateCategoryStyles.button,
+                        text: CreateCategoryStyles.buttonText
                     }}/>
                 <Text style={CreateCategoryStyles.label}>Category color:</Text>
             </View>

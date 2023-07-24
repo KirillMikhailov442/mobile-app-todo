@@ -1,31 +1,34 @@
 
 import {StyleSheet} from 'react-native'
 import { bgColors, buttonColors, textColors } from '../constants/colors'
+import { isSmallScreenSize } from '../constants/size'
+
+const tabBarSize = isSmallScreenSize ? 54 : 64
 
 const TabStyles = StyleSheet.create({
     tabBarContainer: {
         position: 'relative',
         backgroundColor: bgColors.blackVeryLight,
-        height: 90,
-        paddingTop: 15,
-        paddingBottom: 25,
+        height: isSmallScreenSize ? 70 : 90,
+        paddingTop:  isSmallScreenSize ? 10 : 15,
+        paddingBottom: isSmallScreenSize ? 10 : 25,
         borderTopWidth: 0,
         zIndex: 1
     },
 
     tabBarCenterButton: {
-        width: 64,
-        height: 64,
+        width: tabBarSize,
+        height: tabBarSize,
         backgroundColor: buttonColors.violetDefault,
         borderRadius: 50,
         position: 'absolute',
-        top: '-130%'
+        top: isSmallScreenSize ? "-110%" : '-130%'
     },
 
     tabBarItemLabel: {
         color: textColors.whiteDefault,
         fontSize: 12,
-        marginTop: 8
+        marginTop: isSmallScreenSize ? 4 : 8
     }
 })
 

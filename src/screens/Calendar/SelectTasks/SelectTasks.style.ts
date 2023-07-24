@@ -1,9 +1,9 @@
 import {StyleSheet} from 'react-native'
 import { bgColors, borderColors, buttonColors } from '../../../constants/colors'
+import { isSmallScreenSize } from '../../../constants/size'
 
 const SelectTasksStyles = StyleSheet.create({
     container: {
-        height: 80,
         backgroundColor: bgColors.blackVeryLight,
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -15,16 +15,18 @@ const SelectTasksStyles = StyleSheet.create({
     },
 
     button: {
-        width: 140
+        width: isSmallScreenSize ? 120 : 140
     },
 
     buttonLeft: {
-        backgroundColor: buttonColors.violetDefault
+        backgroundColor: buttonColors.violetDefault,
+        marginRight: 'auto'
     },
 
     buttonRight: {
         borderColor: borderColors.gray,
-        borderWidth: 2
+        borderWidth: 2,
+        marginLeft: 'auto'
     }
 })
 

@@ -1,6 +1,7 @@
 import { StyleSheet } from "react-native";
 import { TextStyles } from "../../../styles";
 import { textColors } from "../../../constants/colors";
+import { isSmallScreenSize } from "../../../constants/size";
 
 const HomeEmptyStyles = StyleSheet.create({
     container: {
@@ -11,7 +12,7 @@ const HomeEmptyStyles = StyleSheet.create({
     title: {
         marginTop: 10,
         color: textColors.whiteDefault,
-        fontSize: 20
+        fontSize: isSmallScreenSize ? 18 : 20
     },
 
     subtitle: {

@@ -1,6 +1,6 @@
 
 import React, {useEffect, useState} from 'react'
-import {View} from 'react-native'
+import {View, ScrollView} from 'react-native'
 
 
 import IntroLayoutStyles from './IntroLayout.style'
@@ -18,7 +18,11 @@ interface IntroLayoutProps extends LayoutProps {
 }
 
 
-const IntroLayout: React.FC<IntroLayoutProps> = ({children, navigation, limit, index}) =>{
+const IntroLayout: React.FC<IntroLayoutProps> = ({
+    children, 
+    navigation, 
+    limit, 
+    index}) =>{
 
     const [isBack, setIsBack] = useState(false)
     const [isFinish, setIsFinish] = useState(false)
@@ -44,7 +48,7 @@ const IntroLayout: React.FC<IntroLayoutProps> = ({children, navigation, limit, i
                             color: textColors.grayDark
                         },
                         button: {
-                            width: 40
+                            width: 90
                         }
                     }}
                     onPress={()=> navigation.navigate('welcome')}
@@ -58,7 +62,7 @@ const IntroLayout: React.FC<IntroLayoutProps> = ({children, navigation, limit, i
                     text="BACK" 
                     styles={{
                         text: {color : isBack ? textColors.grayDefault : textColors.black},
-                        button : {width: 45}
+                        button : {width: 90}
                     }}
                     isActive={isBack}
                     onPress={()=> navigation.navigate('intro', {screenId: --index})} />
@@ -70,13 +74,11 @@ const IntroLayout: React.FC<IntroLayoutProps> = ({children, navigation, limit, i
                             width: 90
                         },
                     }}
-                    onPress={()=> {
-                        if(isFinish){
-                            return navigation.navigate('welcome')
-                        }
-
-                        return navigation.navigate('intro', {screenId: ++index})
-                    }}/>
+                    onPress={()=> isFinish 
+                        ?
+                        navigation.navigate('welcome')
+                        :
+                        navigation.navigate('intro', {screenId: ++index})}/>
             </View>
         </View>
     )

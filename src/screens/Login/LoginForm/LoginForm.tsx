@@ -10,6 +10,7 @@ import Button from '../../../components/UI/Button/Button'
 import Input from "../../../components/UI/Input/Input"
 import { buttonColors } from "../../../constants/colors"
 import { NavigationProps } from "../../../types/navigation/NavigationProps";
+import { isSmallScreenSize } from "../../../constants/size";
 
 
 const LoginForm: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation}) =>{
@@ -61,7 +62,7 @@ const LoginForm: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation}) 
                         error={formikLogin.errors.username}
                         styles={{
                             container: {
-                                marginTop: 52
+                                marginTop: isSmallScreenSize ? 32 : 52
                             }
                         }}/>
 
@@ -76,7 +77,7 @@ const LoginForm: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation}) 
                         security={true}
                         styles={{
                             container: {
-                                marginTop: 25
+                                marginTop: isSmallScreenSize ? 15 : 25
                             }
                         }}/>
 
@@ -86,7 +87,7 @@ const LoginForm: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation}) 
                         styles={{
                             button: {
                                 backgroundColor: buttonColors.violetDefault,
-                                marginTop: 70
+                                marginTop: isSmallScreenSize ? 50 : 70
                             }
                         }}/>
                 </>

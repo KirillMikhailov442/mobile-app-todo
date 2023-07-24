@@ -4,55 +4,14 @@ import { ScrollView, View } from "react-native";
 import { ViewStyles } from "../../../styles";
 import {SearchBar} from '../../../components/index'
 import TasksList from "../../../components/TasksList/TasksList";
-import { TaskProps } from "../../../types";
+import { useAppSelector } from "../../../hooks";
 
-const tasks: TaskProps[] = [
-    {
-        text: 'Do Math Homework',
-        check: false,
-        completed: false,
-        details: {
-            date: 'Today At 16:45',
-            category: 'University',
-            priority: 1
-        }
-    },
-
-    {
-        text: 'Tack out dogs',
-        check: false,
-        completed: false,
-        details: {
-            date: 'Today At 18:20',
-            category: 'Home',
-            priority: 2
-        }
-    },
-
-    {
-        text: 'Business meeting with CEO',
-        check: false,
-        completed: false,
-        details: {
-            date: 'Today At 08:15',
-            category: 'Work',
-            priority: 3
-        }
-    }
-]
-
-const tasksCompleted: TaskProps[] = [
-    {
-        text: 'Buy Grocery',
-        check: false,
-        completed: true,
-        details: {
-            date: 'Today At 16:45',
-        }
-    }
-]
 
 const HomeContent = () =>{
+
+
+    const tasks = useAppSelector(state => state.tasks)
+
     return(
         <View style={[ViewStyles.container, ViewStyles.fullScreen]}>
             <SearchBar/>
@@ -61,10 +20,11 @@ const HomeContent = () =>{
                 showsHorizontalScrollIndicator={false}>
                 <TasksList
                     label="Today"
-                    data={tasks}/>
+                    data={tasks.filter(item => item.completed === false)}/>
                 <TasksList 
                     label="Completed"
-                    data={tasksCompleted}
+                    data={tasks.filter(item => item.completed === true)}
+                    styles={{container: {paddingBottom: 40}}}
                     />
             </ScrollView>
         </View>

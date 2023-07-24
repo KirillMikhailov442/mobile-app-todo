@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { isSmallScreenSize } from "../../constants/size";
 
 const SearchBarStyles = StyleSheet.create({
     icon: {
@@ -7,7 +8,11 @@ const SearchBarStyles = StyleSheet.create({
     },
     input: {
         paddingLeft: 5,
-        paddingRight: 10
+        paddingRight: 10,
+        height: isSmallScreenSize ? 40 : 48
+    },
+    inputContainer: {
+        paddingBottom: 10,
     }
 })
 

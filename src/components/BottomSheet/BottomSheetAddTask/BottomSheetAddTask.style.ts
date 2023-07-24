@@ -1,34 +1,36 @@
 import { StyleSheet } from "react-native"
 import { bgColors, borderColors } from "../../../constants/colors"
+import { isSmallScreenSize } from "../../../constants/size"
+
+const bottomSheetAddTaskPadding = isSmallScreenSize ? 14 : 24
+const inputHeight = isSmallScreenSize ? 38 : 43
 
 const BottomSheetAddTaskStyles = StyleSheet.create({
     container: {
-        minHeight: 230,
+        minHeight: isSmallScreenSize ? 200 : 250,
         backgroundColor: bgColors.blackVeryLight,
         marginTop: 'auto',
-        paddingLeft: 24,
-        paddingRight: 24,
-        paddingTop: 24,
-        paddingBottom: 18,
+        paddingLeft: bottomSheetAddTaskPadding,
+        paddingRight: bottomSheetAddTaskPadding,
+        paddingTop: bottomSheetAddTaskPadding,
+        paddingBottom: isSmallScreenSize ? 10 : 18,
         borderTopLeftRadius: 10,
         borderTopRightRadius: 10
     },
-    form: {
-    },
     title: {
         marginTop: 0,
-        fontSize: 20,
+        fontSize: isSmallScreenSize ? 18 : 20,
         fontWeight: 'bold'
     },
     inputContainer: {
-        height: 43,
+        height: inputHeight,
         borderColor: borderColors.gray,
-        marginTop: 14
+        marginTop: isSmallScreenSize ? 10 : 14
     },
 
     input: {
         backgroundColor: bgColors.transparent,
-        height: 43,
+        height: inputHeight,
     },
     inputText: {
         fontSize: 18

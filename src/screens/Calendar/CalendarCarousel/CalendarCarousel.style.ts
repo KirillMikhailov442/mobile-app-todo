@@ -5,6 +5,7 @@ import { ViewStyles } from '../../../styles'
 const CalendarCarouselStyles = StyleSheet.create({
     container: {
         backgroundColor: bgColors.blackVeryLight,
+        marginBottom: 5
     },
 
     header: {

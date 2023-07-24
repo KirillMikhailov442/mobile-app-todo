@@ -1,13 +1,13 @@
 
-interface TaskPropsDetails {
+interface ITaskDetails {
     date: string,
     category?: string,
     priority?: number
 }
 
-export default interface TaskProps {
+export default interface ITask {
     check: boolean,
     text: string,
-    details: TaskPropsDetails,
+    details: ITaskDetails,
     completed: boolean
 }

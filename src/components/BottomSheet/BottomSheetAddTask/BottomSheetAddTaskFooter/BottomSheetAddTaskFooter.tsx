@@ -6,6 +6,12 @@ import { textColors } from '../../../../constants/colors';
 import BottomSheetAddTaskFooterStyles from './BottomSheetAddTaskFooter.style';
 import { useDispatch } from 'react-redux';
 import { showModal } from '../../../../store/slices/modalsSlice';
+import { isSmallScreenSize } from '../../../../constants/size';
+import { hideBottomSheet } from '../../../../store/slices/bottomSheetSlice';
+
+
+const iconSize = isSmallScreenSize ? 20 : 25
+const iconMargin = isSmallScreenSize ? 25 : 32
 
 const BottomSheetAddTaskFooter = () =>{
 
@@ -17,23 +23,24 @@ const BottomSheetAddTaskFooter = () =>{
                 <Icon 
                     name='timer-outline' 
                     onPress={()=> dispatch(showModal('calendar'))}
-                    size={25} 
+                    size={iconSize} 
                     color={textColors.whiteDefault}/>
                 <Icon 
                     name='tag-outline' 
                     onPress={()=> dispatch(showModal('category'))}
-                    size={25} 
+                    size={iconSize} 
                     color={textColors.whiteDefault}
-                    style={{marginLeft: 32, marginRight: 32}}/>
+                    style={{marginLeft: iconMargin, marginRight: iconMargin}}/>
                 <Icon 
                     name='flag-outline' 
                     onPress={()=> dispatch(showModal('priority'))}
-                    size={25} 
+                    size={iconSize} 
                     color={textColors.whiteDefault}/>
             </View>
             <Icon 
-                name='send' 
-                size={25} 
+                name='send'
+                onPress={()=> dispatch(hideBottomSheet('addTask'))}
+                size={iconSize} 
                 color={textColors.violet}/>
         </View>
     )

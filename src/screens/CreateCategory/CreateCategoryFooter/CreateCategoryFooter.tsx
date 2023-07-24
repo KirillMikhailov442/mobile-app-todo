@@ -6,6 +6,9 @@ import { ViewStyles } from "../../../styles";
 import { Button } from "../../../components/UI";
 import { NavigationProps } from "../../../types/navigation";
 import { textColors, buttonColors } from "../../../constants/colors";
+import { isSmallScreenSize } from "../../../constants/size";
+
+const buttonFontSize = isSmallScreenSize ? 14 : 16
 
 const CreateCategoryFooter: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation}) =>{
     return(
@@ -18,10 +21,11 @@ const CreateCategoryFooter: React.FC<Pick<NavigationProps, 'navigation'>> = ({na
                 onPress={()=> navigation.goBack()}
                 styles={{
                     button: {
-                        width: 154,
+                        width: isSmallScreenSize ? 124 : 154,
                     },
                     text: {
-                        color: textColors.violet
+                        color: textColors.violet,
+                        fontSize: buttonFontSize
                     }
                 }}/>
 
@@ -29,8 +33,11 @@ const CreateCategoryFooter: React.FC<Pick<NavigationProps, 'navigation'>> = ({na
                 text='Create Category'
                 styles={{
                     button: {
-                        width: 154,
+                        width: isSmallScreenSize ? 'auto' : 154,
                         backgroundColor: buttonColors.violetDefault
+                    },
+                    text: {
+                        fontSize: buttonFontSize
                     }
                 }}/>
         </View>

@@ -1,5 +1,5 @@
 import React from "react"
-import {SafeAreaView} from 'react-native'
+import {SafeAreaView, ScrollView} from 'react-native'
 
 import { ViewStyles } from "../../styles"
 import TaskHeader from "./TaskHeader/TaskHeader"
@@ -10,6 +10,7 @@ import ChangeableTask from "./ChangeableTask/ChangeableTask"
 import { hideModal, showModal } from "../../store/slices/modalsSlice"
 import { ModalCalendar, ModalCategory, ModalDelete, ModalEditTask, ModalPriority, ModalTime } from "../../components/Modals"
 import { useAppDispatch, useAppNavigation } from "../../hooks"
+import TaskScreenStyles from "./TaskScreen.style"
 
 const TaskScreen = () =>{
 
@@ -22,18 +23,22 @@ const TaskScreen = () =>{
             ViewStyles.fullScreen
         ]}>
             <TaskHeader/>
-            <ChangeableTask/>
-            <TaskPreferences/>
+            <ScrollView 
+                showsVerticalScrollIndicator={false}
+                style={TaskScreenStyles.content}>
+                <ChangeableTask/>
+                <TaskPreferences/>
+            </ScrollView>
             <Button
-                text="Edit Task"
-                onPress={()=> navigation.goBack()}
-                styles={{
-                    button: {
-                        backgroundColor: buttonColors.violetDefault,
-                        marginTop: 'auto',
-                        marginBottom: 40
-                    }
-                }}/>
+                    text="Edit Task"
+                    onPress={()=> navigation.goBack()}
+                    styles={{
+                        button: {
+                            backgroundColor: buttonColors.violetDefault,
+                            marginTop: 'auto',
+                            marginBottom: 40
+                        }
+                    }}/>
 
             <ModalCalendar onPressButton={()=> {
                 dispatch(hideModal('calendar'))

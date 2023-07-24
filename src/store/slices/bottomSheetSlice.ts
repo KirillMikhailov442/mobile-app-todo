@@ -21,19 +21,22 @@ const bottomSheetSlice = createSlice({
     initialState,
     reducers: {
         showBottomSheet: (state, {payload}: PayloadAction<string>) =>{
-            state.find(bottomSheet => 
-                bottomSheet.name === payload ? 
-                bottomSheet.showBottomSheet = true :
-                bottomSheet.showBottomSheet = false)
+
+            state.forEach((bottomSheet, index) => {
+                if(bottomSheet.name === payload) state[index] = {...bottomSheet,  showBottomSheet: true}
+
+                else { state[index] = {...bottomSheet, showBottomSheet: false} }
+            })
 
         },
 
         hideBottomSheet: (state, {payload}: PayloadAction<string>) =>{
-            state.find(bottomSheet => 
-                bottomSheet.name === payload ? 
-                bottomSheet.showBottomSheet = false :
-                bottomSheet.showBottomSheet = false)
-        },
+
+            state.forEach((bottomSheet, index) => {
+                state[index] = {...bottomSheet, showBottomSheet: false}
+            })
+
+        }
     }
 })
 

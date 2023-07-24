@@ -52,9 +52,13 @@ const prioritySlice = createSlice({
     initialState,
     reducers: {
         selectPriority: (state, {payload}: PayloadAction<number>) =>{
-            state.find(item => item.number === payload ?
-                item.isSelected = true : 
-                item.isSelected = false)
+
+            state.forEach((priority, index) =>{
+                if(priority.number === payload) state[index] = {...priority, isSelected: true}
+
+                else { state[index] = {...priority, isSelected: false} }
+            })
+
         }
     }
 })

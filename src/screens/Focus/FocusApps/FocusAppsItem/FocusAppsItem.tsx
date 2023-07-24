@@ -5,6 +5,7 @@ import { Image, Text, TouchableOpacity, View} from "react-native";
 import FocusAppsItemStyles from "./FocusAppsItem.style";
 import { textColors } from "../../../../constants/colors";
 import { FocusAppsItemProps } from "../../../../types";
+import { isSmallScreenSize } from "../../../../constants/size";
 
 
 const FocusAppsItem: React.FC<FocusAppsItemProps> = ({
@@ -29,7 +30,7 @@ const FocusAppsItem: React.FC<FocusAppsItemProps> = ({
             </View>
             <Icon 
                 name="alert-circle-outline" 
-                size={30} 
+                size={isSmallScreenSize ? 25 : 30} 
                 color={textColors.whiteDefault}
                 style={FocusAppsItemStyles.icon}/>
         </TouchableOpacity>

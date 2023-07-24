@@ -6,7 +6,7 @@ import FocusAppsItem from "./FocusAppsItem/FocusAppsItem";
 
 const FocusApps = () =>{
     return(
-        <View>
+        <View style={FocusAppsStyles.container}>
             <Text style={FocusAppsStyles.title}>Applications</Text>
             <FocusAppsItem
                 title="Instagram"

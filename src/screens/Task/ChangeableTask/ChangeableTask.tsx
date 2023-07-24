@@ -7,6 +7,7 @@ import ChangeableTaskStyles from './ChangeableTask.style'
 import { textColors } from '../../../constants/colors'
 import { useDispatch } from 'react-redux'
 import { showModal } from '../../../store/slices/modalsSlice'
+import { isSmallScreenSize } from '../../../constants/size'
 
 const ChangeableTask = () =>{
     const dispatch = useDispatch()
@@ -23,7 +24,7 @@ const ChangeableTask = () =>{
             <Icon 
                 name='pencil' 
                 onPress={()=> dispatch(showModal('editTitle'))}
-                color={textColors.whiteDefault} size={25}/>
+                color={textColors.whiteDefault} size={isSmallScreenSize ? 20 : 25}/>
         </View>
     )
 }

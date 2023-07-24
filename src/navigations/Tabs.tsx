@@ -9,9 +9,12 @@ import { ViewStyles } from '../styles'
 import TabStyles from './Tab.style'
 import { useAppDispatch } from '../hooks'
 import { showBottomSheet } from '../store/slices/bottomSheetSlice'
+import { isSmallScreenSize } from '../constants/size'
+
+
+const iconSize = isSmallScreenSize ? 22 : 25
 
 const Tab = createBottomTabNavigator()
-
 
 const Tabs = () =>{
 
@@ -32,7 +35,7 @@ const Tabs = () =>{
                         <View style={[
                             ViewStyles.center
                         ]}>
-                            <Icon name={focused ? 'home' : 'home-outline'} color={textColors.whiteDefault} size={25}/>
+                            <Icon name={focused ? 'home' : 'home-outline'} color={textColors.whiteDefault} size={iconSize}/>
                             <Text style={TabStyles.tabBarItemLabel}>Home</Text>
                         </View>
                     )
@@ -48,7 +51,7 @@ const Tabs = () =>{
                         <View style={[
                             ViewStyles.center
                         ]}>
-                            <Icon name={focused ? 'calendar-month' : 'calendar-month-outline'} color={textColors.whiteDefault} size={25}/>
+                            <Icon name={focused ? 'calendar-month' : 'calendar-month-outline'} color={textColors.whiteDefault} size={iconSize}/>
                             <Text style={TabStyles.tabBarItemLabel}>Calendar</Text>
                         </View>
                     )
@@ -67,7 +70,7 @@ const Tabs = () =>{
                                 TabStyles.tabBarCenterButton
                             ]}
                             onPress={()=> dispatch(showBottomSheet('addTask'))}>
-                            <Icon name='plus' color={textColors.whiteDefault} size={30}/>
+                            <Icon name='plus' color={textColors.whiteDefault} size={isSmallScreenSize ? 25 : 30}/>
                         </TouchableHighlight>
                     )
                 }}/>
@@ -82,7 +85,7 @@ const Tabs = () =>{
                         <View style={[
                             ViewStyles.center
                         ]}>
-                            <Icon name={focused ? 'clock-time-four' : 'clock-time-four-outline'} color={textColors.whiteDefault} size={25}/>
+                            <Icon name={focused ? 'clock-time-four' : 'clock-time-four-outline'} color={textColors.whiteDefault} size={iconSize}/>
                             <Text style={TabStyles.tabBarItemLabel}>Focus</Text>
                         </View>
                     )
@@ -97,7 +100,7 @@ const Tabs = () =>{
                         <View style={[
                             ViewStyles.center
                         ]}>
-                            <Icon name={focused ? 'account' : 'account-outline'} color={textColors.whiteDefault} size={25}/>
+                            <Icon name={focused ? 'account' : 'account-outline'} color={textColors.whiteDefault} size={iconSize}/>
                             <Text style={TabStyles.tabBarItemLabel}>Profile</Text>
                         </View>
                     )

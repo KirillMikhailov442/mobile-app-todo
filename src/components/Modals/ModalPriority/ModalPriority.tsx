@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import { View } from "react-native";
+import { FlatGrid } from "react-native-super-grid";
 
 import { ModalLayout } from "../../../layouts";
 import MiniCard from "../../UI/MiniCard/MiniCard";
@@ -10,6 +11,7 @@ import { hideModal } from "../../../store/slices/modalsSlice";
 import { useAppDispatch, useAppSelector } from "../../../hooks";
 import { IPriority } from "../../../types";
 import { selectPriority } from "../../../store/slices/prioritySlice";
+import { isSmallScreenSize } from "../../../constants/size";
 
 
 
@@ -42,16 +44,22 @@ const ModalPriority = () =>{
                 }
             }}>
             <View style={ModalPriorityStyles.grid}>
-                {priorities.map(({number, isSelected}: IPriority, index: number) => 
-                    <MiniCard 
-                        key={index}
-                        cardText={number}
-                        onPress={() => dispatch(selectPriority(number))}
-                        styles={{
+                <FlatGrid
+                    data={priorities}
+                    itemDimension={isSmallScreenSize ? 50 : 60}
+                    spacing={10}
+                    itemContainerStyle={{justifyContent: 'center', alignItems: 'center'}}
+                    renderItem={({item}) => 
+                        <MiniCard
+                            key={item.number}
+                            cardText={item.number}
+                            onPress={()=> dispatch(selectPriority(item.number))}
+                            styles={{
                                 container: ModalPriorityStyles.priorityCardContainer,
-                                card: isSelected && ModalPriorityStyles.prioritySelectedCard
+                                card: item.isSelected && ModalPriorityStyles.prioritySelectedCard
                             }}
-                        icon={<Icon name={'flag'} size={25} color={textColors.whiteDefault}/>}/>)}
+                            icon={<Icon name={'flag'} size={isSmallScreenSize ? 20 : 25} color={textColors.whiteDefault}/>}
+                            />}/>
             </View>
         </ModalLayout>
     )

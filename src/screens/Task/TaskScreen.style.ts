@@ -1,23 +1,34 @@
 import {StyleSheet} from 'react-native'
 import { buttonColors, textColors } from '../../constants/colors'
+import { isSmallScreenSize } from '../../constants/size'
+import { ViewStyles } from '../../styles'
+
+const preferenceButtonPadding = isSmallScreenSize ? 12 : 16
 
 const TaskScreenStyles = StyleSheet.create({
+
+    content: {
+        flex: 1
+    },
+
     preference: {
-        marginTop: 26
+        marginTop: isSmallScreenSize ? 16 : 26
     },
 
     preferenceButton: {
-        paddingTop: 8,
-        paddingBottom: 8,
-        paddingLeft: 16,
-        paddingRight: 16,
+        paddingLeft: preferenceButtonPadding,
+        paddingRight: preferenceButtonPadding,
         marginLeft: 'auto',
         width: 'auto',
-        height: 40,
+        height: isSmallScreenSize ? 35 : 40,
         backgroundColor: buttonColors.grayDefault
     },
 
-    preferenceText: {
+    preferenceButtonText: {
+        fontSize: isSmallScreenSize ? 12 : 16
+    },
+
+    preferenceTextDelete: {
         color: textColors.red
     }
 })

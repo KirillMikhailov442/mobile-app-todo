@@ -6,6 +6,7 @@ import { VictoryBar, VictoryChart, VictoryTheme } from 'victory-native';
 import { bgColors, textColors } from '../../../constants/colors';
 import FocusSheduleStyles from './FocusShedule.style';
 import { Button } from '../../../components/UI';
+import { isSmallScreenSize } from '../../../constants/size';
 
 
 const data = [
@@ -39,10 +40,7 @@ const FocuseShedule = () =>{
                     }}/>
             </View>
             <VictoryChart 
-                width={sheduleWidth}
-                style={{
-                    
-                }}>
+                width={sheduleWidth}>
                 <VictoryBar 
                     animate={{
                         duration: 2000,
@@ -52,7 +50,7 @@ const FocuseShedule = () =>{
                     x="month" 
                     y="value"
                     width={sheduleWidth}
-                    barWidth={30}
+                    barWidth={isSmallScreenSize ? 25 : 30}
                     cornerRadius={{top: 5, bottom: 5}}
                     style={{
                         data: { fill: bgColors.grayLight, borderRadius: 4},

@@ -42,9 +42,13 @@ const colorsSlice = createSlice({
     initialState,
     reducers: {
         selectColor: (state, {payload}: PayloadAction<string>) =>{
-            state.find(item => item.color === payload ?
-                item.isSelected = true :
-                item.isSelected = false)
+
+            state.forEach((item, index) => {
+                if(item.color === payload) state[index] = {...item, isSelected: true}
+
+                else { state[index] = {...item, isSelected: false} }
+            })
+
         }
     }
 })

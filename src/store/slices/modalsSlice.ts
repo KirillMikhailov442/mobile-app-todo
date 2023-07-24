@@ -47,18 +47,18 @@ const modalsSlice = createSlice({
     reducers: {
         showModal: (state, {payload}: PayloadAction<string>) => {
 
-            state.find(modal => 
-                modal.name === payload ? 
-                modal.showModal = true :
-                modal.showModal = false) 
+            state.forEach((modal, index) => {
+                if(modal.name === payload) state[index] = {...modal, showModal: true}
+                
+                else{ state[index] = {...modal, showModal: false} }
+            })
+
         },
 
         hideModal: (state, {payload}: PayloadAction<string>) => {
 
-            state.find(modal => 
-                modal.name === payload ? 
-                modal.showModal = false :
-                modal.showModal = false)
+            state.forEach((modal, index) => state[index] = {...modal, showModal: false})
+
         }
     }
 })

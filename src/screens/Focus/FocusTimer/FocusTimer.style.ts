@@ -1,6 +1,7 @@
 import { StyleSheet } from "react-native";
 import { buttonColors, textColors } from "../../../constants/colors";
 import { TextStyles } from "../../../styles";
+import { isSmallScreenSize } from "../../../constants/size";
 
 
 const FocusTimerStyles = StyleSheet.create({
@@ -22,7 +23,7 @@ const FocusTimerStyles = StyleSheet.create({
     },
 
     button: {
-        width: 180,
+        width: isSmallScreenSize ? 160 : 180,
         backgroundColor: buttonColors.violetDefault,
         marginTop: 20
     }

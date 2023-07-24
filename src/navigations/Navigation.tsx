@@ -12,6 +12,7 @@ import {
     TaskScreen,
     SettingsScreen, } from "../screens";
 import Tabs from "./Tabs";
+import { isSmallScreenSize } from "../constants/size";
 
 
 const Stack = createStackNavigator()
@@ -92,6 +93,7 @@ const Navigation = () =>{
 
                 <Stack.Screen
                     options={{
+                        cardStyleInterpolator: CardStyleInterpolators.forVerticalIOS,
                         headerStyle: {
                             backgroundColor: bgColors.blackDefault
                         },
@@ -106,6 +108,9 @@ const Navigation = () =>{
                     options={{
                         headerStyle: {
                             backgroundColor: bgColors.blackDefault
+                        },
+                        headerTitleStyle: {
+                            fontSize: isSmallScreenSize ? 16 : 20
                         },
                         headerTitle: 'Settings',
                         headerTitleAlign: 'center',

@@ -9,6 +9,9 @@ import { FormLayout } from "../../../layouts"
 import { ViewStyles } from "../../../styles"
 import { buttonColors } from "../../../constants/colors"
 import { NavigationProps } from "../../../types/navigation";
+import { isSmallScreenSize } from "../../../constants/size";
+
+const inputMargin = isSmallScreenSize ? 15 : 25
 
 
 const RegisterForm: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation}) =>{
@@ -37,7 +40,6 @@ const RegisterForm: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation
         validationSchema: RegisterSchema,
         onSubmit: values => {
             navigation.navigate('home')
-            
         }
     })
 
@@ -68,11 +70,11 @@ const RegisterForm: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation
                             }}
                             label="Username"
                             value={formikRegister.values.username}
-                            onChange={formikRegister.handleChange('username')}
+                            onChange={() => formikRegister.handleChange('username')}
                             error={formikRegister.errors.username}
                             styles={{
                                 container: {
-                                    marginTop: 25
+                                    marginTop: inputMargin
                                 }
                             }}/>
 
@@ -83,11 +85,11 @@ const RegisterForm: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation
                             security={true}
                             label="Password"
                             value={formikRegister.values.password}
-                            onChange={formikRegister.handleChange('password')}
+                            onChange={() => formikRegister.handleChange('password')}
                             error={formikRegister.errors.password}
                             styles={{
                                 container: {
-                                    marginTop: 25
+                                    marginTop: inputMargin
                                 }
                             }}/>
 
@@ -98,11 +100,11 @@ const RegisterForm: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation
                             security={true}
                             label="Confirm Password"
                             value={formikRegister.values.confirmPassword}
-                            onChange={formikRegister.handleChange('confirmPassword')}
+                            onChange={() => formikRegister.handleChange('confirmPassword')}
                             error={formikRegister.errors.confirmPassword}
                             styles={{
                                 container: {
-                                    marginTop: 25
+                                    marginTop: inputMargin
                                 }
                             }}/>
 

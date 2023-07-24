@@ -10,6 +10,7 @@ import { hideModal } from '../../../store/slices/modalsSlice'
 import { useAppSelector, useAppDispatch, useAppNavigation } from '../../../hooks'
 import { hideBottomSheet } from '../../../store/slices/bottomSheetSlice'
 import { ModalLayoutPropsButttons } from '../../../types/layouts/ModalLayoutProps'
+import { isSmallScreenSize } from '../../../constants/size'
 
 interface ModalCategoryProps {
     buttons?: ModalLayoutPropsButttons,
@@ -60,7 +61,8 @@ const ModalCategory: React.FC<ModalCategoryProps> = ({
                 <View style={ModalCategoryStyles.grid}>
                     <FlatGrid
                         data={[...categories, {text: 'Create new', iconName: 'plus', color: '#80FFD1', iconColor: "#00A369"}]}
-                        itemDimension={80}
+                        itemDimension={isSmallScreenSize ? 60 : 80}
+                        spacing={10}
                         itemContainerStyle={{justifyContent: 'center', alignItems: 'center'}}
                         renderItem={({item}) => 
                             <MiniCard 
@@ -68,7 +70,7 @@ const ModalCategory: React.FC<ModalCategoryProps> = ({
                                 onPress={ ()=> item.iconName === 'plus' && addCategory()}
                                 styles={{card: {backgroundColor: item.color}}} 
                                 icon={<Icon 
-                                    size={35} 
+                                    size={ isSmallScreenSize ? 25 : 35} 
                                     name={item.iconName} 
                                     color={item.iconColor}/>}
                             />}/>

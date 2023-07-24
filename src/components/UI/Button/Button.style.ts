@@ -1,15 +1,16 @@
 import {StyleSheet} from 'react-native'
 import { bgColors, borderColors, textColors } from '../../../constants/colors'
+import { isSmallScreenSize } from '../../../constants/size'
 
 const ButtonStyles = StyleSheet.create({
     button: {
         borderColor: borderColors.transparent,
         borderWidth: 1,
-        paddingTop: 12,
-        paddingBottom: 12,
         fontSize: 16,
+        paddingLeft: 10,
+        paddingRight: 10,
         alignItems: 'center',
-        height: 48,
+        height: isSmallScreenSize ? 40 : 48,
         width: '100%',
         backgroundColor: bgColors.transparent,
         borderRadius: 4,

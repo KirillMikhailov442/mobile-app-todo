@@ -1,9 +1,10 @@
 import {StyleSheet} from 'react-native'
 import { textColors } from '../../constants/colors'
+import { isSmallScreenSize } from '../../constants/size'
 
 const HeaderLayoutStyles = StyleSheet.create({
     header: {
-        height: 70,
+        height: isSmallScreenSize ? 60 : 70,
         paddingTop: 14,
         paddingBottom: 14,
         paddingLeft: 24,
@@ -14,7 +15,7 @@ const HeaderLayoutStyles = StyleSheet.create({
     },
 
     title: {
-        fontSize: 20,
+        fontSize: isSmallScreenSize ? 18 : 20,
         color: textColors.whiteDefault
     }
 })

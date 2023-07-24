@@ -1,6 +1,7 @@
 import { StyleSheet } from "react-native";
 import { bgColors, borderColors, buttonColors, textColors } from "../../constants/colors";
 import { TextStyles } from "../../styles";
+import { isSmallScreenSize } from "../../constants/size";
 
 const ModalLayoutStyles = StyleSheet.create({
 
@@ -34,7 +35,8 @@ const ModalLayoutStyles = StyleSheet.create({
     },
 
     footerButton: {
-        width: 154,
+        width: isSmallScreenSize ? 120 : 154,
+        height: isSmallScreenSize ? 40 : 48,
         backgroundColor: bgColors.transparent,
 
     },
@@ -44,6 +46,7 @@ const ModalLayoutStyles = StyleSheet.create({
 
     footerButtonText: {
         color: textColors.violet,
+        fontSize: isSmallScreenSize ? 14 : 16
     },
 
     footerButtonTextRight: {

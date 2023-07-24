@@ -1,5 +1,7 @@
 import {StyleSheet} from 'react-native'
+
 import { buttonColors } from '../../../constants/colors'
+import { isSmallScreenSize, screenWidth } from '../../../constants/size'
 
 const ProfileButtonsStyles = StyleSheet.create({
     container: {
@@ -10,8 +12,8 @@ const ProfileButtonsStyles = StyleSheet.create({
     },
 
     button: {
-        height: 58,
-        width: 150,
+        height: isSmallScreenSize ?  50 : 58,
+        width: isSmallScreenSize ? 120 : 150,
         backgroundColor: buttonColors.grayDefault
     }
 })

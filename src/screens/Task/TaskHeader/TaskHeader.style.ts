@@ -1,24 +1,26 @@
 import {StyleSheet} from 'react-native'
 import { bgColors} from '../../../constants/colors'
+import { isSmallScreenSize } from '../../../constants/size'
+
+const taskHeaderPadding = isSmallScreenSize ? 6 : 11
+const taskButtonSize = isSmallScreenSize ? 26 : 32
 
 const TaskHeaderStyles = StyleSheet.create({
     container: {
-        height: 54,
+        height: isSmallScreenSize ? 44 : 54,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        paddingTop: 11,
-        paddingBottom: 11,
+        paddingTop:  taskHeaderPadding,
+        paddingBottom: taskHeaderPadding,
     },
 
     button: {
         backgroundColor: bgColors.blackLight,
-        width: 32,
-        height: 32,
+        width: taskButtonSize,
+        height: taskButtonSize,
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 5,
-        paddingTop: 0,
-        paddingBottom: 0,
         paddingLeft: 0,
         paddingRight: 0
     }

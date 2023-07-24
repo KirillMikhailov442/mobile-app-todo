@@ -1,11 +1,14 @@
 import { StyleSheet } from "react-native";
 
 import { borderColors, textColors } from "../../../constants/colors";
+import { isSmallScreenSize } from "../../../constants/size";
+
+const checkboxHeight = isSmallScreenSize ? 14 : 16
 
 const CheckBoxStyles = StyleSheet.create({
     container: {
-        width: 16,
-        height: 16,
+        width: checkboxHeight,
+        height: checkboxHeight,
         borderRadius: 50,
         borderColor: borderColors.white,
         borderWidth: 1.5,
@@ -14,13 +17,12 @@ const CheckBoxStyles = StyleSheet.create({
     },
     checkBox: {
         borderRadius: 50,
-        width: 7.5,
-        height: 7.5
+        width: checkboxHeight / 2,
+        height: checkboxHeight / 2
     },
 
     checkBoxActive: {
-        backgroundColor: textColors.violet,
-
+        backgroundColor: textColors.violet
     }
 })
 

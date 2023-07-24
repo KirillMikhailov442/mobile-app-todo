@@ -18,7 +18,7 @@ const Avatar: React.FC<AvatarProps> = ({
                     style
             ]}>
                 <Image
-                    source={require('../../../assets/images/user.png')}
+                    source={require('../../../assets/images/user/user-2.png')}
                     style={AvatarStyles.avatar}/>
             </TouchableOpacity>
         )
@@ -31,7 +31,7 @@ const Avatar: React.FC<AvatarProps> = ({
                 style
             ]}>
             <Image
-            source={require('../../../assets/images/user.png')}
+            source={require('../../../assets/images/user/user-2.png')}
             style={AvatarStyles.avatar}/>
         </View>
     )

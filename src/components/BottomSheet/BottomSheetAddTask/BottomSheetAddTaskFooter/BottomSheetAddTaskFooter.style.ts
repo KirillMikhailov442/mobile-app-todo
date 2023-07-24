@@ -11,9 +11,6 @@ const BottomSheetAddTaskFooterStyles = StyleSheet.create({
         flexDirection: 'row'
     },
 
-    footerActionsItem: {
-
-    }
 })
 
 export default BottomSheetAddTaskFooterStyles

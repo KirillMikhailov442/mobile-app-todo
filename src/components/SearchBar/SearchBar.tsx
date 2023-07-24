@@ -4,6 +4,7 @@ import Icon from "react-native-vector-icons/Ionicons"
 import { Input } from "../UI";
 import { textColors } from "../../constants/colors";
 import SearchBarStyles from "./SearchBar.style";
+import { isSmallScreenSize } from "../../constants/size";
 
 
 const SearchBar = () =>{
@@ -16,10 +17,11 @@ const SearchBar = () =>{
             icon={<Icon
                 name="search" 
                 color={textColors.grayDefault} 
-                size={30}
+                size={isSmallScreenSize ? 25 : 30}
                 style={SearchBarStyles.icon}/>}
             styles={{
-                inputText: SearchBarStyles.input
+                inputText: SearchBarStyles.input,
+                container: SearchBarStyles.inputContainer
             }}/>
     )
 }

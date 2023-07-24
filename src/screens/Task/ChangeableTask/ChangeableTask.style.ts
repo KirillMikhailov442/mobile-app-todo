@@ -1,6 +1,7 @@
 import {StyleSheet} from 'react-native'
 import { TextStyles } from '../../../styles'
 import { textColors } from '../../../constants/colors'
+import { isSmallScreenSize } from '../../../constants/size'
 
 const ChangeableTaskStyles = StyleSheet.create({
     container: {
@@ -16,11 +17,12 @@ const ChangeableTaskStyles = StyleSheet.create({
     },
     title: {
         ...TextStyles.text,
-        fontSize: 20
+        fontSize: isSmallScreenSize ? 18 : 20
     },
     subtitle: {
         ...TextStyles.text,
-        color: textColors.grayDark
+        color: textColors.grayDark,
+        fontSize: isSmallScreenSize ? 12 : 14
     }
 })
 

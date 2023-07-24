@@ -23,16 +23,16 @@ const ModalLayout: React.FC<ModalLayoutProps> = ({
             style={ModalLayoutStyles.modal}>
                 <View style={[
                     ModalLayoutStyles.container,
-                    styles && {...styles.container}
+                    {...styles?.container}
                 ]}>
                     {title && 
                         <View style={[
                             ModalLayoutStyles.header,
-                            styles && {...styles.header}
+                            {...styles?.header}
                         ]}>
                             <Text style={[
                                 ModalLayoutStyles.headerTitle,
-                                styles && {...styles.title}
+                                {...styles?.title}
                             ]}>{title}</Text>
                         </View>}
                     {children}

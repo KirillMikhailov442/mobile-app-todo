@@ -1,9 +1,10 @@
 import { StyleSheet } from "react-native";
+import { isSmallScreenSize, screenWidth } from "../constants/size";
 
 const ViewStyles = StyleSheet.create({
     container: {
-        paddingLeft: 24,
-        paddingRight: 24
+        paddingLeft: isSmallScreenSize ? 10 : 24,
+        paddingRight: isSmallScreenSize ? 10 : 24
     },
 
     fullScreen: {
@@ -16,8 +17,7 @@ const ViewStyles = StyleSheet.create({
     },
 
     grid: {
-        flexDirection: 'row',
-        flexWrap: 'wrap',
+        width: '100%'
     }
 })
 

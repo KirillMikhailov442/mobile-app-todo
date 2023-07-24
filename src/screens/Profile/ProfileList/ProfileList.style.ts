@@ -1,6 +1,7 @@
 import {StyleSheet} from 'react-native'
 
 import { textColors } from '../../../constants/colors'
+import { isSmallScreenSize } from '../../../constants/size'
 
 const ProfileListStyles = StyleSheet.create({
     container: {
@@ -11,7 +12,7 @@ const ProfileListStyles = StyleSheet.create({
     },
     sectionTitle: {
         color: textColors.grayDefault,
-        fontSize: 14
+        fontSize: isSmallScreenSize ? 12 : 14
     },
 
     preference: {

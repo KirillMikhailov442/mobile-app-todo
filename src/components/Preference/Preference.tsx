@@ -5,6 +5,7 @@ import IconSimple from 'react-native-vector-icons/SimpleLineIcons'
 import { PreferenceProps } from '../../types'
 import PreferenceStyles from './Preference.style'
 import { textColors } from '../../constants/colors'
+import { isSmallScreenSize } from '../../constants/size'
 
 const Preference: React.FC<PreferenceProps> = ({
     icon,
@@ -30,7 +31,7 @@ const Preference: React.FC<PreferenceProps> = ({
                 ( showButton && <IconSimple 
                     name='arrow-right' 
                     color={textColors.whiteDefault} 
-                    size={20}
+                    size={isSmallScreenSize ? 15 : 20}
                     style={PreferenceStyles.button}/>)
             }
         </TouchableOpacity>

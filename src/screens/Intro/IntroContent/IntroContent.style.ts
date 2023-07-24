@@ -1,13 +1,23 @@
-import {StyleSheet} from 'react-native'
+import {StyleSheet, Dimensions} from 'react-native'
+
 import { bgColors } from '../../../constants/colors'
+
+
 
 const IntroContentStyles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
     },
+    imageContainer: {
+        width: '100%',
+        height: 100,
+        paddingLeft: 50,
+        paddingRight: 50,
+        backgroundColor: 'red'
+    },
     image: {
-        
+        resizeMode: 'stretch',
     },
     title: {
         marginTop: 50,

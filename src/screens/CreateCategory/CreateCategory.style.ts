@@ -2,13 +2,14 @@ import { StyleSheet, Dimensions } from "react-native";
 
 import { bgColors, textColors } from "../../constants/colors";
 import { TextStyles } from "../../styles";
+import { isSmallScreenSize } from "../../constants/size";
 
 const CreateCategoryStyles = StyleSheet.create({
     title: {
-        fontSize: 20,
+        fontSize: isSmallScreenSize ? 18 : 20,
         fontWeight :'bold',
         color: textColors.whiteDefault,
-        marginTop: 26
+        marginTop: isSmallScreenSize ? 16 : 26
     },
     label: {
         ...TextStyles.text,
@@ -18,21 +19,21 @@ const CreateCategoryStyles = StyleSheet.create({
     button: {
         paddingTop: 8,
         paddingBottom: 8,
-        paddingLeft: 16,
-        paddingRight: 16,
+        paddingLeft: isSmallScreenSize ? 12 : 16,
+        paddingRight: isSmallScreenSize ? 12 : 16,
         width: 'auto',
-        height: 50,
+        height: isSmallScreenSize ? 40 : 50,
         backgroundColor: bgColors.blackVeryLight,
         marginRight: 'auto'
     },
 
     buttonText: {
-        fontSize: 12,
+        fontSize: isSmallScreenSize ? 12 : 16,
     },
 
     footer: {
         marginTop: 'auto',
-        marginBottom: 47,
+        marginBottom: 45,
         flexDirection: 'row',
         justifyContent: 'space-between'
     }

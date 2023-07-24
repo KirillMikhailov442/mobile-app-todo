@@ -1,9 +1,13 @@
 import { StyleSheet } from "react-native";
 
+import { isSmallScreenSize } from "../../../../constants/size";
+
+const colorsListItemSize = isSmallScreenSize ? 26 : 36
+
 const ColorsListItemStyles = StyleSheet.create({
     container: {
-        width: 36,
-        height: 36,
+        width: colorsListItemSize,
+        height: colorsListItemSize,
         borderRadius: 50,
         marginLeft: 16,
         alignItems: 'center',
