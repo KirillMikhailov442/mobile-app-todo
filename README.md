@@ -2,9 +2,6 @@
 
 ![](./assets/logo.png)
 
-
-## Description
-
 Mobile app to do list on React Native.
 The goal of this project is to apply the knowledge of typescript, redux and react native to create a mobile application from a real layout.
 `Here is only the client part app.`
