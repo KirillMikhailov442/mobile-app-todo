@@ -2,9 +2,8 @@
 
 ![](./assets/logo.png)
 
-#### Description:
 
-***
+## Description
 
 Mobile app to do list on React Native.
 The goal of this project is to apply the knowledge of typescript, redux and react native to create a mobile application from a real layout.
@@ -12,9 +11,7 @@ The goal of this project is to apply the knowledge of typescript, redux and reac
 
 [application layout in figma](https://www.figma.com/file/qvQGqs600ek5PpCF1TN2K7/UpTodo---Todo-list-app-UI-Kit-(Community)?type=design&node-id=0-1)
 
-#### Stack:
-
-***
+## Stack
 
   * React
   * React Native
@@ -25,9 +22,7 @@ The goal of this project is to apply the knowledge of typescript, redux and reac
   * TypeScript
   
 
-#### Installation project:
-
-***
+## Installation project
 
 ```
 git clone https://github.com/KirillMikhailov442/mobile-app-todo.git
@@ -52,8 +47,6 @@ __IOS__
 npm run ios
 ```
 
-#### Installing the app on your phone:
-
-***
+## Installing the app on your phone
 
 * [android](https://github.com/KirillMikhailov442/mobile-app-todo/blob/main/dist/todoMobile.apk)
