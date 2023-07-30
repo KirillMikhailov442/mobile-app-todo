@@ -11,6 +11,7 @@ import { hideModal, showModal } from "../../store/slices/modalsSlice"
 import { ModalCalendar, ModalCategory, ModalDelete, ModalEditTask, ModalPriority, ModalTime } from "../../components/Modals"
 import { useAppDispatch, useAppNavigation } from "../../hooks"
 import TaskScreenStyles from "./TaskScreen.style"
+import { isSmallScreenSize } from "../../constants/size"
 
 const TaskScreen = () =>{
 
@@ -36,7 +37,7 @@ const TaskScreen = () =>{
                         button: {
                             backgroundColor: buttonColors.violetDefault,
                             marginTop: 'auto',
-                            marginBottom: 40
+                            marginBottom: isSmallScreenSize ? 20 : 40,
                         }
                     }}/>
 

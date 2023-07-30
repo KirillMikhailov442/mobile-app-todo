@@ -4,6 +4,7 @@ import { CountdownCircleTimer } from 'react-native-countdown-circle-timer'
 
 import FocusTimerStyles from "./FocusTimer.style";
 import { Button } from "../../../components/UI";
+import { isSmallScreenSize } from "../../../constants/size";
 
 
 const FocusTimer = () =>{
@@ -15,7 +16,7 @@ const FocusTimer = () =>{
             <CountdownCircleTimer
                 duration={60*60}
                 isPlaying={isWorkTimer}
-                size={213}
+                size={ isSmallScreenSize ? 193 : 213}
                 colors={['#8687E7', '#8687E7', '#8687E7', '#8687E7']}
                 colorsTime={[1, 2]}>
                         {({ remainingTime }) => 

@@ -19,10 +19,10 @@ const CreateCategoryStyles = StyleSheet.create({
     button: {
         paddingTop: 8,
         paddingBottom: 8,
-        paddingLeft: isSmallScreenSize ? 12 : 16,
-        paddingRight: isSmallScreenSize ? 12 : 16,
+        paddingLeft: isSmallScreenSize ? 10 : 16,
+        paddingRight: isSmallScreenSize ? 10 : 16,
         width: 'auto',
-        height: isSmallScreenSize ? 40 : 50,
+        height: isSmallScreenSize ? 35 : 50,
         backgroundColor: bgColors.blackVeryLight,
         marginRight: 'auto'
     },

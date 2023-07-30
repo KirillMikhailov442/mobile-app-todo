@@ -17,6 +17,9 @@ const BoxList: React.FC<BoxListProps> = ({
                 style={BoxListStyles.container}
                 showsVerticalScrollIndicator={false}
                 showsHorizontalScrollIndicator={false}
+                onViewableItemsChanged={({viewableItems, changed})=> {
+                    
+                }}
                 bounces={false}
                 data={data}
                 renderItem={({item}) => <Text style={[BoxListStyles.text]}>{item}</Text>}/>

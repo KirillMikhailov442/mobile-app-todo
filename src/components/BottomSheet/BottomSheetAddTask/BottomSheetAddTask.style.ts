@@ -7,7 +7,9 @@ const inputHeight = isSmallScreenSize ? 38 : 43
 
 const BottomSheetAddTaskStyles = StyleSheet.create({
     container: {
-        minHeight: isSmallScreenSize ? 200 : 250,
+        height: isSmallScreenSize ? 200 : 250,
+        // maxHeight: 500,
+        // minHeight: 200,
         backgroundColor: bgColors.blackVeryLight,
         marginTop: 'auto',
         paddingLeft: bottomSheetAddTaskPadding,

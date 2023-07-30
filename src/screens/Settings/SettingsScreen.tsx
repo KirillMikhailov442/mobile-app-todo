@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, TextInput } from "react-native";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import IconOcticons from 'react-native-vector-icons/Octicons'
 import IconIonicons from 'react-native-vector-icons/Ionicons'

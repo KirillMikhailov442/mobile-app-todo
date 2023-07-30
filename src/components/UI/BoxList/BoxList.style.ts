@@ -14,8 +14,8 @@ const BoxListStyles = StyleSheet.create({
         textAlign: 'center',
         fontSize :24,
         fontWeight: '700',
-        width: 64,
-        height: 32
+        marginTop: 14,
+        marginBottom: 14
     }
 })
 

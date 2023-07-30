@@ -1,6 +1,7 @@
-import {StyleSheet, Dimensions} from 'react-native'
+import { StyleSheet } from 'react-native'
 
 import { bgColors } from '../../../constants/colors'
+import { isSmallScreenSize } from '../../../constants/size'
 
 
 
@@ -9,21 +10,15 @@ const IntroContentStyles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
     },
-    imageContainer: {
-        width: '100%',
-        height: 100,
-        paddingLeft: 50,
-        paddingRight: 50,
-        backgroundColor: 'red'
-    },
     image: {
         resizeMode: 'stretch',
     },
     title: {
-        marginTop: 50,
+        marginTop: isSmallScreenSize ? 20 : 50,
+        fontSize: isSmallScreenSize ? 20 : 32
     }, 
     subtitle: {
-        marginTop: 42
+        marginTop: isSmallScreenSize ? 12 : 42
     },
     indicator: {
         width: 95,

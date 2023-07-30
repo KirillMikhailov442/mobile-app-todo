@@ -1,15 +1,13 @@
 import React from "react"
-import { useDispatch } from "react-redux"
 
 import { BottomSheetAddTask } from "../BottomSheet"
 import { ModalCalendar, ModalCategory, ModalPriority, ModalTime } from "../Modals"
 import { hideModal, showModal } from "../../store/slices/modalsSlice"
-import { useAppNavigation } from "../../hooks"
+import { useAppDispatch } from "../../hooks"
 
 const AddTask = () =>{
 
-    const dispatch = useDispatch()
-    const navigation = useAppNavigation()
+    const dispatch = useAppDispatch()
 
     return(
         <>
@@ -26,7 +24,7 @@ const AddTask = () =>{
                             width: '100%'
                         }
                     }
-                },
+                }
             }}/>
             <ModalTime/>
             <ModalPriority/>

@@ -8,7 +8,7 @@ const preferenceButtonPadding = isSmallScreenSize ? 12 : 16
 const TaskScreenStyles = StyleSheet.create({
 
     content: {
-        flex: 1
+        ...ViewStyles.fullScreen
     },
 
     preference: {

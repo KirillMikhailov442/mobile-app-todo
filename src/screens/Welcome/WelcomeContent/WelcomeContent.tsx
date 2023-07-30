@@ -6,6 +6,7 @@ import WelcomeContentStyles from "./WelcomeContent.style"
 import Button from "../../../components/UI/Button/Button"
 import { buttonColors } from "../../../constants/colors"
 import { NavigationProps } from "../../../types/navigation";
+import { isSmallScreenSize } from "../../../constants/size"
 
 const WelcomeContent: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation}) =>{
     return(
@@ -31,6 +32,9 @@ const WelcomeContent: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigati
                         styles={{
                             button: {
                                 backgroundColor: buttonColors.violetDefault
+                            },
+                            text: {
+                                fontSize: isSmallScreenSize ? 14 : 16
                             }
                         }}
                         onPress={()=> navigation.navigate('login')}/>
@@ -40,6 +44,9 @@ const WelcomeContent: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigati
                             button: {
                                 borderColor: buttonColors.violetDefault,
                                 marginTop: 28
+                            },
+                            text: {
+                                fontSize: isSmallScreenSize ? 14 : 16
                             }
                         }}
                         onPress={()=> navigation.navigate('register')}/>

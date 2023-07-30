@@ -16,18 +16,18 @@ const BottomSheetAddTask = () =>{
     
     const [showBottomSheet, setShowBottomSheet] = useState(bottomSheetState.showBottomSheet)
 
-    
+
     useEffect(()=>{
         setShowBottomSheet(bottomSheetState.showBottomSheet)
     }, [bottomSheetState])
-    
+
 
     return(
         <Modal 
             isVisible={showBottomSheet}
             onBackdropPress={()=> dispatch(hideBottomSheet('addTask')) }
             swipeDirection="down" 
-            style={{margin: 0}}>
+            style={{margin: 0, height: 'auto'}}>
             <View style={BottomSheetAddTaskStyles.container}>
                 <FormLayout 
                     title='Add Task'
@@ -39,7 +39,6 @@ const BottomSheetAddTask = () =>{
                             placeholder={{
                                 text: 'Description'
                             }}
-                            isMultiline
                             styles={{
                                 container: BottomSheetAddTaskStyles.inputContainer,
                                 input: BottomSheetAddTaskStyles.input,

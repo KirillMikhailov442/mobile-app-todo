@@ -13,9 +13,7 @@ const CreateCategoryScreen: React.FC<Pick<NavigationProps, 'navigation'>> = ({na
 
     return(
         <SafeAreaView style={ViewStyles.fullScreen}>
-            <View style={[
-                ViewStyles.container,
-            ]}>
+            <View style={ViewStyles.container}>
                 <Text style={CreateCategoryStyles.title}>Create new category</Text>
                 <Input
                     label='Category name:'

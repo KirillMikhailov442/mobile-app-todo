@@ -5,6 +5,7 @@ import moment from 'moment'
 
 import CalendarCarouselStyles from './CalendarCarousel.style'
 import CalendarCarouselItem from './CalendarCarouselItem/CalendarCarouselItem'
+import { isSmallScreenSize } from '../../../constants/size'
 
 const date = moment().format("YYYY-MM-DD")
 
@@ -31,17 +32,19 @@ for (let i = 1; i < daysInMonthNum; i++) {
     
 }
 
+const iconSize = isSmallScreenSize ? 14 : 16
+
 const CalendarCarousel = () =>{
     
     return(
         <View style={CalendarCarouselStyles.container}>
             <View style={CalendarCarouselStyles.header}>
-                <Icon name='arrow-left' color={'white'} size={16}/>
+                <Icon name='arrow-left' color={'white'} size={iconSize}/>
                 <View style={CalendarCarouselStyles.headerText}>
                     <Text style={CalendarCarouselStyles.headerTextTitle}>{month.toUpperCase()}</Text>
                     <Text style={CalendarCarouselStyles.headerTextSubtitle}>{year}</Text>
                 </View>
-                <Icon name='arrow-right' color={'white'} size={16}/>
+                <Icon name='arrow-right' color={'white'} size={iconSize}/>
             </View>
 
             <FlatList

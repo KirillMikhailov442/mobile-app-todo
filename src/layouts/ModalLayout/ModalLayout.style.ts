@@ -35,7 +35,8 @@ const ModalLayoutStyles = StyleSheet.create({
     },
 
     footerButton: {
-        width: isSmallScreenSize ? 120 : 154,
+        // 154
+        width: isSmallScreenSize ? 120 : 140,
         height: isSmallScreenSize ? 40 : 48,
         backgroundColor: bgColors.transparent,
 

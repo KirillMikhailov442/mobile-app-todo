@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native'
-import { bgColors, textColors } from '../../../../constants/colors'
+
+import { bgColors, buttonColors, textColors } from '../../../../constants/colors'
 
 const CalendarCarouselItemStyles = StyleSheet.create({
     container: {
@@ -31,6 +32,13 @@ const CalendarCarouselItemStyles = StyleSheet.create({
         color: textColors.whiteDefault,
         fontSize: 14,
         fontWeight: 'bold'
+    },
+
+    isTask: {
+        width: 5,
+        height: 5,
+        borderRadius: 50,
+        backgroundColor: buttonColors.violetDefault
     }
 })
 

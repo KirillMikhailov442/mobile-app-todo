@@ -9,13 +9,15 @@ import { textColors } from "../../../constants/colors";
 const Input: React.FC<InputProps> = ({
     label,
     onChange,
+    onChangeText,
     value,
     error,
     placeholder,
     styles,
     security,
     icon,
-    isMultiline
+    isMultiline,
+    inputRef
 })=>{
 
     return(
@@ -39,8 +41,10 @@ const Input: React.FC<InputProps> = ({
                     placeholder={placeholder.text}
                     placeholderTextColor={placeholder.color ?? textColors.grayVeryDark}
                     secureTextEntry={security}
-                    onChangeText={onChange}
+                    onChangeText={onChangeText}
+                    onChange={onChange}
                     value={value}
+                    ref={inputRef}
                     multiline={isMultiline}
                     style={[
                         TextStyles.text,

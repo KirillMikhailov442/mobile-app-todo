@@ -17,6 +17,8 @@ export default interface InputProps {
     label?: string,
     value?: string,
     onChange?: ()=> void,
+    onChangeText?: (text: string) => void,
+    inputRef?: any,
     error?: string,
     security?: boolean,
     styles?: InputPropsStyles,
