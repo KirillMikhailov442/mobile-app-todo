@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import { bgColors, textColors } from "../../../constants/colors";
+import { StyleSheet } from 'react-native';
+import { bgColors, textColors } from '../../../constants/colors';
 
 const BoxListStyles = StyleSheet.create({
     container: {

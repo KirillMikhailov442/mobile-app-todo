@@ -1,6 +1,6 @@
-import { StyleSheet } from "react-native";
-import { TextStyles } from "../../../styles";
-import { bgColors } from "../../../constants/colors";
+import { StyleSheet } from 'react-native';
+import { TextStyles } from '../../../styles';
+import { bgColors } from '../../../constants/colors';
 
 
 const FocusHeaderStyles = StyleSheet.create({

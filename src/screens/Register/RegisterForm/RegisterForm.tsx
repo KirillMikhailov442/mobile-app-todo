@@ -1,15 +1,15 @@
-import React from "react"
-import { ScrollView } from "react-native"
-import { useFormik } from "formik"
+import React from 'react'
+import { ScrollView } from 'react-native'
+import { useFormik } from 'formik'
 import * as Yup from 'yup';
 
-import Button from "../../../components/UI/Button/Button"
-import Input from "../../../components/UI/Input/Input"
-import { FormLayout } from "../../../layouts"
-import { ViewStyles } from "../../../styles"
-import { buttonColors } from "../../../constants/colors"
-import { NavigationProps } from "../../../types/navigation";
-import { isSmallScreenSize } from "../../../constants/size";
+import Button from '../../../components/UI/Button/Button'
+import Input from '../../../components/UI/Input/Input'
+import { FormLayout } from '../../../layouts'
+import { ViewStyles } from '../../../styles'
+import { buttonColors } from '../../../constants/colors'
+import { NavigationProps } from '../../../types/navigation';
+import { isSmallScreenSize } from '../../../constants/size';
 
 const inputMargin = isSmallScreenSize ? 15 : 25
 
@@ -18,16 +18,16 @@ const RegisterForm: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation
 
     const RegisterSchema = Yup.object({
         username: Yup.string()
-            .min(5, "username less than 5 characters")
-            .required("you didn't enter a name"),
+            .min(5, 'username less than 5 characters')
+            .required(`you didn't enter a name`),
 
         password: Yup.string()
-            .min(5, "password less than 5 characters")
-            .required("you didn't enter a password"),
+            .min(5, 'password less than 5 characters')
+            .required(`you didn't enter a password`),
 
             confirmPassword: Yup.string()
             .oneOf([Yup.ref('password')], 'Passwords must match')
-            .required("you did not repeat your password")
+            .required('you did not repeat your password')
             
     })
 
@@ -49,7 +49,7 @@ const RegisterForm: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation
             ViewStyles.fullScreen
         ]}>
             <FormLayout 
-                title="Register" 
+                title='Register' 
                 showSocialMedias={true}
                 bottomText={{
                     text: 'Already have an account?',
@@ -68,7 +68,7 @@ const RegisterForm: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation
                             placeholder={{
                                 text: 'Enter your Username',
                             }}
-                            label="Username"
+                            label='Username'
                             value={formikRegister.values.username}
                             onChange={() => formikRegister.handleChange('username')}
                             error={formikRegister.errors.username}
@@ -83,7 +83,7 @@ const RegisterForm: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation
                                 text: 'Enter password'
                             }}
                             security={true}
-                            label="Password"
+                            label='Password'
                             value={formikRegister.values.password}
                             onChange={() => formikRegister.handleChange('password')}
                             error={formikRegister.errors.password}
@@ -98,7 +98,7 @@ const RegisterForm: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation
                                 text: 'Enter password'
                             }}
                             security={true}
-                            label="Confirm Password"
+                            label='Confirm Password'
                             value={formikRegister.values.confirmPassword}
                             onChange={() => formikRegister.handleChange('confirmPassword')}
                             error={formikRegister.errors.confirmPassword}
@@ -109,7 +109,7 @@ const RegisterForm: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation
                             }}/>
 
                         <Button
-                            text="Register"
+                            text='Register'
                             onPress={formikRegister.handleSubmit}
                             styles={{
                                 button: {

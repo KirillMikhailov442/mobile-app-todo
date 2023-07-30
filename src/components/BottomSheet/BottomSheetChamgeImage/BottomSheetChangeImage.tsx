@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Text, View } from "react-native";
+import React, { useState, useEffect } from 'react';
+import { Text, View } from 'react-native';
 import Modal from 'react-native-modal';
-import BottomSheetChangeImageStyles from "./BottomSheetChangeImage.style";
-import Preference from "../../Preference/Preference";
-import { hideBottomSheet } from "../../../store/slices/bottomSheetSlice";
-import { useAppDispatch, useAppSelector } from "../../../hooks";
+import BottomSheetChangeImageStyles from './BottomSheetChangeImage.style';
+import Preference from '../../Preference/Preference';
+import { hideBottomSheet } from '../../../store/slices/bottomSheetSlice';
+import { useAppDispatch, useAppSelector } from '../../../hooks';
 
 
 const BottomSheetChangeImage = () =>{
@@ -21,7 +21,7 @@ const BottomSheetChangeImage = () =>{
 
     return(
         <Modal
-            swipeDirection={"down"}
+            swipeDirection={'down'}
             isVisible={showBottomSheet}
             style={{margin: 0}}
             onBackdropPress={()=> dispatch(hideBottomSheet('changeImage'))}>
@@ -32,15 +32,15 @@ const BottomSheetChangeImage = () =>{
                         </Text>
                     </View>
                     <Preference
-                        text="Tack picture"
+                        text='Tack picture'
                         showButton={false}/>
 
                     <Preference
-                        text="Import from gallery"
+                        text='Import from gallery'
                         showButton={false}/>
 
                     <Preference
-                        text="Import from Google Drive"
+                        text='Import from Google Drive'
                         showButton={false}/>
                 </View>
         </Modal>

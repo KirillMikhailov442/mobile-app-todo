@@ -1,7 +1,7 @@
-import { StyleSheet } from "react-native";
-import { bgColors, borderColors } from "../../../constants/colors";
-import { TextStyles } from "../../../styles";
-import { isSmallScreenSize } from "../../../constants/size";
+import { StyleSheet } from 'react-native';
+import { bgColors, borderColors } from '../../../constants/colors';
+import { TextStyles } from '../../../styles';
+import { isSmallScreenSize } from '../../../constants/size';
 
 
 const BottomSheetChangeImageStyles = StyleSheet.create({

@@ -1,9 +1,9 @@
-import React from "react";
-import { Text, View, TextInput } from "react-native";
-import { InputProps } from "../../../types";
-import InputStyles from "./Input.style";
-import { TextStyles } from "../../../styles";
-import { textColors } from "../../../constants/colors";
+import React from 'react';
+import { Text, View, TextInput } from 'react-native';
+import { InputProps } from '../../../types';
+import InputStyles from './Input.style';
+import { TextStyles } from '../../../styles';
+import { textColors } from '../../../constants/colors';
 
 
 const Input: React.FC<InputProps> = ({

@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import { ModalLayout } from "../../../layouts";
-import { Input } from "../../UI";
-import ModalChangeNameStyles from "./ModalChangeName.style";
-import { hideModal } from "../../../store/slices/modalsSlice";
-import { useAppDispatch, useAppSelector } from "../../../hooks";
+import { ModalLayout } from '../../../layouts';
+import { Input } from '../../UI';
+import ModalChangeNameStyles from './ModalChangeName.style';
+import { hideModal } from '../../../store/slices/modalsSlice';
+import { useAppDispatch, useAppSelector } from '../../../hooks';
 
 
 
@@ -22,7 +22,7 @@ const ModalChangeName = () =>{
 
     return(
         <ModalLayout
-            title="Change account name"
+            title='Change account name'
             visibleModal={showModal}
             onBackdropPress={()=> dispatch(hideModal('changeName'))}
             buttons={{
@@ -35,7 +35,7 @@ const ModalChangeName = () =>{
             }}>
                 <Input
                     placeholder={{
-                        text: "Enter new name"
+                        text: 'Enter new name'
                     }}
                     styles={{
                         container: ModalChangeNameStyles.inputContainer,

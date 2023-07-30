@@ -1,11 +1,11 @@
-import React from "react"
-import { Text, Image, View } from "react-native"
+import React from 'react'
+import { Text, Image, View } from 'react-native'
 
-import IntroContentStyles from "./IntroContent.style"
-import { TextStyles } from "../../../styles"
-import IntroContentIndicator from "./IntroContentIndicator"
-import SmallIntoImage from "./SmallIntroImage/SmallIntroImage"
-import { isSmallScreenSize } from "../../../constants/size"
+import IntroContentStyles from './IntroContent.style'
+import { TextStyles } from '../../../styles'
+import IntroContentIndicator from './IntroContentIndicator'
+import SmallIntoImage from './SmallIntroImage/SmallIntroImage'
+import { isSmallScreenSize } from '../../../constants/size'
 
 interface IntroContentProps {
     index: number,

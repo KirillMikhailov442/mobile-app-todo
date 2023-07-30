@@ -1,6 +1,6 @@
-import { StyleSheet } from "react-native";
-import { bgColors, buttonColors, textColors } from "../../../constants/colors";
-import { TextStyles } from "../../../styles";
+import { StyleSheet } from 'react-native';
+import { bgColors, buttonColors, textColors } from '../../../constants/colors';
+import { TextStyles } from '../../../styles';
 
 const ModalCalendarStyles = StyleSheet.create({
     calendar: {

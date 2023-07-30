@@ -1,6 +1,6 @@
-import { RouteProp } from "@react-navigation/native"
-import { NativeStackNavigationProp } from "@react-navigation/native-stack"
-import { RootStackParamList } from "./RootStackParamList"
+import { RouteProp } from '@react-navigation/native'
+import { NativeStackNavigationProp } from '@react-navigation/native-stack'
+import { RootStackParamList } from './RootStackParamList'
  
 export type ScreensRouteProp = RouteProp<RootStackParamList, keyof RootStackParamList>
 

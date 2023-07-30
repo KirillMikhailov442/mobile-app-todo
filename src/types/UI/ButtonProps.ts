@@ -10,5 +10,5 @@ export default interface ButtonProps {
     onPress?: ()=> void,
     styles?: ButtonPropsStyles,
     icon?: JSX.Element,
-    positinIcon?: 'left' | "right"
+    positinIcon?: 'left' | 'right'
 }

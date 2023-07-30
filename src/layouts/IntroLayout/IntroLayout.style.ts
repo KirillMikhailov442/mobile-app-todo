@@ -1,6 +1,6 @@
-import { StyleSheet } from "react-native"
-import { isSmallScreenSize } from "../../constants/size"
-import { textColors } from "../../constants/colors"
+import { StyleSheet } from 'react-native'
+import { isSmallScreenSize } from '../../constants/size'
+import { textColors } from '../../constants/colors'
 
 const IntroLayoutStyles = StyleSheet.create({
     header: {

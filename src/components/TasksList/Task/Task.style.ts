@@ -1,8 +1,8 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
-import { bgColors, borderColors, buttonColors, textColors } from "../../../constants/colors";
-import { TextStyles } from "../../../styles";
-import { isSmallScreenSize } from "../../../constants/size";
+import { bgColors, borderColors, buttonColors, textColors } from '../../../constants/colors';
+import { TextStyles } from '../../../styles';
+import { isSmallScreenSize } from '../../../constants/size';
 
 const TaskStyles = StyleSheet.create({
     container: {

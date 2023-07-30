@@ -1,6 +1,6 @@
-import React from "react";
-import { Text, View } from "react-native";
-import FocusHeaderStyles from "./FocusHeader.style";
+import React from 'react';
+import { Text, View } from 'react-native';
+import FocusHeaderStyles from './FocusHeader.style';
 
 const FocusHeader = () =>{
     return(

@@ -1,10 +1,10 @@
-import React, {useState} from "react";
-import { View, Text} from "react-native";
+import React, {useState} from 'react';
+import { View, Text} from 'react-native';
 import { CountdownCircleTimer } from 'react-native-countdown-circle-timer'
 
-import FocusTimerStyles from "./FocusTimer.style";
-import { Button } from "../../../components/UI";
-import { isSmallScreenSize } from "../../../constants/size";
+import FocusTimerStyles from './FocusTimer.style';
+import { Button } from '../../../components/UI';
+import { isSmallScreenSize } from '../../../constants/size';
 
 
 const FocusTimer = () =>{

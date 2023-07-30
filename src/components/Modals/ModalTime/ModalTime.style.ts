@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import { textColors } from "../../../constants/colors";
+import { StyleSheet } from 'react-native';
+import { textColors } from '../../../constants/colors';
 
 const ModalTimeStyles = StyleSheet.create({
     content: {

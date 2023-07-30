@@ -1,7 +1,7 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
-import { borderColors, textColors } from "../../../constants/colors";
-import { isSmallScreenSize } from "../../../constants/size";
+import { borderColors, textColors } from '../../../constants/colors';
+import { isSmallScreenSize } from '../../../constants/size';
 
 const checkboxHeight = isSmallScreenSize ? 14 : 16
 

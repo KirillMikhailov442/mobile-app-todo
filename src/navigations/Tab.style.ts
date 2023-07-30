@@ -22,7 +22,7 @@ const TabStyles = StyleSheet.create({
         backgroundColor: buttonColors.violetDefault,
         borderRadius: 50,
         position: 'absolute',
-        top: isSmallScreenSize ? "-110%" : '-130%'
+        top: isSmallScreenSize ? '-110%' : '-130%'
     },
 
     tabBarItemLabel: {

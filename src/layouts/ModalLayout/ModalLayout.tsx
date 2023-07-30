@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import Modal from 'react-native-modal'
-import { ModalLayoutProps } from "../../types";
-import { View } from "react-native";
-import ModalLayoutStyles from "./ModalLayout.style";
-import { Button } from "../../components/UI";
-import { Text } from "react-native";
+import { ModalLayoutProps } from '../../types';
+import { View } from 'react-native';
+import ModalLayoutStyles from './ModalLayout.style';
+import { Button } from '../../components/UI';
+import { Text } from 'react-native';
 
 const ModalLayout: React.FC<ModalLayoutProps> = ({
     children,

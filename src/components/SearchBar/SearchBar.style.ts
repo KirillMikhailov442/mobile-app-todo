@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import { isSmallScreenSize } from "../../constants/size";
+import { StyleSheet } from 'react-native';
+import { isSmallScreenSize } from '../../constants/size';
 
 const SearchBarStyles = StyleSheet.create({
     icon: {

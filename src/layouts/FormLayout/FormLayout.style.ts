@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import { bgColors, borderColors, textColors } from "../../constants/colors";
+import { StyleSheet } from 'react-native';
+import { bgColors, borderColors, textColors } from '../../constants/colors';
 
 
 const FormLayoutStyles = StyleSheet.create({

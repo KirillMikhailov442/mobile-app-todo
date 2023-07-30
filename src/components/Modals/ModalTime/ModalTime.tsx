@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { Text, View } from "react-native";
+import React, { useEffect, useState } from 'react';
+import { Text, View } from 'react-native';
 
-import { ModalLayout } from "../../../layouts";
-import BoxList from "../../UI/BoxList/BoxList";
-import ModalTimeStyles from "./ModalTime.style";
-import { hideModal } from "../../../store/slices/modalsSlice";
-import { useAppDispatch, useAppSelector } from "../../../hooks";
+import { ModalLayout } from '../../../layouts';
+import BoxList from '../../UI/BoxList/BoxList';
+import ModalTimeStyles from './ModalTime.style';
+import { hideModal } from '../../../store/slices/modalsSlice';
+import { useAppDispatch, useAppSelector } from '../../../hooks';
 
 const numbersTime:number[] = []
 
@@ -28,7 +28,7 @@ const ModalTime = () =>{
 
     return(
         <ModalLayout
-            title="Choose Time"
+            title='Choose Time'
             visibleModal={showModal}
             onBackdropPress={()=> dispatch(hideModal('time'))}
             buttons={{

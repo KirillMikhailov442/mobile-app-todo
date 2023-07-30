@@ -1,13 +1,13 @@
-import React from "react"
+import React from 'react'
 import {Text} from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
-import { HeaderLayout } from "../../../layouts"
-import { Avatar } from "../../../components/UI"
-import HomeHeaderStyles from "./HomeHeader.style"
-import { textColors } from "../../../constants/colors"
-import { useAppNavigation } from "../../../hooks"
-import { isSmallScreenSize } from "../../../constants/size"
+import { HeaderLayout } from '../../../layouts'
+import { Avatar } from '../../../components/UI'
+import HomeHeaderStyles from './HomeHeader.style'
+import { textColors } from '../../../constants/colors'
+import { useAppNavigation } from '../../../hooks'
+import { isSmallScreenSize } from '../../../constants/size'
 
 
 const HomeHeader = () =>{
@@ -18,7 +18,7 @@ const HomeHeader = () =>{
         <HeaderLayout styles={{ header: HomeHeaderStyles.container }}>
             <>
                 <Icon
-                    name="menu"
+                    name='menu'
                     color={textColors.whiteDefault}
                     size={isSmallScreenSize ? 25 : 30}/>
                 <Text style={HomeHeaderStyles.title}>Home</Text>

@@ -1,7 +1,7 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
-import { bgColors, borderColors } from "../../../../constants/colors";
-import { TextStyles } from "../../../../styles";
+import { bgColors, borderColors } from '../../../../constants/colors';
+import { TextStyles } from '../../../../styles';
 
 
 const FocusAppsItemStyles = StyleSheet.create({

@@ -1,14 +1,14 @@
-import React, {useState, useEffect} from "react"
-import { Calendar } from "react-native-calendars"
+import React, {useState, useEffect} from 'react'
+import { Calendar } from 'react-native-calendars'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
-import { View, Text } from "react-native"
+import { View, Text } from 'react-native'
 
 
-import { ModalLayout } from "../../../layouts"
-import ModalCalendarStyles from "./ModalCalendar.style"
-import { bgColors, buttonColors, textColors } from "../../../constants/colors"
-import { useAppDispatch, useAppSelector } from "../../../hooks"
-import { hideModal } from "../../../store/slices/modalsSlice"
+import { ModalLayout } from '../../../layouts'
+import ModalCalendarStyles from './ModalCalendar.style'
+import { bgColors, buttonColors, textColors } from '../../../constants/colors'
+import { useAppDispatch, useAppSelector } from '../../../hooks'
+import { hideModal } from '../../../store/slices/modalsSlice'
 
 interface ModalCalendarProps {
     onPressButton?: ()=> void
@@ -64,10 +64,10 @@ const ModalCalendar: React.FC<ModalCalendarProps> = ({
                 }}
                 renderArrow={(direction) =>{
                     if(direction === 'left'){
-                        return <Icon name="chevron-left" size={30} color={textColors.whiteDefault}/>
+                        return <Icon name='chevron-left' size={30} color={textColors.whiteDefault}/>
                     }
 
-                    return <Icon name="chevron-right" size={30} color={textColors.whiteDefault}/>
+                    return <Icon name='chevron-right' size={30} color={textColors.whiteDefault}/>
                 }}
 
                 style={ModalCalendarStyles.calendar}

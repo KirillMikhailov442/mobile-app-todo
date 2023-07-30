@@ -1,4 +1,4 @@
-import TaskProps from "./ITask"
+import TaskProps from './ITask'
 
 interface TasksListPropsStyles {
     container?: object

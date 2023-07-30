@@ -1,10 +1,10 @@
-import React from "react";
-import { ScrollView, View } from "react-native";
+import React from 'react';
+import { ScrollView, View } from 'react-native';
 
-import { ViewStyles } from "../../../styles";
+import { ViewStyles } from '../../../styles';
 import {SearchBar} from '../../../components/index'
-import TasksList from "../../../components/TasksList/TasksList";
-import { useAppSelector } from "../../../hooks";
+import TasksList from '../../../components/TasksList/TasksList';
+import { useAppSelector } from '../../../hooks';
 
 
 const HomeContent = () =>{
@@ -19,10 +19,10 @@ const HomeContent = () =>{
                 showsVerticalScrollIndicator={false}
                 showsHorizontalScrollIndicator={false}>
                 <TasksList
-                    label="Today"
+                    label='Today'
                     data={tasks.filter(item => item.completed === false)}/>
                 <TasksList 
-                    label="Completed"
+                    label='Completed'
                     data={tasks.filter(item => item.completed === true)}
                     styles={{container: {paddingBottom: 40}}}
                     />

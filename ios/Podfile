@@ -1,5 +1,5 @@
-require_relative '../node_modules/react-native/scripts/react_native_pods'
-require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+require_relative "../node_modules/react-native/scripts/react_native_pods"
+require_relative "../node_modules/@react-native-community/cli-platform-ios/native_modules"
 
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
@@ -11,17 +11,17 @@ prepare_react_native_project!
 # ```js
 # module.exports = {
 #   dependencies: {
-#     ...(process.env.NO_FLIPPER ? { 'react-native-flipper': { platforms: { ios: null } } } : {}),
+#     ...(process.env.NO_FLIPPER ? { "react-native-flipper": { platforms: { ios: null } } } : {}),
 # ```
-flipper_config = ENV['NO_FLIPPER'] == "1" ? FlipperConfiguration.disabled : FlipperConfiguration.enabled
+flipper_config = ENV["NO_FLIPPER"] == "1" ? FlipperConfiguration.disabled : FlipperConfiguration.enabled
 
-linkage = ENV['USE_FRAMEWORKS']
+linkage = ENV["USE_FRAMEWORKS"]
 if linkage != nil
   Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
   use_frameworks! :linkage => linkage.to_sym
 end
 
-target 'TodoMobile' do
+target "TodoMobile" do
   config = use_native_modules!
 
   # Flags change depending on the env values.
@@ -43,7 +43,7 @@ target 'TodoMobile' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  target 'TodoMobileTests' do
+  target "TodoMobileTests" do
     inherit! :complete
     # Pods for testing
   end

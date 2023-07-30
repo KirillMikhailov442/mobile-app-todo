@@ -1,12 +1,12 @@
-import React from "react"
-import { Text, View } from "react-native"
+import React from 'react'
+import { Text, View } from 'react-native'
 
-import { TextStyles, ViewStyles } from "../../../styles"
-import WelcomeContentStyles from "./WelcomeContent.style"
-import Button from "../../../components/UI/Button/Button"
-import { buttonColors } from "../../../constants/colors"
-import { NavigationProps } from "../../../types/navigation";
-import { isSmallScreenSize } from "../../../constants/size"
+import { TextStyles, ViewStyles } from '../../../styles'
+import WelcomeContentStyles from './WelcomeContent.style'
+import Button from '../../../components/UI/Button/Button'
+import { buttonColors } from '../../../constants/colors'
+import { NavigationProps } from '../../../types/navigation';
+import { isSmallScreenSize } from '../../../constants/size'
 
 const WelcomeContent: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigation}) =>{
     return(
@@ -28,7 +28,7 @@ const WelcomeContent: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigati
                 
                 <View style={WelcomeContentStyles.footer}>
                     <Button 
-                        text="LOGIN"
+                        text='LOGIN'
                         styles={{
                             button: {
                                 backgroundColor: buttonColors.violetDefault
@@ -39,7 +39,7 @@ const WelcomeContent: React.FC<Pick<NavigationProps, 'navigation'>> = ({navigati
                         }}
                         onPress={()=> navigation.navigate('login')}/>
                     <Button 
-                        text="CREATE ACCOUNT"
+                        text='CREATE ACCOUNT'
                         styles={{
                             button: {
                                 borderColor: buttonColors.violetDefault,

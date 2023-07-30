@@ -1,7 +1,7 @@
-import React from "react"
+import React from 'react'
 
-import LoginForm from "./LoginForm/LoginForm"
-import { NavigationProps } from "../../types/navigation"
+import LoginForm from './LoginForm/LoginForm'
+import { NavigationProps } from '../../types/navigation'
 
 
 

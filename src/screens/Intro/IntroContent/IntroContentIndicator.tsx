@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from "react"
+import React, {useState, useEffect} from 'react'
 import {View} from 'react-native'
 
-import IntroContentStyles from "./IntroContent.style"
-import { bgColors, buttonColors } from "../../../constants/colors"
+import IntroContentStyles from './IntroContent.style'
+import { bgColors, buttonColors } from '../../../constants/colors'
 
 interface IntroContentIndicatorProps {
     index: number,

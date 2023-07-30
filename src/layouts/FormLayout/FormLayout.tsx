@@ -1,13 +1,12 @@
-import React from "react"
-import { Text, View, Image } from "react-native"
+import React from 'react'
+import { Text, View, Image } from 'react-native'
 
-import { TextStyles } from "../../styles"
-import FormLayoutStyles from "./FormLayout.style"
-import { FormLayoutProps, LayoutProps } from "../../types"
-import Button from "../../components/UI/Button/Button"
-import { buttonColors } from "../../constants/colors"
-import {ScreensNavigationProp } from "../../types/navigation/NavigationProps"
-import { useAppNavigation } from "../../hooks"
+import { TextStyles } from '../../styles'
+import FormLayoutStyles from './FormLayout.style'
+import { FormLayoutProps, LayoutProps } from '../../types'
+import Button from '../../components/UI/Button/Button'
+import { buttonColors } from '../../constants/colors'
+import { useAppNavigation } from '../../hooks'
 
 
 const FormLayout: React.FC<FormLayoutProps & LayoutProps> = ({
@@ -52,7 +51,7 @@ const FormLayout: React.FC<FormLayoutProps & LayoutProps> = ({
                     </View>
 
                     <Button
-                        text="Login with Google"
+                        text='Login with Google'
                         icon={<Image  source={require('../../assets/images/login/google.png')} />}
                         onPress={()=> navigation.navigate('home')}
                         styles={{
@@ -65,7 +64,7 @@ const FormLayout: React.FC<FormLayoutProps & LayoutProps> = ({
                         }}/>
 
                     <Button
-                        text="Login with Apple"
+                        text='Login with Apple'
                         icon={<Image  source={require('../../assets/images/login/apple.png')} />}
                         onPress={()=> navigation.navigate('home')}
                         styles={{

@@ -7,12 +7,12 @@ import CalendarCarouselStyles from './CalendarCarousel.style'
 import CalendarCarouselItem from './CalendarCarouselItem/CalendarCarouselItem'
 import { isSmallScreenSize } from '../../../constants/size'
 
-const date = moment().format("YYYY-MM-DD")
+const date = moment().format('YYYY-MM-DD')
 
 const daysInMonthNum = moment().daysInMonth()
-const month = moment().format("MMMM")
+const month = moment().format('MMMM')
 const monthNumber = moment().format('M')
-const year = moment().format("YYYY")
+const year = moment().format('YYYY')
 
 
 interface IListDaysInMonth {

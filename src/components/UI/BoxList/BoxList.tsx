@@ -1,8 +1,8 @@
-import React from "react";
-import { FlatList, ScrollView, Text, View, Animated } from "react-native";
+import React from 'react';
+import { FlatList, ScrollView, Text, View, Animated } from 'react-native';
 
-import BoxListStyles from "./BoxList.style";
-import { BoxListProps } from "../../../types";
+import BoxListStyles from './BoxList.style';
+import { BoxListProps } from '../../../types';
 
 const BoxList: React.FC<BoxListProps> = ({
     styles,

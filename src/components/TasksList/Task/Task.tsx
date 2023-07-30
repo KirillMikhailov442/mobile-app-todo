@@ -4,14 +4,14 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import { Button, CheckBox } from '../../UI'
 import TaskStyles from './Task.style'
-import {TaskProps} from '../../../types'
+import {ITask} from '../../../types'
 import { useAppNavigation, useAppSelector } from '../../../hooks'
 
-const Task: React.FC<TaskProps> = ({
+const Task: React.FC<ITask> = ({
     text,
     check,
     details,
-    completed,
+    completed
 }) =>{
 
     const [value, setValue] = useState(check)

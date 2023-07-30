@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from "react";
-import { FlatList, View } from "react-native";
+import React, {useEffect, useState} from 'react';
+import { FlatList, View } from 'react-native';
 
-import ColorsListItem from "./ColorsListItem/ColorsListItem";
-import ColorsListStyles from "./ColorsList.style";
-import { useAppDispatch, useAppSelector } from "../../../hooks";
+import ColorsListItem from './ColorsListItem/ColorsListItem';
+import ColorsListStyles from './ColorsList.style';
+import { useAppDispatch, useAppSelector } from '../../../hooks';
 
 
 const ColorList = () =>{

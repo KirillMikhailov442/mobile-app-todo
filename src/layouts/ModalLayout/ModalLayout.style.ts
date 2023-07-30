@@ -1,7 +1,7 @@
-import { StyleSheet } from "react-native";
-import { bgColors, borderColors, buttonColors, textColors } from "../../constants/colors";
-import { TextStyles } from "../../styles";
-import { isSmallScreenSize } from "../../constants/size";
+import { StyleSheet } from 'react-native';
+import { bgColors, borderColors, buttonColors, textColors } from '../../constants/colors';
+import { TextStyles } from '../../styles';
+import { isSmallScreenSize } from '../../constants/size';
 
 const ModalLayoutStyles = StyleSheet.create({
 

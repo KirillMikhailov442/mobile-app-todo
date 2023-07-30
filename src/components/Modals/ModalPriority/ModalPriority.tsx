@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
-import { View } from "react-native";
-import { FlatGrid } from "react-native-super-grid";
+import { View } from 'react-native';
+import { FlatGrid } from 'react-native-super-grid';
 
-import { ModalLayout } from "../../../layouts";
-import MiniCard from "../../UI/MiniCard/MiniCard";
-import ModalPriorityStyles from "./ModalPriority.style";
-import { textColors } from "../../../constants/colors";
-import { hideModal } from "../../../store/slices/modalsSlice";
-import { useAppDispatch, useAppSelector } from "../../../hooks";
-import { IPriority } from "../../../types";
-import { selectPriority } from "../../../store/slices/prioritySlice";
-import { isSmallScreenSize } from "../../../constants/size";
+import { ModalLayout } from '../../../layouts';
+import MiniCard from '../../UI/MiniCard/MiniCard';
+import ModalPriorityStyles from './ModalPriority.style';
+import { textColors } from '../../../constants/colors';
+import { hideModal } from '../../../store/slices/modalsSlice';
+import { useAppDispatch, useAppSelector } from '../../../hooks';
+import { IPriority } from '../../../types';
+import { selectPriority } from '../../../store/slices/prioritySlice';
+import { isSmallScreenSize } from '../../../constants/size';
 
 
 
@@ -32,7 +32,7 @@ const ModalPriority = () =>{
     
     return(
         <ModalLayout
-            title="Task Priority"
+            title='Task Priority'
             visibleModal={showModal}
             onBackdropPress={()=> dispatch(hideModal('priority'))}
             buttons={{

@@ -1,6 +1,6 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
-import { isSmallScreenSize } from "../../../../constants/size";
+import { isSmallScreenSize } from '../../../../constants/size';
 
 const colorsListItemSize = isSmallScreenSize ? 26 : 36
 

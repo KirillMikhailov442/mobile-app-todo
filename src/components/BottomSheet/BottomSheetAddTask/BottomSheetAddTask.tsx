@@ -26,7 +26,7 @@ const BottomSheetAddTask = () =>{
         <Modal 
             isVisible={showBottomSheet}
             onBackdropPress={()=> dispatch(hideBottomSheet('addTask')) }
-            swipeDirection="down" 
+            swipeDirection='down' 
             style={{margin: 0, height: 'auto'}}>
             <View style={BottomSheetAddTaskStyles.container}>
                 <FormLayout 

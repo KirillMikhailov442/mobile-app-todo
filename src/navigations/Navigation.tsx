@@ -1,8 +1,8 @@
-import React from "react"
+import React from 'react'
 import {CardStyleInterpolators, createStackNavigator} from '@react-navigation/stack'
 import { NavigationContainer } from '@react-navigation/native';
 
-import { bgColors, textColors } from "../constants/colors";
+import { bgColors, textColors } from '../constants/colors';
 import { 
     IntroScreen,
     WelcomeScreen,
@@ -10,9 +10,9 @@ import {
     RegisterScreen,
     CreateCategoryScreen,
     TaskScreen,
-    SettingsScreen, } from "../screens";
-import Tabs from "./Tabs";
-import { isSmallScreenSize } from "../constants/size";
+    SettingsScreen, } from '../screens';
+import Tabs from './Tabs';
+import { isSmallScreenSize } from '../constants/size';
 
 
 const Stack = createStackNavigator()
@@ -23,7 +23,7 @@ const Navigation = () =>{
     return(
         <NavigationContainer>
             <Stack.Navigator 
-                initialRouteName="intro" 
+                initialRouteName='intro' 
                 screenOptions={{
                     cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
                     cardStyle: {
@@ -37,24 +37,24 @@ const Navigation = () =>{
                 {/* Tabs */}
                 <Stack.Screen
                     options={{headerShown: false}}
-                    name="home"
+                    name='home'
                     component={Tabs}/>
                     
                 <Stack.Screen 
                     options={{headerShown: false}} 
-                    name="intro" 
+                    name='intro' 
                     component={IntroScreen}
                     initialParams={{screenId: 1}}/>
 
                 <Stack.Screen 
                     options={{
-                        headerTitle: "",
+                        headerTitle: '',
                         headerStyle: {
                          backgroundColor: bgColors.blackDefault,
                         },
                     headerTintColor: textColors.whiteDefault
                     }} 
-                    name="welcome" 
+                    name='welcome' 
                     component={WelcomeScreen} />
 
                 <Stack.Screen
@@ -65,7 +65,7 @@ const Navigation = () =>{
                         headerTitle: '',
                         headerTintColor: textColors.whiteDefault
                     }}
-                    name="login"
+                    name='login'
                     component={LoginScreen}/>
 
                 <Stack.Screen
@@ -76,7 +76,7 @@ const Navigation = () =>{
                         headerTitle: '',
                         headerTintColor: textColors.whiteDefault
                     }}
-                    name="register"
+                    name='register'
                     component={RegisterScreen}/>
 
                 <Stack.Screen
@@ -88,7 +88,7 @@ const Navigation = () =>{
                         headerTintColor: textColors.whiteDefault,
                         headerShown: false
                     }}
-                    name="categories"
+                    name='categories'
                     component={CreateCategoryScreen}/>
 
                 <Stack.Screen
@@ -101,7 +101,7 @@ const Navigation = () =>{
                         headerTintColor: textColors.whiteDefault,
                         headerShown: false
                     }}
-                    name="task"
+                    name='task'
                     component={TaskScreen}/>
 
                 <Stack.Screen
@@ -116,7 +116,7 @@ const Navigation = () =>{
                         headerTitleAlign: 'center',
                         headerTintColor: textColors.whiteDefault
                     }}
-                    name="settings"
+                    name='settings'
                     component={SettingsScreen}/>
 
             </Stack.Navigator>

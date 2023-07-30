@@ -1,8 +1,8 @@
-import React from "react";
-import { View, Image, Text } from "react-native";
+import React from 'react';
+import { View, Image, Text } from 'react-native';
 
-import { ViewStyles } from "../../../styles";
-import HomeEmptyStyles from "./HomeEmpty.style";
+import { ViewStyles } from '../../../styles';
+import HomeEmptyStyles from './HomeEmpty.style';
 
 
 const HomeEmpty = () =>{
@@ -13,7 +13,7 @@ const HomeEmpty = () =>{
         ]}>
             <Image
                 style={HomeEmptyStyles.image}
-                resizeMode="contain"
+                resizeMode='contain'
                 source={require('../../../assets/images/check-list.png')}/>
             <Text style={HomeEmptyStyles.title}>What do you want to do today?</Text>
             <Text style={HomeEmptyStyles.subtitle}>Tap + to add your tasks</Text>

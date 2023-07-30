@@ -1,8 +1,8 @@
-import { StyleSheet, Dimensions } from "react-native";
+import { StyleSheet, Dimensions } from 'react-native';
 
-import { bgColors, textColors } from "../../constants/colors";
-import { TextStyles } from "../../styles";
-import { isSmallScreenSize } from "../../constants/size";
+import { bgColors, textColors } from '../../constants/colors';
+import { TextStyles } from '../../styles';
+import { isSmallScreenSize } from '../../constants/size';
 
 const CreateCategoryStyles = StyleSheet.create({
     title: {

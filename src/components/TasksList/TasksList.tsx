@@ -1,13 +1,13 @@
-import React, {useState} from "react";
-import { FlatList, View } from "react-native";
+import React, {useState} from 'react';
+import { FlatList, View } from 'react-native';
 import Icon from 'react-native-vector-icons/SimpleLineIcons'
 
 
-import Task from "./Task/Task";
-import { TasksListProps } from "../../types";
-import { Button } from "../UI";
-import TasksListStyles from "./TasksList.style";
-import { textColors } from "../../constants/colors";
+import Task from './Task/Task';
+import { TasksListProps } from '../../types';
+import { Button } from '../UI';
+import TasksListStyles from './TasksList.style';
+import { textColors } from '../../constants/colors';
 
 
 
@@ -28,7 +28,7 @@ const TaskList: React.FC<TasksListProps> = ({
                     text={label}
                     onPress={()=> setShowToDoList(prev => !prev)}
                     icon={<Icon name={showToDoList ? 'arrow-down' : 'arrow-up'} size={10} color={textColors.whiteDefault}/>}
-                    positinIcon="right"
+                    positinIcon='right'
                     styles={{
                         button: TasksListStyles.buttonLabel,
                         text: TasksListStyles.buttonLabelText

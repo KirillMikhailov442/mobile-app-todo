@@ -19,9 +19,9 @@ const TaskPreferences = () =>{
     return(
             <>
                 <Preference
-                    text="Task Time :"
+                    text='Task Time :'
                     onPress={()=> dispatch(showModal('calendar'))}
-                    icon={<Icon name="timer-outline" color={textColors.whiteDefault} size={iconSize}/>}
+                    icon={<Icon name='timer-outline' color={textColors.whiteDefault} size={iconSize}/>}
                     button={<Button 
                             text='Today At 16:45' 
                             onPress={()=> dispatch(showModal('calendar'))}
@@ -29,9 +29,9 @@ const TaskPreferences = () =>{
                     styles={{container: TaskScreenStyles.preference}}/>
 
                 <Preference
-                    text="Task Category :"
+                    text='Task Category :'
                     onPress={()=> dispatch(showModal('category'))}
-                    icon={<Icon name="tag-outline" color={textColors.whiteDefault} size={iconSize}/>}
+                    icon={<Icon name='tag-outline' color={textColors.whiteDefault} size={iconSize}/>}
                     button={<Button 
                             text='University' 
                             positinIcon='left'
@@ -41,9 +41,9 @@ const TaskPreferences = () =>{
                     styles={{container: TaskScreenStyles.preference}}/>
 
                 <Preference
-                    text="Task Priority :"
+                    text='Task Priority :'
                     onPress={()=> dispatch(showModal('priority'))}
-                    icon={<Icon name="flag-outline" color={textColors.whiteDefault} size={iconSize}/>}
+                    icon={<Icon name='flag-outline' color={textColors.whiteDefault} size={iconSize}/>}
                     button={<Button 
                             text='Default'
                             onPress={()=> dispatch(hideModal('priority'))}
@@ -51,16 +51,16 @@ const TaskPreferences = () =>{
                     styles={{container: TaskScreenStyles.preference}}/>
 
                 <Preference
-                    text="Sub - Task"
-                    icon={<IconIonicons name="git-merge-outline" color={textColors.whiteDefault} size={iconSize}/>}
+                    text='Sub - Task'
+                    icon={<IconIonicons name='git-merge-outline' color={textColors.whiteDefault} size={iconSize}/>}
                     button={<Button text='Add Sub - Task' styles={{button: TaskScreenStyles.preferenceButton, text: TaskScreenStyles.preferenceButtonText}}/>} 
                     styles={{container: TaskScreenStyles.preference}}/>
 
                 <Preference
-                    text="Delete Task"
+                    text='Delete Task'
                     onPress={()=> dispatch(showModal('delete'))}
                     icon={<Icon
-                            name="trash-can-outline" 
+                            name='trash-can-outline' 
                             color={textColors.red} 
                             size={iconSize}/>}
                     showButton={false}

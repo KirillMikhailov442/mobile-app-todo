@@ -1,7 +1,7 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
-import { buttonColors } from "../../../constants/colors";
-import { TextStyles } from "../../../styles";
+import { buttonColors } from '../../../constants/colors';
+import { TextStyles } from '../../../styles';
 
 
 const FocusSheduleStyles = StyleSheet.create({

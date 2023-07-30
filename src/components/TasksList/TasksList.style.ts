@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import { buttonColors } from "../../constants/colors";
+import { StyleSheet } from 'react-native';
+import { buttonColors } from '../../constants/colors';
 
 const TasksListStyles = StyleSheet.create({
     buttonLabel: {

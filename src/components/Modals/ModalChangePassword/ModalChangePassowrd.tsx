@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import { ModalLayout } from "../../../layouts";
-import { Input } from "../../UI";
-import ModalChangePassowrdStyles from "./ModalChangePassword.style";
-import { hideModal } from "../../../store/slices/modalsSlice";
-import { useAppDispatch, useAppSelector } from "../../../hooks";
+import { ModalLayout } from '../../../layouts';
+import { Input } from '../../UI';
+import ModalChangePassowrdStyles from './ModalChangePassword.style';
+import { hideModal } from '../../../store/slices/modalsSlice';
+import { useAppDispatch, useAppSelector } from '../../../hooks';
 
 
 const ModalChangePassword = () =>{
@@ -20,7 +20,7 @@ const ModalChangePassword = () =>{
 
     return(
         <ModalLayout
-            title="Change account password"
+            title='Change account password'
             visibleModal={showModal}
             onBackdropPress={()=> dispatch(hideModal('changePassword'))}
             buttons={{
@@ -33,20 +33,20 @@ const ModalChangePassword = () =>{
             }}>
                 <>
                 <Input
-                    label="Enter old password"
+                    label='Enter old password'
                     security
                     placeholder={{
-                        text: "Enter old password"
+                        text: 'Enter old password'
                     }}
                     styles={{
                         container: ModalChangePassowrdStyles.inputContainer,
                         input: ModalChangePassowrdStyles.input
                     }}/>
                     <Input
-                        label="Enter new password"
+                        label='Enter new password'
                         security
                         placeholder={{
-                            text: "Enter new password"
+                            text: 'Enter new password'
                         }}
                         styles={{
                             container: ModalChangePassowrdStyles.inputContainer,

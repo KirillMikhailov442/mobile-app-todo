@@ -1,9 +1,9 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
 
-import { TextStyles } from "../../../styles";
-import { bgColors, textColors } from "../../../constants/colors";
-import { isSmallScreenSize } from "../../../constants/size";
+import { TextStyles } from '../../../styles';
+import { bgColors, textColors } from '../../../constants/colors';
+import { isSmallScreenSize } from '../../../constants/size';
 
 
 const miniCardSize = isSmallScreenSize ? 50 : 64
@@ -13,7 +13,7 @@ const MiniCardStyles = StyleSheet.create({
         width: miniCardSize
     },
     card: {
-        width: "100%",
+        width: '100%',
         height: miniCardSize,
         backgroundColor: bgColors.blackLight,
         borderRadius: 5,

@@ -1,8 +1,8 @@
-import React from "react"
-import { Text, TouchableOpacity, View} from "react-native"
+import React from 'react'
+import { Text, TouchableOpacity, View} from 'react-native'
 
-import ButtonStyles from "./Button.style"
-import { ButtonProps } from "../../../types"
+import ButtonStyles from './Button.style'
+import { ButtonProps } from '../../../types'
 
 
 const Button: React.FC<ButtonProps> = ({

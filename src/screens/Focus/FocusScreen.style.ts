@@ -1,6 +1,6 @@
-import { StyleSheet } from "react-native";
-import { ViewStyles } from "../../styles";
-import { bgColors } from "../../constants/colors";
+import { StyleSheet } from 'react-native';
+import { ViewStyles } from '../../styles';
+import { bgColors } from '../../constants/colors';
 
 
 const FocusScreenStyles = StyleSheet.create({

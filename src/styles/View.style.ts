@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import { isSmallScreenSize, screenWidth } from "../constants/size";
+import { StyleSheet } from 'react-native';
+import { isSmallScreenSize, screenWidth } from '../constants/size';
 
 const ViewStyles = StyleSheet.create({
     container: {

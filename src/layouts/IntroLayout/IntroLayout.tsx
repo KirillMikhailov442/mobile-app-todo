@@ -42,7 +42,7 @@ const IntroLayout: React.FC<IntroLayoutProps> = ({
             ViewStyles.fullScreen]}>
             <View style={IntroLayoutStyles.header}>
                 <Button
-                    text="SKIP" 
+                    text='SKIP' 
                     styles={{
                         text: IntroLayoutStyles.buttonText,
                         button: IntroLayoutStyles.button
@@ -55,7 +55,7 @@ const IntroLayout: React.FC<IntroLayoutProps> = ({
             
             <View style={IntroLayoutStyles.footer}>
                 <Button 
-                    text="BACK" 
+                    text='BACK' 
                     styles={{
                         text: [{color : isBack ? textColors.grayDefault : textColors.black}, IntroLayoutStyles.buttonText],
                         button : IntroLayoutStyles.button
@@ -63,7 +63,7 @@ const IntroLayout: React.FC<IntroLayoutProps> = ({
                     isActive={isBack}
                     onPress={()=> navigation.navigate('intro', {screenId: --index})} />
                 <Button 
-                    text={isFinish ? "FINISH" : "NEXT"}
+                    text={isFinish ? 'FINISH' : 'NEXT'}
                     styles={{
                         button: [IntroLayoutStyles.button, {backgroundColor: buttonColors.violetDefault}],
                         text: [IntroLayoutStyles.buttonText, {color: textColors.whiteDefault}]

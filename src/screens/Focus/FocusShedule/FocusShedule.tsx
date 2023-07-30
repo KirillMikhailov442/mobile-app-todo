@@ -11,12 +11,12 @@ import { isSmallScreenSize } from '../../../constants/size';
 
 const data = [
     { month: 'SUN', value: 2.3 },
-    { month: "MON", value: 3.3  },
-    { month: "TUE", value: 5 },
-    { month: "WED", value: 3 },
-    { month: "THU", value: 4 },
-    { month: "FRI", value: 4.3 },
-    { month: "SAT", value: 2 },
+    { month: 'MON', value: 3.3  },
+    { month: 'TUE', value: 5 },
+    { month: 'WED', value: 3 },
+    { month: 'THU', value: 4 },
+    { month: 'FRI', value: 4.3 },
+    { month: 'SAT', value: 2 },
   ];
 
 const sheduleWidth = Dimensions.get('window').width - 20
@@ -47,8 +47,8 @@ const FocuseShedule = () =>{
                         onLoad: { duration: 1000 }
                     }}
                     data={data} 
-                    x="month" 
-                    y="value"
+                    x='month' 
+                    y='value'
                     width={sheduleWidth}
                     barWidth={isSmallScreenSize ? 25 : 30}
                     cornerRadius={{top: 5, bottom: 5}}

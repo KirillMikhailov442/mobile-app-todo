@@ -1,6 +1,6 @@
-import { StyleSheet } from "react-native"
-import { bgColors, borderColors } from "../../../constants/colors"
-import { isSmallScreenSize } from "../../../constants/size"
+import { StyleSheet } from 'react-native'
+import { bgColors, borderColors } from '../../../constants/colors'
+import { isSmallScreenSize } from '../../../constants/size'
 
 const bottomSheetAddTaskPadding = isSmallScreenSize ? 14 : 24
 const inputHeight = isSmallScreenSize ? 38 : 43

@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import { ViewStyles } from "../../../styles";
+import { StyleSheet } from 'react-native';
+import { ViewStyles } from '../../../styles';
 
 const ModalCategoryStyles = StyleSheet.create({
     grid: {

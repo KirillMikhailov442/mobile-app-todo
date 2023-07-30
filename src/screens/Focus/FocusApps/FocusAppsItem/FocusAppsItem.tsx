@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
-import { Image, Text, TouchableOpacity, View} from "react-native";
+import { Image, Text, TouchableOpacity, View} from 'react-native';
 
-import FocusAppsItemStyles from "./FocusAppsItem.style";
-import { textColors } from "../../../../constants/colors";
-import { FocusAppsItemProps } from "../../../../types";
-import { isSmallScreenSize } from "../../../../constants/size";
+import FocusAppsItemStyles from './FocusAppsItem.style';
+import { textColors } from '../../../../constants/colors';
+import { FocusAppsItemProps } from '../../../../types';
+import { isSmallScreenSize } from '../../../../constants/size';
 
 
 const FocusAppsItem: React.FC<FocusAppsItemProps> = ({
@@ -29,7 +29,7 @@ const FocusAppsItem: React.FC<FocusAppsItemProps> = ({
                 </Text>
             </View>
             <Icon 
-                name="alert-circle-outline" 
+                name='alert-circle-outline' 
                 size={isSmallScreenSize ? 25 : 30} 
                 color={textColors.whiteDefault}
                 style={FocusAppsItemStyles.icon}/>

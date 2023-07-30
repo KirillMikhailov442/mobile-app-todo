@@ -1,12 +1,12 @@
-import React from "react";
-import { View } from "react-native";
+import React from 'react';
+import { View } from 'react-native';
 
-import CreateCategoryStyles from "../CreateCategory.style";
-import { ViewStyles } from "../../../styles";
-import { Button } from "../../../components/UI";
-import { NavigationProps } from "../../../types/navigation";
-import { textColors, buttonColors } from "../../../constants/colors";
-import { isSmallScreenSize } from "../../../constants/size";
+import CreateCategoryStyles from '../CreateCategory.style';
+import { ViewStyles } from '../../../styles';
+import { Button } from '../../../components/UI';
+import { NavigationProps } from '../../../types/navigation';
+import { textColors, buttonColors } from '../../../constants/colors';
+import { isSmallScreenSize } from '../../../constants/size';
 
 const buttonFontSize = isSmallScreenSize ? 14 : 16
 

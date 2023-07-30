@@ -4,7 +4,7 @@ import {View, Text, Pressable} from 'react-native'
 import CalendarCarouselItemStyles from './CalendarCarouselItem.style'
 import { CalendarCarouselItemProps } from '../../../../types'
 
-const listWeekend = ["SUN", "SAT"]
+const listWeekend = ['SUN', 'SAT']
 
 const CalendarCarouselItem: React.FC<CalendarCarouselItemProps> = ({
     dayWeek,

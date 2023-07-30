@@ -1,6 +1,6 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
-import { textColors } from "../../constants/colors";
+import { textColors } from '../../constants/colors';
 
 
 const PreferencesLayoutStyles = StyleSheet.create({

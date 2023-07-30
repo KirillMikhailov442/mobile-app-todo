@@ -1,13 +1,13 @@
-import { StyleSheet } from "react-native";
-import { buttonColors, textColors } from "../../../constants/colors";
-import { TextStyles } from "../../../styles";
-import { isSmallScreenSize } from "../../../constants/size";
+import { StyleSheet } from 'react-native';
+import { buttonColors, textColors } from '../../../constants/colors';
+import { TextStyles } from '../../../styles';
+import { isSmallScreenSize } from '../../../constants/size';
 
 
 const FocusTimerStyles = StyleSheet.create({
 
     container: {
-        alignItems: "center",
+        alignItems: 'center',
         marginTop: 43
     },
 

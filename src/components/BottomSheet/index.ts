@@ -1,5 +1,5 @@
-import BottomSheetAddTask from "./BottomSheetAddTask/BottomSheetAddTask";
-import BottomSheetChangeImage from "./BottomSheetChamgeImage/BottomSheetChangeImage";
+import BottomSheetAddTask from './BottomSheetAddTask/BottomSheetAddTask';
+import BottomSheetChangeImage from './BottomSheetChamgeImage/BottomSheetChangeImage';
 
 export {
     BottomSheetAddTask,

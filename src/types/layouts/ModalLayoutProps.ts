@@ -1,5 +1,5 @@
-import ButtonPropsStyles from "../UI/ButtonProps";
-import LayoutProps from "./LayoutProps";
+import ButtonPropsStyles from '../UI/ButtonProps';
+import LayoutProps from './LayoutProps';
 
 interface ModalLayoutPropsStyles {
     modal?: object,

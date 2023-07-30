@@ -1,13 +1,13 @@
-import React from "react";
-import { View, ScrollView } from "react-native";
+import React from 'react';
+import { View, ScrollView } from 'react-native';
 
-import FocusScreenStyles from "./FocusScreen.style";
-import FocusHeader from "./FocusHeader/FocusHeader";
-import FocusApps from "./FocusApps/FocusApps";
-import { ViewStyles } from "../../styles";
-import FocusTimer from "./FocusTimer/FocusTimer";
-import FocuseShedule from "./FocusShedule/FocusShedule";
-import AddTask from "../../components/AddTask/AddTask";
+import FocusScreenStyles from './FocusScreen.style';
+import FocusHeader from './FocusHeader/FocusHeader';
+import FocusApps from './FocusApps/FocusApps';
+import { ViewStyles } from '../../styles';
+import FocusTimer from './FocusTimer/FocusTimer';
+import FocuseShedule from './FocusShedule/FocusShedule';
+import AddTask from '../../components/AddTask/AddTask';
 
 
 const FocusScreen = () =>{

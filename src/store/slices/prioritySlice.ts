@@ -1,5 +1,5 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { IPriority } from "../../types";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { IPriority } from '../../types';
 
 
 

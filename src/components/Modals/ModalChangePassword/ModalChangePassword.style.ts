@@ -1,7 +1,7 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
-import { bgColors } from "../../../constants/colors";
-import { isSmallScreenSize } from "../../../constants/size";
+import { bgColors } from '../../../constants/colors';
+import { isSmallScreenSize } from '../../../constants/size';
 
 const inputHeight = isSmallScreenSize ? 40 : 48
 

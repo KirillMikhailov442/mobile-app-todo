@@ -1,7 +1,7 @@
-import React from "react";
-import { Pressable, Text, TouchableOpacity, View } from "react-native";
-import MiniCardStyles from "./MiniCard.style";
-import { MiniCardProps } from "../../../types";
+import React from 'react';
+import { Pressable, Text, TouchableOpacity, View } from 'react-native';
+import MiniCardStyles from './MiniCard.style';
+import { MiniCardProps } from '../../../types';
 
 
 const MiniCard: React.FC<MiniCardProps> = ({

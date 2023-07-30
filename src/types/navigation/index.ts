@@ -1,4 +1,4 @@
-import { NavigationProps } from "./NavigationProps";
-import { IntroProps } from "./IntroProps";
+import { NavigationProps } from './NavigationProps';
+import { IntroProps } from './IntroProps';
 
 export type {NavigationProps, IntroProps}

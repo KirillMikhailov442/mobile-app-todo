@@ -1,5 +1,5 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { IColor } from "../../types";
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { IColor } from '../../types';
 
 
 const initialState: IColor[] = [

@@ -1,9 +1,9 @@
-import React from "react"
+import React from 'react'
 
-import { BottomSheetAddTask } from "../BottomSheet"
-import { ModalCalendar, ModalCategory, ModalPriority, ModalTime } from "../Modals"
-import { hideModal, showModal } from "../../store/slices/modalsSlice"
-import { useAppDispatch } from "../../hooks"
+import { BottomSheetAddTask } from '../BottomSheet'
+import { ModalCalendar, ModalCategory, ModalPriority, ModalTime } from '../Modals'
+import { hideModal, showModal } from '../../store/slices/modalsSlice'
+import { useAppDispatch } from '../../hooks'
 
 const AddTask = () =>{
 

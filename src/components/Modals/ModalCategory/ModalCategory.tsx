@@ -60,7 +60,7 @@ const ModalCategory: React.FC<ModalCategoryProps> = ({
             >
                 <View style={ModalCategoryStyles.grid}>
                     <FlatGrid
-                        data={[...categories, {text: 'Create new', iconName: 'plus', color: '#80FFD1', iconColor: "#00A369"}]}
+                        data={[...categories, {text: 'Create new', iconName: 'plus', color: '#80FFD1', iconColor: '#00A369'}]}
                         itemDimension={isSmallScreenSize ? 60 : 80}
                         spacing={10}
                         itemContainerStyle={{justifyContent: 'center', alignItems: 'center'}}

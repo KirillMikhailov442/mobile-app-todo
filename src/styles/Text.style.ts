@@ -14,7 +14,7 @@ const TextStyles = StyleSheet.create({
     },
     title: {
         fontSize: isSmallScreenSize ? 25 : 32,
-        fontWeight: "bold"
+        fontWeight: 'bold'
     }
 })
 
