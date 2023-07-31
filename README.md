@@ -45,9 +45,4 @@ npm run ios
 ```
 
 ## Installing the app on your phone
-
-<<<<<<< HEAD
 * [android](https://github.com/KirillMikhailov442/mobile-app-todo/blob/main/dist/todoMobile.apk)
-=======
-* [android](https://github.com/KirillMikhailov442/mobile-app-todo/blob/main/dist/todoMobile.apk)
->>>>>>> 91896d4b37382bcc581790b4973388f6a9d5f61d
