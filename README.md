@@ -27,8 +27,6 @@ git clone https://github.com/KirillMikhailov442/mobile-app-todo.git
 cd ./mobile-app-todo
 
 npm install
-//or
-yarn add
 ```
 
 after cloning the repository and installing all dependent packages, you need to run the application on the emulator
